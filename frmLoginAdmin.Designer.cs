@@ -144,7 +144,7 @@
             // pbPassIcon
             // 
             this.pbPassIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbPassIcon.Image = global::ClinicaMedica.Properties.Resources.PasswordIcon1;
+            this.pbPassIcon.Image = global::ClinicaMedica.Properties.Resources.PasswordIcon;
             this.pbPassIcon.Location = new System.Drawing.Point(286, 259);
             this.pbPassIcon.Name = "pbPassIcon";
             this.pbPassIcon.Size = new System.Drawing.Size(45, 45);
