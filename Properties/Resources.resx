@@ -130,9 +130,6 @@
   <data name="AdminIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AdminIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PasswordIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PasswordIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="PasswordIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PasswordIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -147,32 +144,5 @@
   </data>
   <data name="278158071_329692962482837_3178279064538201005_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\278158071_329692962482837_3178279064538201005_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="278158071_329692962482837_3178279064538201005_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\278158071_329692962482837_3178279064538201005_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AdminIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AdminIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AdminIcon321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AdminIcon32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="copia1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\copia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ExitIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ExitIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MedicoIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MedicoIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MedicoIcon321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MedicoIcon32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PasswordIcon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PasswordIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="UserIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UserIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
