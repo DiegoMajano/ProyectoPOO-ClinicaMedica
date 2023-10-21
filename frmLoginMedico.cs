@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace ClinicaMedica
 {
-    public partial class LoginAdmin : Form
+    public partial class frmLoginMedico : Form
     {
-        public LoginAdmin()
+        public frmLoginMedico()
         {
             InitializeComponent();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
+            frmHome home = new frmHome();
             this.Hide();
             home.Show();
         }

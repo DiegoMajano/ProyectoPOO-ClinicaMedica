@@ -10,31 +10,31 @@ using System.Windows.Forms;
 
 namespace ClinicaMedica
 {
-    public partial class Home : Form
+    public partial class frmHome : Form
     {
-        public Home()
+        public frmHome()
         {
             InitializeComponent();
         }
 
         private void btnmedico_Click(object sender, EventArgs e)
         {            
-            LoginMedico loginMedico = new LoginMedico();
+            frmLoginMedico loginMedico = new frmLoginMedico();
             this.Hide();
             loginMedico.Show();
         }
 
         private void btnadmin_Click(object sender, EventArgs e)
         {
-            LoginAdmin loginAdmin = new LoginAdmin();
+            frmLoginAdmin loginAdmin = new frmLoginAdmin();
             this.Hide();
             loginAdmin.Show();
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Está seguro de salir de la aplicación?","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-            if (resultado == DialogResult.OK) Application.Exit();
+            DialogResult resultado = MessageBox.Show("¿Está seguro de salir de la aplicación?","Aviso",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
+            if (resultado == DialogResult.Yes) Application.Exit();
         }
     }
 }

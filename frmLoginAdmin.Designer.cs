@@ -1,6 +1,6 @@
 ﻿namespace ClinicaMedica
 {
-    partial class LoginAdmin
+    partial class frmLoginAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -46,6 +46,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat Thin", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(342, 259);
@@ -56,6 +57,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat Thin", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(342, 198);
@@ -66,6 +68,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(316, 130);
             this.label4.Name = "label4";
@@ -75,17 +78,20 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(221)))), ((int)(((byte)(255)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Location = new System.Drawing.Point(342, 279);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(195, 25);
             this.txtPassword.TabIndex = 30;
             // 
             // btnRegresar
             // 
+            this.btnRegresar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.Font = new System.Drawing.Font("Montserrat Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.Location = new System.Drawing.Point(515, 362);
@@ -99,6 +105,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(356, 362);
@@ -111,6 +118,7 @@
             // 
             // btnIngresar
             // 
+            this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Location = new System.Drawing.Point(196, 362);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -119,9 +127,11 @@
             this.btnIngresar.TabIndex = 27;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // txtUser
             // 
+            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(221)))), ((int)(((byte)(255)))));
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Location = new System.Drawing.Point(342, 218);
@@ -133,6 +143,7 @@
             // 
             // pbPassIcon
             // 
+            this.pbPassIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbPassIcon.Image = global::ClinicaMedica.Properties.Resources.PasswordIcon1;
             this.pbPassIcon.Location = new System.Drawing.Point(286, 259);
             this.pbPassIcon.Name = "pbPassIcon";
@@ -143,6 +154,7 @@
             // 
             // pbUserIcon
             // 
+            this.pbUserIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbUserIcon.Image = global::ClinicaMedica.Properties.Resources.UserIcon;
             this.pbUserIcon.Location = new System.Drawing.Point(286, 198);
             this.pbUserIcon.Name = "pbUserIcon";
@@ -153,6 +165,7 @@
             // 
             // pcbLogo
             // 
+            this.pcbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pcbLogo.Image = global::ClinicaMedica.Properties.Resources.copia;
             this.pcbLogo.Location = new System.Drawing.Point(300, 14);
             this.pcbLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -162,7 +175,7 @@
             this.pcbLogo.TabIndex = 25;
             this.pcbLogo.TabStop = false;
             // 
-            // LoginAdmin
+            // frmLoginAdmin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(809, 451);
@@ -178,9 +191,9 @@
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.pcbLogo);
             this.Font = new System.Drawing.Font("Montserrat Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "LoginAdmin";
+            this.Name = "frmLoginAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Administración";
+            this.Text = "Personal de Administración";
             ((System.ComponentModel.ISupportInitialize)(this.pbPassIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();

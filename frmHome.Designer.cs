@@ -1,6 +1,6 @@
 ﻿namespace ClinicaMedica
 {
-    partial class Home
+    partial class frmHome
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,7 @@
             // 
             // btnsalir
             // 
+            this.btnsalir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.Image = global::ClinicaMedica.Properties.Resources.ExitIcon;
             this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -52,6 +53,7 @@
             // 
             // btnadmin
             // 
+            this.btnadmin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnadmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnadmin.Image = global::ClinicaMedica.Properties.Resources.AdminIcon32;
             this.btnadmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -67,6 +69,7 @@
             // 
             // btnmedico
             // 
+            this.btnmedico.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnmedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmedico.Image = global::ClinicaMedica.Properties.Resources.MedicoIcon32;
             this.btnmedico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -82,6 +85,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::ClinicaMedica.Properties.Resources.copia;
             this.pictureBox1.Location = new System.Drawing.Point(171, 35);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -91,16 +95,17 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // Home
+            // frmHome
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnadmin);
             this.Controls.Add(this.btnmedico);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Montserrat Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Home";
+            this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clinicas Guadalupanas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
