@@ -37,13 +37,13 @@
             this.lblMenuAdmin = new System.Windows.Forms.Label();
             this.pnSlideBotones = new System.Windows.Forms.Panel();
             this.pnLogoSlide = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnTop = new System.Windows.Forms.Panel();
             this.pnContenido = new System.Windows.Forms.Panel();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnSlideBotones.SuspendLayout();
             this.pnLogoSlide.SuspendLayout();
-            this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.pnTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -130,6 +130,7 @@
             this.btnAgregarPaciente.TabIndex = 1;
             this.btnAgregarPaciente.Text = "Agregar Paciente";
             this.btnAgregarPaciente.UseVisualStyleBackColor = true;
+            this.btnAgregarPaciente.Click += new System.EventHandler(this.btnAgregarPaciente_Click);
             // 
             // lblMenuAdmin
             // 
@@ -137,7 +138,7 @@
             this.lblMenuAdmin.AutoSize = true;
             this.lblMenuAdmin.Font = new System.Drawing.Font("Montserrat Thin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMenuAdmin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblMenuAdmin.Location = new System.Drawing.Point(230, 17);
+            this.lblMenuAdmin.Location = new System.Drawing.Point(269, 17);
             this.lblMenuAdmin.Name = "lblMenuAdmin";
             this.lblMenuAdmin.Size = new System.Drawing.Size(244, 29);
             this.lblMenuAdmin.TabIndex = 1;
@@ -156,7 +157,7 @@
             this.pnSlideBotones.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnSlideBotones.Location = new System.Drawing.Point(0, 0);
             this.pnSlideBotones.Name = "pnSlideBotones";
-            this.pnSlideBotones.Size = new System.Drawing.Size(230, 619);
+            this.pnSlideBotones.Size = new System.Drawing.Size(230, 761);
             this.pnSlideBotones.TabIndex = 7;
             // 
             // pnLogoSlide
@@ -170,24 +171,6 @@
             this.pnLogoSlide.Size = new System.Drawing.Size(230, 60);
             this.pnLogoSlide.TabIndex = 0;
             // 
-            // pnTop
-            // 
-            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(221)))), ((int)(((byte)(255)))));
-            this.pnTop.Controls.Add(this.lblMenuAdmin);
-            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTop.Location = new System.Drawing.Point(230, 0);
-            this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(677, 60);
-            this.pnTop.TabIndex = 8;
-            // 
-            // pnContenido
-            // 
-            this.pnContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContenido.Location = new System.Drawing.Point(230, 60);
-            this.pnContenido.Name = "pnContenido";
-            this.pnContenido.Size = new System.Drawing.Size(677, 559);
-            this.pnContenido.TabIndex = 9;
-            // 
             // pbLogo
             // 
             this.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -200,10 +183,28 @@
             this.pbLogo.TabStop = false;
             this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
             // 
+            // pnTop
+            // 
+            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(221)))), ((int)(((byte)(255)))));
+            this.pnTop.Controls.Add(this.lblMenuAdmin);
+            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTop.Location = new System.Drawing.Point(230, 0);
+            this.pnTop.Name = "pnTop";
+            this.pnTop.Size = new System.Drawing.Size(754, 60);
+            this.pnTop.TabIndex = 8;
+            // 
+            // pnContenido
+            // 
+            this.pnContenido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContenido.Location = new System.Drawing.Point(230, 60);
+            this.pnContenido.Name = "pnContenido";
+            this.pnContenido.Size = new System.Drawing.Size(754, 701);
+            this.pnContenido.TabIndex = 9;
+            // 
             // frmMenuAdministrativo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(907, 619);
+            this.ClientSize = new System.Drawing.Size(984, 761);
             this.Controls.Add(this.pnContenido);
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.pnSlideBotones);
@@ -213,9 +214,9 @@
             this.Text = "Menu Administrativo";
             this.pnSlideBotones.ResumeLayout(false);
             this.pnLogoSlide.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

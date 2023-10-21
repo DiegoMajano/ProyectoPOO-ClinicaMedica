@@ -32,5 +32,15 @@ namespace ClinicaMedica
         {
 
         }
+
+        private void btnAgregarPaciente_Click(object sender, EventArgs e)
+        {           
+            frmAgendarPacientes agendarPacientes = new frmAgendarPacientes();
+            agendarPacientes.TopLevel = false;
+            agendarPacientes.Dock = DockStyle.Fill;
+            pnContenido.Controls.Add(agendarPacientes);
+            agendarPacientes.Show();
+            agendarPacientes.BringToFront();
+        }
     }
 }

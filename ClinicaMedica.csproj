@@ -76,8 +76,12 @@
     <Compile Include="frmMenuAdministrativo.Designer.cs">
       <DependentUpon>frmMenuAdministrativo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgendarPacientes.resx">
+      <DependentUpon>frmAgendarPacientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>

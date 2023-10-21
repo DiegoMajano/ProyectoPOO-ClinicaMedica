@@ -21,3 +21,4 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaM
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\bin\Debug\Resources\AdminIcon32.png
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\bin\Debug\Resources\MedicoIcon32.png
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\bin\Debug\Resources\ExitIcon.png
+C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmAgendarPacientes.resources
