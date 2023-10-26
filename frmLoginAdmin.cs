@@ -10,18 +10,27 @@ using System.Windows.Forms;
 
 namespace ClinicaMedica
 {
-    public partial class LoginAdmin : Form
+    public partial class frmLoginAdmin : Form
     {
-        public LoginAdmin()
+        public frmLoginAdmin()
         {
             InitializeComponent();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
+            frmHome home = new frmHome();
             this.Hide();
             home.Show();
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            // codigo para validar el login
+
+            frmMenuAdministrativo menuAdmin = new frmMenuAdministrativo();
+            this.Hide();
+            menuAdmin.Show();
         }
     }
 }
