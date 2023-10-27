@@ -166,8 +166,8 @@
             // pcbLogo
             // 
             this.pcbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pcbLogo.Image = global::ClinicaMedica.Properties.Resources.copia;
-            this.pcbLogo.Location = new System.Drawing.Point(300, 14);
+            this.pcbLogo.Image = global::ClinicaMedica.Properties.Resources.logo_;
+            this.pcbLogo.Location = new System.Drawing.Point(300, 27);
             this.pcbLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pcbLogo.Name = "pcbLogo";
             this.pcbLogo.Size = new System.Drawing.Size(225, 72);

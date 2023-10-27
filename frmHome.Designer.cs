@@ -86,7 +86,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::ClinicaMedica.Properties.Resources.copia;
+            this.pictureBox1.Image = global::ClinicaMedica.Properties.Resources.logo_;
             this.pictureBox1.Location = new System.Drawing.Point(171, 35);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";

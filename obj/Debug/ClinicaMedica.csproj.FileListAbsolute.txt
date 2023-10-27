@@ -46,3 +46,4 @@ C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-Cl
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.exe
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.pdb
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarExpediente.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\logo}.png
