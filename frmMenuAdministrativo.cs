@@ -42,5 +42,20 @@ namespace ClinicaMedica
             agendarPacientes.Show();
             agendarPacientes.BringToFront();
         }
+
+        private void pnSlideBotones_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnConsultarExpediente_Click(object sender, EventArgs e)
+        {
+            frmConsultarExpediente consultarpaciente = new frmConsultarExpediente();
+            consultarpaciente.TopLevel = false;
+            consultarpaciente.Dock = DockStyle.Fill;
+            pnContenido.Controls.Add(consultarpaciente);
+            consultarpaciente.Show();
+            consultarpaciente.BringToFront();
+        }
     }
 }

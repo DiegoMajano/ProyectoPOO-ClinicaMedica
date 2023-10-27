@@ -35,7 +35,7 @@ namespace ClinicaMedica
             cbGenero.SelectedIndex = 0;
             mtxtDUI.Clear();
             mtxtNIT.Clear();
-            dtpFechaNaciemiento.Value = System.DateTime.Now;
+            dtpFechaNacimiento.Value = System.DateTime.Now;
         }     
         // Validaciones de los campos
         
@@ -77,7 +77,7 @@ namespace ClinicaMedica
 
         private void dtpFechaNaciemiento_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpFechaNaciemiento.Value > DateTime.Now)
+            if (dtpFechaNacimiento.Value > DateTime.Now)
             {
                 MessageBox.Show("Seleccionar una fecha válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -89,21 +89,33 @@ namespace ClinicaMedica
             paciente.SegundoNombre = txtS_Nombre.Text;
             paciente.PrimerApellido = txtP_Apellido.Text;
             paciente.SegundoApellido = txtS_Apellido.Text;
-            paciente.FechaNacimiento = dtpFechaNaciemiento.Value;
+            paciente.FechaNacimiento = dtpFechaNacimiento.Value;
             paciente.Direccion = txtDireccion.Text;
             paciente.Genero = cbGenero.SelectedItem.ToString();
             paciente.Telefono = mtxtTelefono.Text;
             paciente.Dui = mtxtDUI.Text;
             paciente.Nit = mtxtNIT.Text;
             LimpiarCampos();
+            //falta mostrar mensaje que se guardo correctamente, uso de catch
         }
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+            //falta mostrar que se borro correctamente o mal, uso de catch
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void pnContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gbInformacion_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

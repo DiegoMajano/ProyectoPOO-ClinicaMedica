@@ -103,26 +103,6 @@ namespace ClinicaMedica.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Diseño_sin_título {
-            get {
-                object obj = ResourceManager.GetObject("Diseño sin título", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Diseño_sin_título__1_ {
-            get {
-                object obj = ResourceManager.GetObject("Diseño sin título (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ExitIcon {
             get {
                 object obj = ResourceManager.GetObject("ExitIcon", resourceCulture);
@@ -156,16 +136,6 @@ namespace ClinicaMedica.Properties {
         internal static System.Drawing.Bitmap PasswordIcon {
             get {
                 object obj = ResourceManager.GetObject("PasswordIcon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PasswordIcon1 {
-            get {
-                object obj = ResourceManager.GetObject("PasswordIcon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
