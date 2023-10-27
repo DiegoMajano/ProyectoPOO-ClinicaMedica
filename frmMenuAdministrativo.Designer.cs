@@ -37,19 +37,19 @@
             this.lblMenuAdmin = new System.Windows.Forms.Label();
             this.pnSlideBotones = new System.Windows.Forms.Panel();
             this.pnLogoSlide = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnTop = new System.Windows.Forms.Panel();
             this.pnContenido = new System.Windows.Forms.Panel();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnSlideBotones.SuspendLayout();
             this.pnLogoSlide.SuspendLayout();
-            this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.pnTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
             this.btnSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -65,7 +65,7 @@
             // button5
             // 
             this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -80,7 +80,7 @@
             // btnConsultarCita
             // 
             this.btnConsultarCita.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnConsultarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            this.btnConsultarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnConsultarCita.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConsultarCita.FlatAppearance.BorderSize = 0;
             this.btnConsultarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -95,7 +95,7 @@
             // btnAgendarCita
             // 
             this.btnAgendarCita.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAgendarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            this.btnAgendarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnAgendarCita.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAgendarCita.FlatAppearance.BorderSize = 0;
             this.btnAgendarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -110,7 +110,7 @@
             // btnConsultarExpediente
             // 
             this.btnConsultarExpediente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnConsultarExpediente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            this.btnConsultarExpediente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnConsultarExpediente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConsultarExpediente.FlatAppearance.BorderSize = 0;
             this.btnConsultarExpediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -126,7 +126,7 @@
             // btnAgregarPaciente
             // 
             this.btnAgregarPaciente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAgregarPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            this.btnAgregarPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnAgregarPaciente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAgregarPaciente.FlatAppearance.BorderSize = 0;
             this.btnAgregarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -153,7 +153,7 @@
             // 
             // pnSlideBotones
             // 
-            this.pnSlideBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            this.pnSlideBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.pnSlideBotones.Controls.Add(this.btnSalir);
             this.pnSlideBotones.Controls.Add(this.button5);
             this.pnSlideBotones.Controls.Add(this.btnConsultarCita);
@@ -170,7 +170,7 @@
             // 
             // pnLogoSlide
             // 
-            this.pnLogoSlide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            this.pnLogoSlide.BackColor = System.Drawing.Color.White;
             this.pnLogoSlide.Controls.Add(this.pbLogo);
             this.pnLogoSlide.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnLogoSlide.Location = new System.Drawing.Point(0, 0);
@@ -178,25 +178,6 @@
             this.pnLogoSlide.Padding = new System.Windows.Forms.Padding(3);
             this.pnLogoSlide.Size = new System.Drawing.Size(230, 60);
             this.pnLogoSlide.TabIndex = 0;
-            // 
-            // pnTop
-            // 
-            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.pnTop.Controls.Add(this.lblMenuAdmin);
-            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTop.Location = new System.Drawing.Point(230, 0);
-            this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(754, 60);
-            this.pnTop.TabIndex = 8;
-            // 
-            // pnContenido
-            // 
-            this.pnContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(247)))), ((int)(((byte)(254)))));
-            this.pnContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContenido.Location = new System.Drawing.Point(230, 60);
-            this.pnContenido.Name = "pnContenido";
-            this.pnContenido.Size = new System.Drawing.Size(754, 701);
-            this.pnContenido.TabIndex = 9;
             // 
             // pbLogo
             // 
@@ -211,6 +192,25 @@
             this.pbLogo.TabStop = false;
             this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
             // 
+            // pnTop
+            // 
+            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
+            this.pnTop.Controls.Add(this.lblMenuAdmin);
+            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTop.Location = new System.Drawing.Point(230, 0);
+            this.pnTop.Name = "pnTop";
+            this.pnTop.Size = new System.Drawing.Size(754, 60);
+            this.pnTop.TabIndex = 8;
+            // 
+            // pnContenido
+            // 
+            this.pnContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.pnContenido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContenido.Location = new System.Drawing.Point(230, 60);
+            this.pnContenido.Name = "pnContenido";
+            this.pnContenido.Size = new System.Drawing.Size(754, 701);
+            this.pnContenido.TabIndex = 9;
+            // 
             // frmMenuAdministrativo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -224,9 +224,9 @@
             this.Text = "Menu Administrativo";
             this.pnSlideBotones.ResumeLayout(false);
             this.pnLogoSlide.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
