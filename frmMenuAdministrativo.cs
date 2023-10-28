@@ -62,5 +62,10 @@ namespace ClinicaMedica
             agendarCitas.Show();
             agendarCitas.BringToFront();
         }
+
+        private void btnLimpiarPnContenedor_Click(object sender, EventArgs e)
+        {
+            pnContenido.Controls.Clear();
+        }
     }
 }

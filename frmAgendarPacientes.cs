@@ -103,14 +103,5 @@ namespace ClinicaMedica
             LimpiarCampos();
             //falta mostrar que se borro correctamente o mal, uso de catch
         }
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void btnSalirexp_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
     }
 }

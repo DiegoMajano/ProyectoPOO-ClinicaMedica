@@ -16,15 +16,5 @@ namespace ClinicaMedica
         {
             InitializeComponent();
         }
-
-        private void gbInformacion_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSalirexp_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
     }
 }

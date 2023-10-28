@@ -37,7 +37,6 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.blcodigo = new System.Windows.Forms.Label();
-            this.btnSalirexp = new System.Windows.Forms.Button();
             this.pnTopexp = new System.Windows.Forms.Panel();
             this.lblAgendarPaciente = new System.Windows.Forms.Label();
             this.pnContenedor.SuspendLayout();
@@ -78,7 +77,6 @@
             this.gbInformacion.TabIndex = 23;
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "Llenar Datos del Paciente";
-            this.gbInformacion.Enter += new System.EventHandler(this.gbInformacion_Enter);
             // 
             // btnVerReportes
             // 
@@ -159,26 +157,11 @@
             this.blcodigo.TabIndex = 0;
             this.blcodigo.Text = "Buscar:";
             // 
-            // btnSalirexp
-            // 
-            this.btnSalirexp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalirexp.BackColor = System.Drawing.Color.White;
-            this.btnSalirexp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalirexp.Font = new System.Drawing.Font("Montserrat Thin Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalirexp.Location = new System.Drawing.Point(694, 10);
-            this.btnSalirexp.Name = "btnSalirexp";
-            this.btnSalirexp.Size = new System.Drawing.Size(50, 34);
-            this.btnSalirexp.TabIndex = 22;
-            this.btnSalirexp.Text = "Salir";
-            this.btnSalirexp.UseVisualStyleBackColor = false;
-            this.btnSalirexp.Click += new System.EventHandler(this.btnSalirexp_Click);
-            // 
             // pnTopexp
             // 
             this.pnTopexp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnTopexp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(64)))), ((int)(((byte)(139)))));
             this.pnTopexp.Controls.Add(this.lblAgendarPaciente);
-            this.pnTopexp.Controls.Add(this.btnSalirexp);
             this.pnTopexp.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTopexp.Location = new System.Drawing.Point(0, 0);
             this.pnTopexp.Name = "pnTopexp";
@@ -224,7 +207,6 @@
         private System.Windows.Forms.GroupBox gbInformacion;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label blcodigo;
-        private System.Windows.Forms.Button btnSalirexp;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel pnTopexp;

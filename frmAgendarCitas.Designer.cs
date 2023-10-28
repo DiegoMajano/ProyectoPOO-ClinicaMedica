@@ -43,7 +43,6 @@
             this.lblNombrePaciente = new System.Windows.Forms.Label();
             this.pnTopexp = new System.Windows.Forms.Panel();
             this.lblAgendarCita = new System.Windows.Forms.Label();
-            this.btnSalirexp = new System.Windows.Forms.Button();
             this.gbAgendarCitaa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
             this.pnTopexp.SuspendLayout();
@@ -197,7 +196,6 @@
             this.pnTopexp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnTopexp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(64)))), ((int)(((byte)(139)))));
             this.pnTopexp.Controls.Add(this.lblAgendarCita);
-            this.pnTopexp.Controls.Add(this.btnSalirexp);
             this.pnTopexp.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTopexp.Location = new System.Drawing.Point(0, 0);
             this.pnTopexp.Name = "pnTopexp";
@@ -216,20 +214,6 @@
             this.lblAgendarCita.TabIndex = 23;
             this.lblAgendarCita.Text = "Agendar Cita";
             this.lblAgendarCita.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnSalirexp
-            // 
-            this.btnSalirexp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalirexp.BackColor = System.Drawing.Color.White;
-            this.btnSalirexp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalirexp.Font = new System.Drawing.Font("Montserrat Thin", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalirexp.Location = new System.Drawing.Point(694, 10);
-            this.btnSalirexp.Name = "btnSalirexp";
-            this.btnSalirexp.Size = new System.Drawing.Size(50, 34);
-            this.btnSalirexp.TabIndex = 22;
-            this.btnSalirexp.Text = "Salir";
-            this.btnSalirexp.UseVisualStyleBackColor = false;
-            this.btnSalirexp.Click += new System.EventHandler(this.btnSalirexp_Click);
             // 
             // frmAgendarCitas
             // 
@@ -260,7 +244,6 @@
         private System.Windows.Forms.Label lblNombrePaciente;
         private System.Windows.Forms.Panel pnTopexp;
         private System.Windows.Forms.Label lblAgendarCita;
-        private System.Windows.Forms.Button btnSalirexp;
         private System.Windows.Forms.DataGridView dgvCitas;
         private System.Windows.Forms.DateTimePicker dtpFechaCita;
         private System.Windows.Forms.ComboBox cbHorarioCitas;

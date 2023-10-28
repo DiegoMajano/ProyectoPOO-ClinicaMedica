@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.pnTop = new System.Windows.Forms.Panel();
-            this.btnSalirexp = new System.Windows.Forms.Button();
             this.lblAgendarPaciente = new System.Windows.Forms.Label();
             this.pnContenedor = new System.Windows.Forms.Panel();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.mtxtNIT = new System.Windows.Forms.MaskedTextBox();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.lblDUI = new System.Windows.Forms.Label();
@@ -65,27 +63,12 @@
             // 
             this.pnTop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(64)))), ((int)(((byte)(139)))));
-            this.pnTop.Controls.Add(this.btnSalirexp);
             this.pnTop.Controls.Add(this.lblAgendarPaciente);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(754, 57);
             this.pnTop.TabIndex = 1;
-            // 
-            // btnSalirexp
-            // 
-            this.btnSalirexp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalirexp.BackColor = System.Drawing.Color.White;
-            this.btnSalirexp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalirexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalirexp.Location = new System.Drawing.Point(694, 10);
-            this.btnSalirexp.Name = "btnSalirexp";
-            this.btnSalirexp.Size = new System.Drawing.Size(50, 34);
-            this.btnSalirexp.TabIndex = 24;
-            this.btnSalirexp.Text = "Salir";
-            this.btnSalirexp.UseVisualStyleBackColor = false;
-            this.btnSalirexp.Click += new System.EventHandler(this.btnSalirexp_Click);
             // 
             // lblAgendarPaciente
             // 
@@ -117,7 +100,6 @@
             // 
             this.gbInformacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbInformacion.Controls.Add(this.label3);
-            this.gbInformacion.Controls.Add(this.btnSalir);
             this.gbInformacion.Controls.Add(this.mtxtNIT);
             this.gbInformacion.Controls.Add(this.btnBorrar);
             this.gbInformacion.Controls.Add(this.lblDUI);
@@ -158,19 +140,6 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "NIT";
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(578, 477);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(112, 40);
-            this.btnSalir.TabIndex = 22;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // mtxtNIT
             // 
             this.mtxtNIT.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -187,7 +156,7 @@
             this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(578, 430);
+            this.btnBorrar.Location = new System.Drawing.Point(585, 478);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(112, 40);
             this.btnBorrar.TabIndex = 21;
@@ -211,7 +180,7 @@
             this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(578, 384);
+            this.btnGuardar.Location = new System.Drawing.Point(585, 432);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(112, 40);
             this.btnGuardar.TabIndex = 20;
@@ -452,11 +421,9 @@
         private System.Windows.Forms.TextBox txtS_Nombre;
         private System.Windows.Forms.TextBox txtP_Nombre;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label lblAgendarPaciente;
         private System.Windows.Forms.GroupBox gbInformacion;
-        private System.Windows.Forms.Button btnSalirexp;
         private System.Windows.Forms.Label lblPnombre;
     }
 }

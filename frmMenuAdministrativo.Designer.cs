@@ -34,11 +34,11 @@
             this.btnAgendarCita = new System.Windows.Forms.Button();
             this.btnConsultarExpediente = new System.Windows.Forms.Button();
             this.btnAgregarPaciente = new System.Windows.Forms.Button();
-            this.lblMenuAdmin = new System.Windows.Forms.Label();
             this.pnSlideBotones = new System.Windows.Forms.Panel();
             this.pnLogoSlide = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.btnLimpiarPnContenedor = new System.Windows.Forms.Button();
             this.pnContenido = new System.Windows.Forms.Panel();
             this.pnSlideBotones.SuspendLayout();
             this.pnLogoSlide.SuspendLayout();
@@ -140,18 +140,6 @@
             this.btnAgregarPaciente.UseVisualStyleBackColor = false;
             this.btnAgregarPaciente.Click += new System.EventHandler(this.btnAgregarPaciente_Click);
             // 
-            // lblMenuAdmin
-            // 
-            this.lblMenuAdmin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMenuAdmin.AutoSize = true;
-            this.lblMenuAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenuAdmin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblMenuAdmin.Location = new System.Drawing.Point(269, 17);
-            this.lblMenuAdmin.Name = "lblMenuAdmin";
-            this.lblMenuAdmin.Size = new System.Drawing.Size(226, 25);
-            this.lblMenuAdmin.TabIndex = 1;
-            this.lblMenuAdmin.Text = "Menú Administrativo";
-            // 
             // pnSlideBotones
             // 
             this.pnSlideBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(53)))));
@@ -194,20 +182,37 @@
             // pnTop
             // 
             this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(248)))));
-            this.pnTop.Controls.Add(this.lblMenuAdmin);
+            this.pnTop.Controls.Add(this.btnLimpiarPnContenedor);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(230, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(754, 60);
+            this.pnTop.Size = new System.Drawing.Size(754, 30);
             this.pnTop.TabIndex = 8;
+            // 
+            // btnLimpiarPnContenedor
+            // 
+            this.btnLimpiarPnContenedor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLimpiarPnContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnLimpiarPnContenedor.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnLimpiarPnContenedor.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarPnContenedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarPnContenedor.Font = new System.Drawing.Font("Montserrat Thin Black", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarPnContenedor.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiarPnContenedor.Location = new System.Drawing.Point(716, 0);
+            this.btnLimpiarPnContenedor.Name = "btnLimpiarPnContenedor";
+            this.btnLimpiarPnContenedor.Size = new System.Drawing.Size(38, 30);
+            this.btnLimpiarPnContenedor.TabIndex = 0;
+            this.btnLimpiarPnContenedor.Text = "X";
+            this.btnLimpiarPnContenedor.UseVisualStyleBackColor = false;
+            this.btnLimpiarPnContenedor.Click += new System.EventHandler(this.btnLimpiarPnContenedor_Click);
             // 
             // pnContenido
             // 
             this.pnContenido.BackColor = System.Drawing.Color.White;
             this.pnContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContenido.Location = new System.Drawing.Point(230, 60);
+            this.pnContenido.Location = new System.Drawing.Point(230, 30);
             this.pnContenido.Name = "pnContenido";
-            this.pnContenido.Size = new System.Drawing.Size(754, 626);
+            this.pnContenido.Size = new System.Drawing.Size(754, 656);
             this.pnContenido.TabIndex = 9;
             // 
             // frmMenuAdministrativo
@@ -227,7 +232,6 @@
             this.pnLogoSlide.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.pnTop.ResumeLayout(false);
-            this.pnTop.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -243,7 +247,7 @@
         private System.Windows.Forms.Button btnConsultarExpediente;
         private System.Windows.Forms.Button btnAgregarPaciente;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.Label lblMenuAdmin;
         private System.Windows.Forms.Panel pnContenido;
+        private System.Windows.Forms.Button btnLimpiarPnContenedor;
     }
 }

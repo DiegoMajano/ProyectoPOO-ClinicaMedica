@@ -16,10 +16,5 @@ namespace ClinicaMedica
         {
             InitializeComponent();
         }
-
-        private void btnSalirexp_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
     }
 }
