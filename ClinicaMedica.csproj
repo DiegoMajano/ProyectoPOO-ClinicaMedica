@@ -98,6 +98,11 @@
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\RecursoFuente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecursoFuente.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAgendarCitas.resx">
       <DependentUpon>frmAgendarCitas.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultarExpediente.resx">
       <DependentUpon>frmConsultarExpediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearReporte.resx">
+      <DependentUpon>frmCrearReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
@@ -123,6 +131,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RecursoFuente.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RecursoFuente.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -153,6 +165,26 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Montserrat-Black.ttf" />
+    <None Include="Resources\Montserrat-BlackItalic.ttf" />
+    <None Include="Resources\Montserrat-Bold.ttf" />
+    <None Include="Resources\Montserrat-BoldItalic.ttf" />
+    <None Include="Resources\Montserrat-ExtraBold.ttf" />
+    <None Include="Resources\Montserrat-ExtraBoldItalic.ttf" />
+    <None Include="Resources\Montserrat-ExtraLight.ttf" />
+    <None Include="Resources\Montserrat-ExtraLightItalic.ttf" />
+    <None Include="Resources\Montserrat-Italic-VariableFont_wght.ttf" />
+    <None Include="Resources\Montserrat-Italic.ttf" />
+    <None Include="Resources\Montserrat-Light.ttf" />
+    <None Include="Resources\Montserrat-LightItalic.ttf" />
+    <None Include="Resources\Montserrat-Medium.ttf" />
+    <None Include="Resources\Montserrat-MediumItalic.ttf" />
+    <None Include="Resources\Montserrat-Regular.ttf" />
+    <None Include="Resources\Montserrat-SemiBold.ttf" />
+    <None Include="Resources\Montserrat-SemiBoldItalic.ttf" />
+    <None Include="Resources\Montserrat-Thin.ttf" />
+    <None Include="Resources\Montserrat-ThinItalic.ttf" />
+    <None Include="Resources\Montserrat-VariableFont_wght.ttf" />
     <None Include="Resources\PasswordIcon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

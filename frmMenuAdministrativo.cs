@@ -22,9 +22,9 @@ namespace ClinicaMedica
             DialogResult result = MessageBox.Show("¿Está seguro que desea cerrar sesión?","Aviso",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if(result == DialogResult.Yes)
             {
-                frmLoginAdmin loginAdmin = new frmLoginAdmin();
+                frmHome home = new frmHome();
                 this.Hide();
-                loginAdmin.Show();
+                home.Show();
             }
         }
 

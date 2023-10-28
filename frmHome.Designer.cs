@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnSoporte = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnadmin = new System.Windows.Forms.Button();
             this.btnmedico = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSoporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnSoporte
+            // 
+            this.btnSoporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSoporte.Location = new System.Drawing.Point(701, 403);
+            this.btnSoporte.Name = "btnSoporte";
+            this.btnSoporte.Size = new System.Drawing.Size(87, 35);
+            this.btnSoporte.TabIndex = 8;
+            this.btnSoporte.Text = "Soporte";
+            this.btnSoporte.UseVisualStyleBackColor = true;
             // 
             // btnsalir
             // 
@@ -96,16 +106,6 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // btnSoporte
-            // 
-            this.btnSoporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSoporte.Location = new System.Drawing.Point(701, 403);
-            this.btnSoporte.Name = "btnSoporte";
-            this.btnSoporte.Size = new System.Drawing.Size(87, 35);
-            this.btnSoporte.TabIndex = 8;
-            this.btnSoporte.Text = "Soporte";
-            this.btnSoporte.UseVisualStyleBackColor = true;
-            // 
             // frmHome
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -117,7 +117,7 @@
             this.Controls.Add(this.btnadmin);
             this.Controls.Add(this.btnmedico);
             this.Controls.Add(this.pictureBox1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Montserrat Thin Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clinicas Guadalupanas";

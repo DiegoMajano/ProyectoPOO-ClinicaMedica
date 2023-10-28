@@ -52,6 +52,7 @@
             this.pnContenedor.BackColor = System.Drawing.Color.White;
             this.pnContenedor.Controls.Add(this.gbInformacion);
             this.pnContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContenedor.Font = new System.Drawing.Font("Montserrat Thin Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnContenedor.Location = new System.Drawing.Point(0, 57);
             this.pnContenedor.Margin = new System.Windows.Forms.Padding(5);
             this.pnContenedor.Name = "pnContenedor";
@@ -61,6 +62,7 @@
             // 
             // gbInformacion
             // 
+            this.gbInformacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbInformacion.BackColor = System.Drawing.Color.White;
             this.gbInformacion.Controls.Add(this.btnVerReportes);
             this.gbInformacion.Controls.Add(this.btnVerCitasM);
@@ -69,7 +71,7 @@
             this.gbInformacion.Controls.Add(this.btnBuscar);
             this.gbInformacion.Controls.Add(this.txtBusqueda);
             this.gbInformacion.Controls.Add(this.blcodigo);
-            this.gbInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbInformacion.Font = new System.Drawing.Font("Montserrat Thin", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInformacion.Location = new System.Drawing.Point(25, 15);
             this.gbInformacion.Name = "gbInformacion";
             this.gbInformacion.Size = new System.Drawing.Size(704, 540);
@@ -82,7 +84,7 @@
             // 
             this.btnVerReportes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVerReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnVerReportes.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerReportes.Location = new System.Drawing.Point(594, 495);
             this.btnVerReportes.Name = "btnVerReportes";
             this.btnVerReportes.Size = new System.Drawing.Size(104, 34);
@@ -94,7 +96,7 @@
             // 
             this.btnVerCitasM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVerCitasM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerCitasM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnVerCitasM.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerCitasM.Location = new System.Drawing.Point(481, 495);
             this.btnVerCitasM.Name = "btnVerCitasM";
             this.btnVerCitasM.Size = new System.Drawing.Size(104, 34);
@@ -106,7 +108,7 @@
             // 
             this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.Location = new System.Drawing.Point(580, 39);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(90, 31);
@@ -128,7 +130,7 @@
             // 
             this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(484, 39);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(90, 31);
@@ -140,20 +142,20 @@
             // 
             this.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqueda.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.Location = new System.Drawing.Point(96, 42);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(375, 24);
+            this.txtBusqueda.Size = new System.Drawing.Size(375, 26);
             this.txtBusqueda.TabIndex = 2;
             // 
             // blcodigo
             // 
             this.blcodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.blcodigo.AutoSize = true;
-            this.blcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blcodigo.Location = new System.Drawing.Point(31, 44);
+            this.blcodigo.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blcodigo.Location = new System.Drawing.Point(18, 44);
             this.blcodigo.Name = "blcodigo";
-            this.blcodigo.Size = new System.Drawing.Size(59, 18);
+            this.blcodigo.Size = new System.Drawing.Size(64, 21);
             this.blcodigo.TabIndex = 0;
             this.blcodigo.Text = "Buscar:";
             // 
@@ -162,7 +164,7 @@
             this.btnSalirexp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSalirexp.BackColor = System.Drawing.Color.White;
             this.btnSalirexp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalirexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirexp.Font = new System.Drawing.Font("Montserrat Thin Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalirexp.Location = new System.Drawing.Point(694, 10);
             this.btnSalirexp.Name = "btnSalirexp";
             this.btnSalirexp.Size = new System.Drawing.Size(50, 34);
@@ -187,11 +189,11 @@
             // 
             this.lblAgendarPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAgendarPaciente.AutoSize = true;
-            this.lblAgendarPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgendarPaciente.Font = new System.Drawing.Font("Montserrat Thin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgendarPaciente.ForeColor = System.Drawing.SystemColors.Control;
             this.lblAgendarPaciente.Location = new System.Drawing.Point(275, 13);
             this.lblAgendarPaciente.Name = "lblAgendarPaciente";
-            this.lblAgendarPaciente.Size = new System.Drawing.Size(221, 24);
+            this.lblAgendarPaciente.Size = new System.Drawing.Size(237, 26);
             this.lblAgendarPaciente.TabIndex = 23;
             this.lblAgendarPaciente.Text = "Consultar Expedientes";
             this.lblAgendarPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,6 +204,7 @@
             this.ClientSize = new System.Drawing.Size(754, 626);
             this.Controls.Add(this.pnContenedor);
             this.Controls.Add(this.pnTopexp);
+            this.Font = new System.Drawing.Font("Montserrat Thin Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConsultarExpediente";
             this.Text = "frmConsultarExpediente";
