@@ -108,14 +108,9 @@ namespace ClinicaMedica
             this.Hide();
         }
 
-        private void pnContenedor_Paint(object sender, PaintEventArgs e)
+        private void btnSalirexp_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void gbInformacion_Enter(object sender, EventArgs e)
-        {
-
+            this.Hide();
         }
     }
 }

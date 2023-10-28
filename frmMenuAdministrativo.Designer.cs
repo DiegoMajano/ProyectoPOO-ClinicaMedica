@@ -54,7 +54,7 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSalir.Location = new System.Drawing.Point(0, 697);
+            this.btnSalir.Location = new System.Drawing.Point(0, 622);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(230, 64);
             this.btnSalir.TabIndex = 6;
@@ -106,6 +106,7 @@
             this.btnAgendarCita.TabIndex = 3;
             this.btnAgendarCita.Text = "Agendar Cita";
             this.btnAgendarCita.UseVisualStyleBackColor = false;
+            this.btnAgendarCita.Click += new System.EventHandler(this.btnAgendarCita_Click);
             // 
             // btnConsultarExpediente
             // 
@@ -164,9 +165,8 @@
             this.pnSlideBotones.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnSlideBotones.Location = new System.Drawing.Point(0, 0);
             this.pnSlideBotones.Name = "pnSlideBotones";
-            this.pnSlideBotones.Size = new System.Drawing.Size(230, 761);
+            this.pnSlideBotones.Size = new System.Drawing.Size(230, 686);
             this.pnSlideBotones.TabIndex = 7;
-            this.pnSlideBotones.Paint += new System.Windows.Forms.PaintEventHandler(this.pnSlideBotones_Paint);
             // 
             // pnLogoSlide
             // 
@@ -195,7 +195,7 @@
             this.pnContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContenido.Location = new System.Drawing.Point(230, 60);
             this.pnContenido.Name = "pnContenido";
-            this.pnContenido.Size = new System.Drawing.Size(754, 701);
+            this.pnContenido.Size = new System.Drawing.Size(754, 626);
             this.pnContenido.TabIndex = 9;
             // 
             // pbLogo
@@ -209,12 +209,12 @@
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
-            this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
             // 
             // frmMenuAdministrativo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(984, 761);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(984, 686);
             this.Controls.Add(this.pnContenido);
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.pnSlideBotones);

@@ -28,9 +28,9 @@ namespace ClinicaMedica
             }
         }
 
-        private void pbLogo_Click(object sender, EventArgs e)
+        public void CerrarFormsHijos()
         {
-
+            pnContenido.Controls.Clear();
         }
 
         private void btnAgregarPaciente_Click(object sender, EventArgs e)
@@ -43,11 +43,6 @@ namespace ClinicaMedica
             agendarPacientes.BringToFront();
         }
 
-        private void pnSlideBotones_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnConsultarExpediente_Click(object sender, EventArgs e)
         {
             frmConsultarExpediente consultarpaciente = new frmConsultarExpediente();
@@ -56,6 +51,16 @@ namespace ClinicaMedica
             pnContenido.Controls.Add(consultarpaciente);
             consultarpaciente.Show();
             consultarpaciente.BringToFront();
+        }
+
+        private void btnAgendarCita_Click(object sender, EventArgs e)
+        {
+            frmAgendarCitas agendarCitas = new frmAgendarCitas();
+            agendarCitas.TopLevel = false;
+            agendarCitas.Dock = DockStyle.Fill;
+            pnContenido.Controls.Add(agendarCitas);
+            agendarCitas.Show();
+            agendarCitas.BringToFront();
         }
     }
 }

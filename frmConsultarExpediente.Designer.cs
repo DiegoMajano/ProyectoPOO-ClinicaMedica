@@ -30,15 +30,19 @@
         {
             this.pnContenedor = new System.Windows.Forms.Panel();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
-            this.txtP_Nombre = new System.Windows.Forms.TextBox();
+            this.btnVerReportes = new System.Windows.Forms.Button();
+            this.btnVerCitasM = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.dgvConsultarExpediente = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.blcodigo = new System.Windows.Forms.Label();
             this.btnSalirexp = new System.Windows.Forms.Button();
-            this.btnBorrarexp = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.pnTopexp = new System.Windows.Forms.Panel();
             this.lblAgendarPaciente = new System.Windows.Forms.Label();
             this.pnContenedor.SuspendLayout();
             this.gbInformacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarExpediente)).BeginInit();
             this.pnTopexp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,21 +51,23 @@
             this.pnContenedor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnContenedor.BackColor = System.Drawing.Color.White;
             this.pnContenedor.Controls.Add(this.gbInformacion);
-            this.pnContenedor.Controls.Add(this.btnSalirexp);
-            this.pnContenedor.Controls.Add(this.btnBorrarexp);
-            this.pnContenedor.Controls.Add(this.btnBuscar);
             this.pnContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContenedor.Location = new System.Drawing.Point(0, 57);
             this.pnContenedor.Margin = new System.Windows.Forms.Padding(5);
             this.pnContenedor.Name = "pnContenedor";
             this.pnContenedor.Padding = new System.Windows.Forms.Padding(5);
-            this.pnContenedor.Size = new System.Drawing.Size(754, 644);
+            this.pnContenedor.Size = new System.Drawing.Size(754, 569);
             this.pnContenedor.TabIndex = 5;
             // 
             // gbInformacion
             // 
             this.gbInformacion.BackColor = System.Drawing.Color.White;
-            this.gbInformacion.Controls.Add(this.txtP_Nombre);
+            this.gbInformacion.Controls.Add(this.btnVerReportes);
+            this.gbInformacion.Controls.Add(this.btnVerCitasM);
+            this.gbInformacion.Controls.Add(this.btnBorrar);
+            this.gbInformacion.Controls.Add(this.dgvConsultarExpediente);
+            this.gbInformacion.Controls.Add(this.btnBuscar);
+            this.gbInformacion.Controls.Add(this.txtBusqueda);
             this.gbInformacion.Controls.Add(this.blcodigo);
             this.gbInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInformacion.Location = new System.Drawing.Point(25, 15);
@@ -72,68 +78,105 @@
             this.gbInformacion.Text = "Llenar Datos del Paciente";
             this.gbInformacion.Enter += new System.EventHandler(this.gbInformacion_Enter);
             // 
-            // txtP_Nombre
+            // btnVerReportes
             // 
-            this.txtP_Nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtP_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtP_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtP_Nombre.Location = new System.Drawing.Point(323, 28);
-            this.txtP_Nombre.Name = "txtP_Nombre";
-            this.txtP_Nombre.Size = new System.Drawing.Size(219, 24);
-            this.txtP_Nombre.TabIndex = 2;
+            this.btnVerReportes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVerReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnVerReportes.Location = new System.Drawing.Point(594, 495);
+            this.btnVerReportes.Name = "btnVerReportes";
+            this.btnVerReportes.Size = new System.Drawing.Size(104, 34);
+            this.btnVerReportes.TabIndex = 23;
+            this.btnVerReportes.Text = "Reportes";
+            this.btnVerReportes.UseVisualStyleBackColor = true;
+            // 
+            // btnVerCitasM
+            // 
+            this.btnVerCitasM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVerCitasM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerCitasM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnVerCitasM.Location = new System.Drawing.Point(481, 495);
+            this.btnVerCitasM.Name = "btnVerCitasM";
+            this.btnVerCitasM.Size = new System.Drawing.Size(104, 34);
+            this.btnVerCitasM.TabIndex = 22;
+            this.btnVerCitasM.Text = "Citas";
+            this.btnVerCitasM.UseVisualStyleBackColor = true;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.Location = new System.Drawing.Point(580, 39);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(90, 31);
+            this.btnBorrar.TabIndex = 21;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            // 
+            // dgvConsultarExpediente
+            // 
+            this.dgvConsultarExpediente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarExpediente.Location = new System.Drawing.Point(6, 79);
+            this.dgvConsultarExpediente.Name = "dgvConsultarExpediente";
+            this.dgvConsultarExpediente.ReadOnly = true;
+            this.dgvConsultarExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvConsultarExpediente.Size = new System.Drawing.Size(692, 410);
+            this.dgvConsultarExpediente.TabIndex = 3;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(484, 39);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(90, 31);
+            this.btnBuscar.TabIndex = 20;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqueda.Location = new System.Drawing.Point(96, 42);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(375, 24);
+            this.txtBusqueda.TabIndex = 2;
             // 
             // blcodigo
             // 
             this.blcodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.blcodigo.AutoSize = true;
             this.blcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blcodigo.Location = new System.Drawing.Point(102, 30);
+            this.blcodigo.Location = new System.Drawing.Point(31, 44);
             this.blcodigo.Name = "blcodigo";
-            this.blcodigo.Size = new System.Drawing.Size(117, 18);
+            this.blcodigo.Size = new System.Drawing.Size(59, 18);
             this.blcodigo.TabIndex = 0;
-            this.blcodigo.Text = "Codigo Paciente";
+            this.blcodigo.Text = "Buscar:";
             // 
             // btnSalirexp
             // 
             this.btnSalirexp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalirexp.BackColor = System.Drawing.Color.White;
             this.btnSalirexp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalirexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSalirexp.Location = new System.Drawing.Point(480, 572);
+            this.btnSalirexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirexp.Location = new System.Drawing.Point(694, 10);
             this.btnSalirexp.Name = "btnSalirexp";
-            this.btnSalirexp.Size = new System.Drawing.Size(112, 40);
+            this.btnSalirexp.Size = new System.Drawing.Size(50, 34);
             this.btnSalirexp.TabIndex = 22;
             this.btnSalirexp.Text = "Salir";
-            this.btnSalirexp.UseVisualStyleBackColor = true;
-            // 
-            // btnBorrarexp
-            // 
-            this.btnBorrarexp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBorrarexp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrarexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnBorrarexp.Location = new System.Drawing.Point(327, 572);
-            this.btnBorrarexp.Name = "btnBorrarexp";
-            this.btnBorrarexp.Size = new System.Drawing.Size(112, 40);
-            this.btnBorrarexp.TabIndex = 21;
-            this.btnBorrarexp.Text = "Borrar";
-            this.btnBorrarexp.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnBuscar.Location = new System.Drawing.Point(178, 572);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(112, 40);
-            this.btnBuscar.TabIndex = 20;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnSalirexp.UseVisualStyleBackColor = false;
+            this.btnSalirexp.Click += new System.EventHandler(this.btnSalirexp_Click);
             // 
             // pnTopexp
             // 
             this.pnTopexp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnTopexp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(64)))), ((int)(((byte)(139)))));
             this.pnTopexp.Controls.Add(this.lblAgendarPaciente);
+            this.pnTopexp.Controls.Add(this.btnSalirexp);
             this.pnTopexp.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTopexp.Location = new System.Drawing.Point(0, 0);
             this.pnTopexp.Name = "pnTopexp";
@@ -156,7 +199,7 @@
             // frmConsultarExpediente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(754, 701);
+            this.ClientSize = new System.Drawing.Size(754, 626);
             this.Controls.Add(this.pnContenedor);
             this.Controls.Add(this.pnTopexp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -165,6 +208,7 @@
             this.pnContenedor.ResumeLayout(false);
             this.gbInformacion.ResumeLayout(false);
             this.gbInformacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarExpediente)).EndInit();
             this.pnTopexp.ResumeLayout(false);
             this.pnTopexp.PerformLayout();
             this.ResumeLayout(false);
@@ -175,12 +219,15 @@
 
         private System.Windows.Forms.Panel pnContenedor;
         private System.Windows.Forms.GroupBox gbInformacion;
-        private System.Windows.Forms.TextBox txtP_Nombre;
+        private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label blcodigo;
         private System.Windows.Forms.Button btnSalirexp;
-        private System.Windows.Forms.Button btnBorrarexp;
+        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel pnTopexp;
         private System.Windows.Forms.Label lblAgendarPaciente;
+        private System.Windows.Forms.DataGridView dgvConsultarExpediente;
+        private System.Windows.Forms.Button btnVerReportes;
+        private System.Windows.Forms.Button btnVerCitasM;
     }
 }

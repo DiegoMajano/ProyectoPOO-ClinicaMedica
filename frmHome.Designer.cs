@@ -32,6 +32,7 @@
             this.btnadmin = new System.Windows.Forms.Button();
             this.btnmedico = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSoporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             this.btnadmin.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnadmin.Size = new System.Drawing.Size(210, 62);
             this.btnadmin.TabIndex = 6;
-            this.btnadmin.Text = "Personal Administrativo";
+            this.btnadmin.Text = "Personal \r\nAdministrativo";
             this.btnadmin.UseVisualStyleBackColor = true;
             this.btnadmin.Click += new System.EventHandler(this.btnadmin_Click);
             // 
@@ -95,12 +96,23 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // btnSoporte
+            // 
+            this.btnSoporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSoporte.Location = new System.Drawing.Point(701, 403);
+            this.btnSoporte.Name = "btnSoporte";
+            this.btnSoporte.Size = new System.Drawing.Size(87, 35);
+            this.btnSoporte.TabIndex = 8;
+            this.btnSoporte.Text = "Soporte";
+            this.btnSoporte.UseVisualStyleBackColor = true;
+            // 
             // frmHome
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSoporte);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnadmin);
             this.Controls.Add(this.btnmedico);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.Button btnadmin;
         private System.Windows.Forms.Button btnmedico;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnSoporte;
     }
 }

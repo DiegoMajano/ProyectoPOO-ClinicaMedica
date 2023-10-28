@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ClinicaMedica
 {
-    public partial class frmConsultarExpediente : Form
+    public partial class frmAgendarCitas : Form
     {
-        public frmConsultarExpediente()
+        public frmAgendarCitas()
         {
             InitializeComponent();
-        }
-
-        private void gbInformacion_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSalirexp_Click(object sender, EventArgs e)
