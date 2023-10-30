@@ -33,12 +33,20 @@ namespace ClinicaMedica
             pnContenido.Controls.Clear();
         }
 
+        // variable estatica para almacenar la referencia a los formularios
+
+        private static frmCrearReportes crearReporte;
+        private static frmConsultarExpedientes consultarExpediente;
+        private static frmConsultarCita consultarCita;
         private void btnCrearReporte_Click(object sender, EventArgs e)
         {
-            frmCrearReportes crearReporte = new frmCrearReportes();
-            crearReporte.TopLevel = false;
-            pnContenido.Controls.Add(crearReporte);
-            crearReporte.Dock = DockStyle.Fill;
+            if (crearReporte == null)
+            {
+                crearReporte = new frmCrearReportes();
+                crearReporte.TopLevel = false;
+                pnContenido.Controls.Add(crearReporte);
+                crearReporte.Dock = DockStyle.Fill;
+            }            
             crearReporte.Show();
             crearReporte.BringToFront();
 
@@ -46,27 +54,28 @@ namespace ClinicaMedica
 
         private void btnConsultarExpediente_Click(object sender, EventArgs e)
         {
-            frmConsultarExpedientes consultarExpediente = new frmConsultarExpedientes();
-            consultarExpediente.TopLevel = false;
-            pnContenido.Controls.Add(consultarExpediente);
-            consultarExpediente.Dock = DockStyle.Fill;
+            if (consultarExpediente==null)
+            {
+                consultarExpediente = new frmConsultarExpedientes();
+                consultarExpediente.TopLevel = false;
+                pnContenido.Controls.Add(consultarExpediente);
+                consultarExpediente.Dock = DockStyle.Fill;
+            }            
             consultarExpediente.Show();
             consultarExpediente.BringToFront();
         }
 
         private void btnConsultarCita_Click(object sender, EventArgs e)
         {
-            frmConsultarCita consultarCita = new frmConsultarCita();
-            consultarCita.TopLevel = false;
-            pnContenido.Controls.Add(consultarCita);
-            consultarCita.Dock = DockStyle.Fill;
+            if (consultarCita==null)
+            {
+                consultarCita = new frmConsultarCita();
+                consultarCita.TopLevel = false;
+                pnContenido.Controls.Add(consultarCita);
+                consultarCita.Dock = DockStyle.Fill;
+            }            
             consultarCita.Show();
             consultarCita.BringToFront();
-        }
-
-        private void btnCrearReceta_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

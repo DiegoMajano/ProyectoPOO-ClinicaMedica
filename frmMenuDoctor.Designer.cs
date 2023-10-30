@@ -143,7 +143,6 @@
             this.btnCrearReceta.TabIndex = 4;
             this.btnCrearReceta.Text = "algomas";
             this.btnCrearReceta.UseVisualStyleBackColor = false;
-            this.btnCrearReceta.Click += new System.EventHandler(this.btnCrearReceta_Click);
             // 
             // btnCrearReporte
             // 
