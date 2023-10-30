@@ -23,5 +23,14 @@ namespace ClinicaMedica
             this.Hide();
             home.Show();
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            // codigo para validar el login
+
+            frmMenuDoctor menuDoctor = new frmMenuDoctor();
+            this.Hide();
+            menuDoctor.Show();
+        }
     }
 }

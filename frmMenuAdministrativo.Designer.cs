@@ -36,14 +36,14 @@
             this.btnAgregarPaciente = new System.Windows.Forms.Button();
             this.pnSlideBotones = new System.Windows.Forms.Panel();
             this.pnLogoSlide = new System.Windows.Forms.Panel();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnLimpiarPnContenedor = new System.Windows.Forms.Button();
             this.pnContenido = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnSlideBotones.SuspendLayout();
             this.pnLogoSlide.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -74,7 +74,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(230, 64);
             this.button5.TabIndex = 5;
-            this.button5.Text = " NoRecuerdoXD";
+            this.button5.Text = "Consultar Agenda por Doctor";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // btnConsultarCita
@@ -91,6 +91,7 @@
             this.btnConsultarCita.TabIndex = 4;
             this.btnConsultarCita.Text = "Consultar Cita";
             this.btnConsultarCita.UseVisualStyleBackColor = false;
+            this.btnConsultarCita.Click += new System.EventHandler(this.btnConsultarCita_Click);
             // 
             // btnAgendarCita
             // 
@@ -167,18 +168,6 @@
             this.pnLogoSlide.Size = new System.Drawing.Size(230, 60);
             this.pnLogoSlide.TabIndex = 0;
             // 
-            // pbLogo
-            // 
-            this.pbLogo.BackColor = System.Drawing.Color.White;
-            this.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbLogo.Image = global::ClinicaMedica.Properties.Resources.logo_;
-            this.pbLogo.Location = new System.Drawing.Point(3, 3);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(224, 54);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo.TabIndex = 0;
-            this.pbLogo.TabStop = false;
-            // 
             // pnTop
             // 
             this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(248)))));
@@ -208,6 +197,7 @@
             // 
             // pnContenido
             // 
+            this.pnContenido.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnContenido.BackColor = System.Drawing.Color.White;
             this.pnContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContenido.Location = new System.Drawing.Point(230, 30);
@@ -215,10 +205,21 @@
             this.pnContenido.Size = new System.Drawing.Size(754, 656);
             this.pnContenido.TabIndex = 9;
             // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.Color.White;
+            this.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbLogo.Image = global::ClinicaMedica.Properties.Resources.logo_;
+            this.pbLogo.Location = new System.Drawing.Point(3, 3);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(224, 54);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
+            // 
             // frmMenuAdministrativo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(984, 686);
             this.Controls.Add(this.pnContenido);
             this.Controls.Add(this.pnTop);
@@ -230,8 +231,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnSlideBotones.ResumeLayout(false);
             this.pnLogoSlide.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.pnTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

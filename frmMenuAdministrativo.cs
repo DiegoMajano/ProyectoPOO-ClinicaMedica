@@ -28,14 +28,9 @@ namespace ClinicaMedica
             }
         }
 
-        public void CerrarFormsHijos()
-        {
-            pnContenido.Controls.Clear();
-        }
-
         private void btnAgregarPaciente_Click(object sender, EventArgs e)
         {           
-            frmAgendarPacientes agendarPacientes = new frmAgendarPacientes();
+            frmAgregarPaciente agendarPacientes = new frmAgregarPaciente();
             agendarPacientes.TopLevel = false;
             agendarPacientes.Dock = DockStyle.Fill;
             pnContenido.Controls.Add(agendarPacientes);
@@ -45,7 +40,7 @@ namespace ClinicaMedica
 
         private void btnConsultarExpediente_Click(object sender, EventArgs e)
         {
-            frmConsultarExpediente consultarpaciente = new frmConsultarExpediente();
+            frmConsultarExpedientes consultarpaciente = new frmConsultarExpedientes();
             consultarpaciente.TopLevel = false;
             consultarpaciente.Dock = DockStyle.Fill;
             pnContenido.Controls.Add(consultarpaciente);
@@ -55,7 +50,7 @@ namespace ClinicaMedica
 
         private void btnAgendarCita_Click(object sender, EventArgs e)
         {
-            frmAgendarCitas agendarCitas = new frmAgendarCitas();
+            frmAgendarCita agendarCitas = new frmAgendarCita();
             agendarCitas.TopLevel = false;
             agendarCitas.Dock = DockStyle.Fill;
             pnContenido.Controls.Add(agendarCitas);
@@ -66,6 +61,16 @@ namespace ClinicaMedica
         private void btnLimpiarPnContenedor_Click(object sender, EventArgs e)
         {
             pnContenido.Controls.Clear();
+        }
+
+        private void btnConsultarCita_Click(object sender, EventArgs e)
+        {
+            frmConsultarCita consultarCita = new frmConsultarCita();
+            consultarCita.TopLevel = false;
+            consultarCita.Dock = DockStyle.Fill;
+            pnContenido.Controls.Add(consultarCita);
+            consultarCita.Show();
+            consultarCita.BringToFront();
         }
     }
 }

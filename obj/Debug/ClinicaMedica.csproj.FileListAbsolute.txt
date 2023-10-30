@@ -21,7 +21,6 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaM
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\bin\Debug\Resources\AdminIcon32.png
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\bin\Debug\Resources\MedicoIcon32.png
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\bin\Debug\Resources\ExitIcon.png
-C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmAgendarPacientes.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\278158071_329692962482837_3178279064538201005_n.jpg
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\copia.jpg
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\PasswordIcon.png
@@ -48,7 +47,12 @@ C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-Cl
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarExpediente.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\logo}.png
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\bin\Debug\Resources\logo}.png
-C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarExpediente.resources
-C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmAgendarCitas.resources
-C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmCrearReporte.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.Resources.RecursoFuente.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmMenuDoctor.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarCita.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmBase.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmAgregarPaciente.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmAgendarCita.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarExpedientes.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmCrearReportes.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmCrearReceta.resources

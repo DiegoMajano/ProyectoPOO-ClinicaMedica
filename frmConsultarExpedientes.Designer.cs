@@ -1,0 +1,194 @@
+﻿namespace ClinicaMedica
+{
+    partial class frmConsultarExpedientes
+    {
+        /// <summary>
+        /// Variable del diseñador necesaria.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Limpiar los recursos que se estén usando.
+        /// </summary>
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Código generado por el Diseñador de Windows Forms
+
+        /// <summary>
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.gbInformacion = new System.Windows.Forms.GroupBox();
+            this.btnVerReportes = new System.Windows.Forms.Button();
+            this.btnVerCitasM = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.dgvConsultarExpediente = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.blcodigo = new System.Windows.Forms.Label();
+            this.pnTop.SuspendLayout();
+            this.pnContenido.SuspendLayout();
+            this.gbInformacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarExpediente)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Location = new System.Drawing.Point(252, 12);
+            this.lblTitulo.Size = new System.Drawing.Size(234, 26);
+            this.lblTitulo.Text = "Consultar expedientes";
+            // 
+            // pnBottom
+            // 
+            this.pnBottom.Location = new System.Drawing.Point(0, 674);
+            this.pnBottom.Size = new System.Drawing.Size(754, 27);
+            // 
+            // pnContenido
+            // 
+            this.pnContenido.Controls.Add(this.gbInformacion);
+            this.pnContenido.Size = new System.Drawing.Size(754, 617);
+            // 
+            // gbInformacion
+            // 
+            this.gbInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbInformacion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.gbInformacion.BackColor = System.Drawing.Color.White;
+            this.gbInformacion.Controls.Add(this.btnVerReportes);
+            this.gbInformacion.Controls.Add(this.btnVerCitasM);
+            this.gbInformacion.Controls.Add(this.btnBorrar);
+            this.gbInformacion.Controls.Add(this.dgvConsultarExpediente);
+            this.gbInformacion.Controls.Add(this.btnBuscar);
+            this.gbInformacion.Controls.Add(this.txtBusqueda);
+            this.gbInformacion.Controls.Add(this.blcodigo);
+            this.gbInformacion.Font = new System.Drawing.Font("Montserrat Thin", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbInformacion.Location = new System.Drawing.Point(25, 17);
+            this.gbInformacion.Name = "gbInformacion";
+            this.gbInformacion.Size = new System.Drawing.Size(701, 540);
+            this.gbInformacion.TabIndex = 24;
+            this.gbInformacion.TabStop = false;
+            this.gbInformacion.Text = "Llenar Datos del Paciente";
+            // 
+            // btnVerReportes
+            // 
+            this.btnVerReportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVerReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerReportes.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerReportes.Location = new System.Drawing.Point(591, 495);
+            this.btnVerReportes.Name = "btnVerReportes";
+            this.btnVerReportes.Size = new System.Drawing.Size(104, 34);
+            this.btnVerReportes.TabIndex = 23;
+            this.btnVerReportes.Text = "Reportes";
+            this.btnVerReportes.UseVisualStyleBackColor = true;
+            // 
+            // btnVerCitasM
+            // 
+            this.btnVerCitasM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVerCitasM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerCitasM.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerCitasM.Location = new System.Drawing.Point(478, 495);
+            this.btnVerCitasM.Name = "btnVerCitasM";
+            this.btnVerCitasM.Size = new System.Drawing.Size(104, 34);
+            this.btnVerCitasM.TabIndex = 22;
+            this.btnVerCitasM.Text = "Citas";
+            this.btnVerCitasM.UseVisualStyleBackColor = true;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.Location = new System.Drawing.Point(577, 39);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(90, 31);
+            this.btnBorrar.TabIndex = 21;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            // 
+            // dgvConsultarExpediente
+            // 
+            this.dgvConsultarExpediente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvConsultarExpediente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarExpediente.Location = new System.Drawing.Point(6, 79);
+            this.dgvConsultarExpediente.Name = "dgvConsultarExpediente";
+            this.dgvConsultarExpediente.ReadOnly = true;
+            this.dgvConsultarExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvConsultarExpediente.Size = new System.Drawing.Size(689, 410);
+            this.dgvConsultarExpediente.TabIndex = 3;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(481, 39);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(90, 31);
+            this.btnBuscar.TabIndex = 20;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBusqueda.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqueda.Location = new System.Drawing.Point(96, 42);
+            this.txtBusqueda.MaximumSize = new System.Drawing.Size(700, 0);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(372, 26);
+            this.txtBusqueda.TabIndex = 2;
+            // 
+            // blcodigo
+            // 
+            this.blcodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.blcodigo.AutoSize = true;
+            this.blcodigo.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blcodigo.Location = new System.Drawing.Point(18, 44);
+            this.blcodigo.Name = "blcodigo";
+            this.blcodigo.Size = new System.Drawing.Size(64, 21);
+            this.blcodigo.TabIndex = 0;
+            this.blcodigo.Text = "Buscar:";
+            // 
+            // frmConsultarExpedientes
+            // 
+            this.ClientSize = new System.Drawing.Size(754, 701);
+            this.Name = "frmConsultarExpedientes";
+            this.pnTop.ResumeLayout(false);
+            this.pnTop.PerformLayout();
+            this.pnContenido.ResumeLayout(false);
+            this.gbInformacion.ResumeLayout(false);
+            this.gbInformacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarExpediente)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox gbInformacion;
+        private System.Windows.Forms.Button btnVerReportes;
+        private System.Windows.Forms.Button btnVerCitasM;
+        private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.DataGridView dgvConsultarExpediente;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBusqueda;
+        private System.Windows.Forms.Label blcodigo;
+    }
+}

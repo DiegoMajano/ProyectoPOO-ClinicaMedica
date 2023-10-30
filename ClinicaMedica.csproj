@@ -47,29 +47,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAgendarCitas.cs">
+    <Compile Include="frmAgendarCita.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAgendarCitas.Designer.cs">
-      <DependentUpon>frmAgendarCitas.cs</DependentUpon>
+    <Compile Include="frmAgendarCita.Designer.cs">
+      <DependentUpon>frmAgendarCita.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAgendarPacientes.cs">
+    <Compile Include="frmAgregarPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAgendarPacientes.Designer.cs">
-      <DependentUpon>frmAgendarPacientes.cs</DependentUpon>
+    <Compile Include="frmAgregarPaciente.Designer.cs">
+      <DependentUpon>frmAgregarPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultarExpediente.cs">
+    <Compile Include="frmConsultarCita.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultarExpediente.Designer.cs">
-      <DependentUpon>frmConsultarExpediente.cs</DependentUpon>
+    <Compile Include="frmConsultarCita.Designer.cs">
+      <DependentUpon>frmConsultarCita.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCrearReporte.cs">
+    <Compile Include="frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCrearReporte.Designer.cs">
-      <DependentUpon>frmCrearReporte.cs</DependentUpon>
+    <Compile Include="frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarExpedientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarExpedientes.Designer.cs">
+      <DependentUpon>frmConsultarExpedientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearReportes.Designer.cs">
+      <DependentUpon>frmCrearReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
@@ -95,6 +107,12 @@
     <Compile Include="frmMenuAdministrativo.Designer.cs">
       <DependentUpon>frmMenuAdministrativo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenuDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuDoctor.Designer.cs">
+      <DependentUpon>frmMenuDoctor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,17 +121,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RecursoFuente.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmAgendarCitas.resx">
-      <DependentUpon>frmAgendarCitas.cs</DependentUpon>
+    <EmbeddedResource Include="frmAgendarCita.resx">
+      <DependentUpon>frmAgendarCita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAgendarPacientes.resx">
-      <DependentUpon>frmAgendarPacientes.cs</DependentUpon>
+    <EmbeddedResource Include="frmAgregarPaciente.resx">
+      <DependentUpon>frmAgregarPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultarExpediente.resx">
-      <DependentUpon>frmConsultarExpediente.cs</DependentUpon>
+    <EmbeddedResource Include="frmConsultarCita.resx">
+      <DependentUpon>frmConsultarCita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCrearReporte.resx">
-      <DependentUpon>frmCrearReporte.cs</DependentUpon>
+    <EmbeddedResource Include="frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarExpedientes.resx">
+      <DependentUpon>frmConsultarExpedientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearReportes.resx">
+      <DependentUpon>frmCrearReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
@@ -126,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuAdministrativo.resx">
       <DependentUpon>frmMenuAdministrativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuDoctor.resx">
+      <DependentUpon>frmMenuDoctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
