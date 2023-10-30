@@ -67,12 +67,12 @@
             this.lblTemperatura = new System.Windows.Forms.Label();
             this.txtPresionArt = new System.Windows.Forms.TextBox();
             this.gbMedicamento = new System.Windows.Forms.GroupBox();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.txtIndicaciones = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.lblIndicaciones = new System.Windows.Forms.Label();
             this.cbMedicamentos = new System.Windows.Forms.CheckedListBox();
             this.lblMedicamentos = new System.Windows.Forms.Label();
-            this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.pnTop.SuspendLayout();
             this.pnContenido.SuspendLayout();
             this.pnBusqueda.SuspendLayout();
@@ -84,11 +84,12 @@
             // 
             // pnTop
             // 
+            this.pnTop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
             this.pnTop.Size = new System.Drawing.Size(853, 57);
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(353, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(399, 13);
             this.lblTitulo.Size = new System.Drawing.Size(150, 26);
             this.lblTitulo.Text = "Crear Reporte";
             // 
@@ -571,6 +572,22 @@
             this.gbMedicamento.TabStop = false;
             this.gbMedicamento.Text = "Receta";
             // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnBorrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.ForeColor = System.Drawing.Color.White;
+            this.btnBorrar.Location = new System.Drawing.Point(704, 164);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(112, 40);
+            this.btnBorrar.TabIndex = 34;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = false;
+            // 
             // txtIndicaciones
             // 
             this.txtIndicaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -580,6 +597,22 @@
             this.txtIndicaciones.Name = "txtIndicaciones";
             this.txtIndicaciones.Size = new System.Drawing.Size(352, 110);
             this.txtIndicaciones.TabIndex = 23;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(586, 164);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(112, 40);
+            this.btnGuardar.TabIndex = 33;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
             // lblIndicaciones
             // 
@@ -614,30 +647,6 @@
             this.lblMedicamentos.Size = new System.Drawing.Size(134, 21);
             this.lblMedicamentos.TabIndex = 8;
             this.lblMedicamentos.Text = "Medicamento(s):";
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(704, 164);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(112, 40);
-            this.btnBorrar.TabIndex = 34;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(586, 164);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(112, 40);
-            this.btnGuardar.TabIndex = 33;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // frmCrearReportes
             // 

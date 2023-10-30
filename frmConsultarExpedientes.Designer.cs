@@ -75,7 +75,7 @@
             this.gbInformacion.Font = new System.Drawing.Font("Montserrat Thin", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInformacion.Location = new System.Drawing.Point(25, 17);
             this.gbInformacion.Name = "gbInformacion";
-            this.gbInformacion.Size = new System.Drawing.Size(701, 540);
+            this.gbInformacion.Size = new System.Drawing.Size(701, 551);
             this.gbInformacion.TabIndex = 24;
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "Llenar Datos del Paciente";
@@ -83,38 +83,47 @@
             // btnVerReportes
             // 
             this.btnVerReportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVerReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnVerReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnVerReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerReportes.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerReportes.Location = new System.Drawing.Point(591, 495);
+            this.btnVerReportes.ForeColor = System.Drawing.Color.White;
+            this.btnVerReportes.Location = new System.Drawing.Point(583, 505);
             this.btnVerReportes.Name = "btnVerReportes";
-            this.btnVerReportes.Size = new System.Drawing.Size(104, 34);
+            this.btnVerReportes.Size = new System.Drawing.Size(112, 40);
             this.btnVerReportes.TabIndex = 23;
             this.btnVerReportes.Text = "Reportes";
-            this.btnVerReportes.UseVisualStyleBackColor = true;
+            this.btnVerReportes.UseVisualStyleBackColor = false;
             // 
             // btnVerCitasM
             // 
             this.btnVerCitasM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVerCitasM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnVerCitasM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnVerCitasM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerCitasM.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerCitasM.Location = new System.Drawing.Point(478, 495);
+            this.btnVerCitasM.ForeColor = System.Drawing.Color.White;
+            this.btnVerCitasM.Location = new System.Drawing.Point(466, 505);
             this.btnVerCitasM.Name = "btnVerCitasM";
-            this.btnVerCitasM.Size = new System.Drawing.Size(104, 34);
+            this.btnVerCitasM.Size = new System.Drawing.Size(112, 40);
             this.btnVerCitasM.TabIndex = 22;
             this.btnVerCitasM.Text = "Citas";
-            this.btnVerCitasM.UseVisualStyleBackColor = true;
+            this.btnVerCitasM.UseVisualStyleBackColor = false;
             // 
             // btnBorrar
             // 
             this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(577, 39);
+            this.btnBorrar.ForeColor = System.Drawing.Color.White;
+            this.btnBorrar.Location = new System.Drawing.Point(598, 34);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(90, 31);
+            this.btnBorrar.Size = new System.Drawing.Size(97, 40);
             this.btnBorrar.TabIndex = 21;
             this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.UseVisualStyleBackColor = false;
             // 
             // dgvConsultarExpediente
             // 
@@ -126,20 +135,23 @@
             this.dgvConsultarExpediente.Name = "dgvConsultarExpediente";
             this.dgvConsultarExpediente.ReadOnly = true;
             this.dgvConsultarExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsultarExpediente.Size = new System.Drawing.Size(689, 410);
+            this.dgvConsultarExpediente.Size = new System.Drawing.Size(689, 420);
             this.dgvConsultarExpediente.TabIndex = 3;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(481, 39);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(494, 34);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(90, 31);
+            this.btnBuscar.Size = new System.Drawing.Size(97, 40);
             this.btnBuscar.TabIndex = 20;
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // txtBusqueda
             // 

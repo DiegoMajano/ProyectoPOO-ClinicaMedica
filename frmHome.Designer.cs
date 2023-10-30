@@ -38,10 +38,12 @@
             // 
             // btnSoporte
             // 
+            this.btnSoporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSoporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(248)))));
             this.btnSoporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSoporte.Location = new System.Drawing.Point(701, 403);
+            this.btnSoporte.Location = new System.Drawing.Point(682, 403);
             this.btnSoporte.Name = "btnSoporte";
-            this.btnSoporte.Size = new System.Drawing.Size(87, 35);
+            this.btnSoporte.Size = new System.Drawing.Size(112, 40);
             this.btnSoporte.TabIndex = 8;
             this.btnSoporte.Text = "Soporte";
             this.btnSoporte.UseVisualStyleBackColor = true;
@@ -49,6 +51,7 @@
             // btnsalir
             // 
             this.btnsalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnsalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(248)))));
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.Image = global::ClinicaMedica.Properties.Resources.ExitIcon;
             this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -65,6 +68,7 @@
             // btnadmin
             // 
             this.btnadmin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnadmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(248)))));
             this.btnadmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnadmin.Image = global::ClinicaMedica.Properties.Resources.AdminIcon32;
             this.btnadmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -81,6 +85,7 @@
             // btnmedico
             // 
             this.btnmedico.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnmedico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(248)))));
             this.btnmedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmedico.Image = global::ClinicaMedica.Properties.Resources.MedicoIcon32;
             this.btnmedico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

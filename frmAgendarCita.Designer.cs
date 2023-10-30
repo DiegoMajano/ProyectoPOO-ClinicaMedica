@@ -57,13 +57,13 @@
             // 
             // pnBottom
             // 
-            this.pnBottom.Location = new System.Drawing.Point(0, 615);
+            this.pnBottom.Location = new System.Drawing.Point(0, 637);
             this.pnBottom.Size = new System.Drawing.Size(754, 11);
             // 
             // pnContenido
             // 
             this.pnContenido.Controls.Add(this.gbAgendarCitaa);
-            this.pnContenido.Size = new System.Drawing.Size(754, 558);
+            this.pnContenido.Size = new System.Drawing.Size(754, 580);
             // 
             // gbAgendarCitaa
             // 
@@ -88,7 +88,7 @@
             this.gbAgendarCitaa.Font = new System.Drawing.Font("Montserrat Thin", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbAgendarCitaa.Location = new System.Drawing.Point(22, 19);
             this.gbAgendarCitaa.Name = "gbAgendarCitaa";
-            this.gbAgendarCitaa.Size = new System.Drawing.Size(704, 533);
+            this.gbAgendarCitaa.Size = new System.Drawing.Size(704, 555);
             this.gbAgendarCitaa.TabIndex = 26;
             this.gbAgendarCitaa.TabStop = false;
             this.gbAgendarCitaa.Text = "Nueva Cita";
@@ -123,7 +123,7 @@
             this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCitas.Location = new System.Drawing.Point(13, 283);
             this.dgvCitas.Name = "dgvCitas";
-            this.dgvCitas.Size = new System.Drawing.Size(679, 207);
+            this.dgvCitas.Size = new System.Drawing.Size(679, 213);
             this.dgvCitas.TabIndex = 29;
             // 
             // dtpFechaCita
@@ -202,26 +202,32 @@
             // btnBorrar
             // 
             this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(602, 496);
+            this.btnBorrar.ForeColor = System.Drawing.Color.White;
+            this.btnBorrar.Location = new System.Drawing.Point(580, 504);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(90, 31);
+            this.btnBorrar.Size = new System.Drawing.Size(112, 40);
             this.btnBorrar.TabIndex = 21;
             this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.UseVisualStyleBackColor = false;
             // 
             // btnAgendar
             // 
             this.btnAgendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnAgendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgendar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgendar.Location = new System.Drawing.Point(506, 496);
+            this.btnAgendar.ForeColor = System.Drawing.Color.White;
+            this.btnAgendar.Location = new System.Drawing.Point(462, 504);
             this.btnAgendar.Name = "btnAgendar";
-            this.btnAgendar.Size = new System.Drawing.Size(90, 31);
+            this.btnAgendar.Size = new System.Drawing.Size(112, 40);
             this.btnAgendar.TabIndex = 20;
             this.btnAgendar.Text = "Agendar";
-            this.btnAgendar.UseVisualStyleBackColor = true;
+            this.btnAgendar.UseVisualStyleBackColor = false;
             // 
             // txtNombrePaciente
             // 
@@ -247,7 +253,7 @@
             // 
             // frmAgendarCita
             // 
-            this.ClientSize = new System.Drawing.Size(754, 626);
+            this.ClientSize = new System.Drawing.Size(754, 648);
             this.Name = "frmAgendarCita";
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();

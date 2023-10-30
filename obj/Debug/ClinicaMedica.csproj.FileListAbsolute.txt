@@ -55,4 +55,3 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaM
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmAgendarCita.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarExpedientes.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmCrearReportes.resources
-C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmCrearReceta.resources
