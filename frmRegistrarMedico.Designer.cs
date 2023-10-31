@@ -46,7 +46,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
             this.cbGenero = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.gbCredenciales = new System.Windows.Forms.GroupBox();
             this.clbPuesto = new System.Windows.Forms.CheckedListBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -253,7 +253,7 @@
             this.gbInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbInformacion.Controls.Add(this.cbGenero);
-            this.gbInformacion.Controls.Add(this.maskedTextBox1);
+            this.gbInformacion.Controls.Add(this.mtxtTelefono);
             this.gbInformacion.Controls.Add(this.label7);
             this.gbInformacion.Controls.Add(this.label6);
             this.gbInformacion.Controls.Add(this.dtpFechaNacimiento);
@@ -288,14 +288,15 @@
             this.cbGenero.Size = new System.Drawing.Size(325, 29);
             this.cbGenero.TabIndex = 15;
             // 
-            // maskedTextBox1
+            // mtxtTelefono
             // 
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maskedTextBox1.Location = new System.Drawing.Point(124, 123);
-            this.maskedTextBox1.Mask = "0000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(325, 23);
-            this.maskedTextBox1.TabIndex = 14;
+            this.mtxtTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtxtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxtTelefono.Location = new System.Drawing.Point(124, 123);
+            this.mtxtTelefono.Mask = "0000-0000";
+            this.mtxtTelefono.Name = "mtxtTelefono";
+            this.mtxtTelefono.Size = new System.Drawing.Size(325, 23);
+            this.mtxtTelefono.TabIndex = 14;
             // 
             // gbCredenciales
             // 
@@ -410,7 +411,7 @@
         private System.Windows.Forms.GroupBox gbInformacion;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtxtTelefono;
         private System.Windows.Forms.ComboBox cbGenero;
     }
 }

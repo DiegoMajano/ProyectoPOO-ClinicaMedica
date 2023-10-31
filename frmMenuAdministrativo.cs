@@ -30,8 +30,8 @@ namespace ClinicaMedica
                 agregarPaciente = new frmAgregarPaciente();
                 agregarPaciente.TopLevel = false;
                 agregarPaciente.Dock = DockStyle.Fill;
-                pnContenido.Controls.Add(agregarPaciente);
-            }            
+            }
+            pnContenido.Controls.Add(agregarPaciente);
             agregarPaciente.Show();
             agregarPaciente.BringToFront();
         }
@@ -43,8 +43,8 @@ namespace ClinicaMedica
                 consultarExpedientes = new frmConsultarExpedientes();
                 consultarExpedientes.TopLevel = false;
                 consultarExpedientes.Dock = DockStyle.Fill;
-                pnContenido.Controls.Add(consultarExpedientes);
-            }            
+            }
+            pnContenido.Controls.Add(consultarExpedientes);
             consultarExpedientes.Show();
             consultarExpedientes.BringToFront();
         }
@@ -56,8 +56,8 @@ namespace ClinicaMedica
                 agendarCitas = new frmAgendarCita();
                 agendarCitas.TopLevel = false;
                 agendarCitas.Dock = DockStyle.Fill;
-                pnContenido.Controls.Add(agendarCitas);
-            }            
+            }
+            pnContenido.Controls.Add(agendarCitas);
             agendarCitas.Show();
             agendarCitas.BringToFront();
         }   
@@ -69,8 +69,8 @@ namespace ClinicaMedica
                 consultarCita = new frmConsultarCita();
                 consultarCita.TopLevel = false;
                 consultarCita.Dock = DockStyle.Fill;
-                pnContenido.Controls.Add(consultarCita);
-            }            
+            }
+            pnContenido.Controls.Add(consultarCita);
             consultarCita.Show();
             consultarCita.BringToFront();
         }
@@ -87,6 +87,7 @@ namespace ClinicaMedica
             {
                 frmHome home = new frmHome();
                 this.Hide();
+                pnContenido.Controls.Clear();
                 home.Show();
             }
         }

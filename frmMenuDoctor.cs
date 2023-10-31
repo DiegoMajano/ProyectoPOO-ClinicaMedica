@@ -24,6 +24,7 @@ namespace ClinicaMedica
             {
                 frmHome home = new frmHome();
                 this.Hide();
+                pnContenido.Controls.Clear();
                 home.Show();
             }
         }
@@ -44,9 +45,9 @@ namespace ClinicaMedica
             {
                 crearReporte = new frmCrearReportes();
                 crearReporte.TopLevel = false;
-                pnContenido.Controls.Add(crearReporte);
                 crearReporte.Dock = DockStyle.Fill;
-            }            
+            }
+            pnContenido.Controls.Add(crearReporte);
             crearReporte.Show();
             crearReporte.BringToFront();
 
@@ -58,9 +59,9 @@ namespace ClinicaMedica
             {
                 consultarExpediente = new frmConsultarExpedientes();
                 consultarExpediente.TopLevel = false;
-                pnContenido.Controls.Add(consultarExpediente);
                 consultarExpediente.Dock = DockStyle.Fill;
-            }            
+            }
+            pnContenido.Controls.Add(consultarExpediente);
             consultarExpediente.Show();
             consultarExpediente.BringToFront();
         }
@@ -71,9 +72,9 @@ namespace ClinicaMedica
             {
                 consultarCita = new frmConsultarCita();
                 consultarCita.TopLevel = false;
-                pnContenido.Controls.Add(consultarCita);
                 consultarCita.Dock = DockStyle.Fill;
-            }            
+            }
+            pnContenido.Controls.Add(consultarCita);
             consultarCita.Show();
             consultarCita.BringToFront();
         }
