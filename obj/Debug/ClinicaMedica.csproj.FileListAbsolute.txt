@@ -34,7 +34,6 @@ C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-Cl
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\bin\Debug\ClinicaMedica.exe
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\bin\Debug\ClinicaMedica.pdb
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.csproj.AssemblyReference.cache
-C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmAgendarPacientes.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmHome.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmLoginAdmin.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmLoginMedico.resources
@@ -44,7 +43,6 @@ C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-Cl
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.csproj.CoreCompileInputs.cache
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.exe
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.pdb
-C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarExpediente.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\logo}.png
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\bin\Debug\Resources\logo}.png
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.Resources.RecursoFuente.resources
@@ -55,3 +53,11 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaM
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmAgendarCita.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarExpedientes.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmCrearReportes.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmAgendarCita.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmAgregarPaciente.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarCita.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmBase.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarExpedientes.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmCrearReportes.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmMenuDoctor.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.Resources.RecursoFuente.resources
