@@ -17,6 +17,9 @@ namespace ClinicaMedica
             InitializeComponent();
         }
 
+        private static frmRegistrarMedico registrarMedico;
+        private static frmConsultarPersonal consultarPersonal;
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -26,8 +29,7 @@ namespace ClinicaMedica
                 this.Hide();
                 home.Show();
             }
-        }
-        private static frmRegistrarMedico registrarMedico;
+        }      
 
         private void btnbtnRegistrarPersonal_Click(object sender, EventArgs e)
         {
@@ -36,8 +38,8 @@ namespace ClinicaMedica
                 registrarMedico = new frmRegistrarMedico();
                 registrarMedico.TopLevel = false;
                 registrarMedico.Dock = DockStyle.Fill;
-                pnContenido.Controls.Add(registrarMedico);
             }
+            pnContenido.Controls.Add(registrarMedico);
             registrarMedico.Show();
             registrarMedico.BringToFront();
         }
@@ -45,6 +47,19 @@ namespace ClinicaMedica
         private void btnLimpiarPnContenedor_Click(object sender, EventArgs e)
         {
             pnContenido.Controls.Clear();
+        }
+
+        private void btnConsultarExpediente_Click(object sender, EventArgs e)
+        {
+            if (consultarPersonal == null)
+            {
+                consultarPersonal = new frmConsultarPersonal();
+                consultarPersonal.TopLevel = false;
+                consultarPersonal.Dock = DockStyle.Fill;
+            }
+            pnContenido.Controls.Add(consultarPersonal);
+            consultarPersonal.Show();
+            consultarPersonal.BringToFront();
         }
     }
 }

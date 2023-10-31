@@ -102,7 +102,7 @@
             this.gbInformacion.Font = new System.Drawing.Font("Montserrat Thin", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInformacion.Location = new System.Drawing.Point(24, 17);
             this.gbInformacion.Name = "gbInformacion";
-            this.gbInformacion.Size = new System.Drawing.Size(669, 563);
+            this.gbInformacion.Size = new System.Drawing.Size(652, 563);
             this.gbInformacion.TabIndex = 24;
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "Llenar Datos del Paciente";
@@ -112,7 +112,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 488);
+            this.label3.Location = new System.Drawing.Point(49, 488);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 21);
             this.label3.TabIndex = 19;
@@ -123,7 +123,7 @@
             this.mtxtNIT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.mtxtNIT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtNIT.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtNIT.Location = new System.Drawing.Point(223, 486);
+            this.mtxtNIT.Location = new System.Drawing.Point(270, 486);
             this.mtxtNIT.Mask = "0000-000000-000-0";
             this.mtxtNIT.Name = "mtxtNIT";
             this.mtxtNIT.Size = new System.Drawing.Size(219, 26);
@@ -137,7 +137,7 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(540, 508);
+            this.btnBorrar.Location = new System.Drawing.Point(523, 508);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(112, 40);
             this.btnBorrar.TabIndex = 21;
@@ -150,7 +150,7 @@
             this.lblDUI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblDUI.AutoSize = true;
             this.lblDUI.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDUI.Location = new System.Drawing.Point(2, 438);
+            this.lblDUI.Location = new System.Drawing.Point(49, 438);
             this.lblDUI.Name = "lblDUI";
             this.lblDUI.Size = new System.Drawing.Size(39, 21);
             this.lblDUI.TabIndex = 17;
@@ -164,7 +164,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(540, 462);
+            this.btnGuardar.Location = new System.Drawing.Point(523, 462);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(112, 40);
             this.btnGuardar.TabIndex = 20;
@@ -177,7 +177,7 @@
             this.mtxtDUI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.mtxtDUI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtDUI.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtDUI.Location = new System.Drawing.Point(223, 436);
+            this.mtxtDUI.Location = new System.Drawing.Point(270, 436);
             this.mtxtDUI.Mask = "00000000-0";
             this.mtxtDUI.Name = "mtxtDUI";
             this.mtxtDUI.Size = new System.Drawing.Size(219, 26);
@@ -192,7 +192,7 @@
             "Seleccionar género",
             "Masculino",
             "Femenino"});
-            this.cbGenero.Location = new System.Drawing.Point(223, 384);
+            this.cbGenero.Location = new System.Drawing.Point(270, 384);
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(219, 29);
             this.cbGenero.TabIndex = 15;
@@ -202,7 +202,7 @@
             this.lblGenero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblGenero.AutoSize = true;
             this.lblGenero.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenero.Location = new System.Drawing.Point(2, 388);
+            this.lblGenero.Location = new System.Drawing.Point(49, 388);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(65, 21);
             this.lblGenero.TabIndex = 14;
@@ -213,7 +213,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 338);
+            this.label1.Location = new System.Drawing.Point(49, 338);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 21);
             this.label1.TabIndex = 13;
@@ -224,7 +224,7 @@
             this.mtxtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.mtxtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtTelefono.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTelefono.Location = new System.Drawing.Point(223, 336);
+            this.mtxtTelefono.Location = new System.Drawing.Point(270, 336);
             this.mtxtTelefono.Mask = "0000-0000";
             this.mtxtTelefono.Name = "mtxtTelefono";
             this.mtxtTelefono.Size = new System.Drawing.Size(219, 26);
@@ -235,7 +235,7 @@
             this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccion.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(223, 286);
+            this.txtDireccion.Location = new System.Drawing.Point(270, 286);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(219, 26);
             this.txtDireccion.TabIndex = 11;
@@ -245,7 +245,7 @@
             this.lblDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(2, 288);
+            this.lblDireccion.Location = new System.Drawing.Point(49, 288);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(80, 21);
             this.lblDireccion.TabIndex = 10;
@@ -255,7 +255,7 @@
             // 
             this.dtpFechaNacimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(223, 236);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(270, 236);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(219, 26);
             this.dtpFechaNacimiento.TabIndex = 9;
@@ -266,7 +266,7 @@
             this.lblF_Nacimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblF_Nacimiento.AutoSize = true;
             this.lblF_Nacimiento.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblF_Nacimiento.Location = new System.Drawing.Point(2, 238);
+            this.lblF_Nacimiento.Location = new System.Drawing.Point(49, 238);
             this.lblF_Nacimiento.Name = "lblF_Nacimiento";
             this.lblF_Nacimiento.Size = new System.Drawing.Size(169, 21);
             this.lblF_Nacimiento.TabIndex = 8;
@@ -277,7 +277,7 @@
             this.txtS_Apellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtS_Apellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtS_Apellido.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtS_Apellido.Location = new System.Drawing.Point(223, 186);
+            this.txtS_Apellido.Location = new System.Drawing.Point(270, 186);
             this.txtS_Apellido.Name = "txtS_Apellido";
             this.txtS_Apellido.Size = new System.Drawing.Size(219, 26);
             this.txtS_Apellido.TabIndex = 7;
@@ -288,7 +288,7 @@
             this.txtP_Apellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtP_Apellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtP_Apellido.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtP_Apellido.Location = new System.Drawing.Point(223, 136);
+            this.txtP_Apellido.Location = new System.Drawing.Point(270, 136);
             this.txtP_Apellido.Name = "txtP_Apellido";
             this.txtP_Apellido.Size = new System.Drawing.Size(219, 26);
             this.txtP_Apellido.TabIndex = 6;
@@ -299,7 +299,7 @@
             this.lblSApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblSApellido.AutoSize = true;
             this.lblSApellido.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSApellido.Location = new System.Drawing.Point(2, 188);
+            this.lblSApellido.Location = new System.Drawing.Point(49, 188);
             this.lblSApellido.Name = "lblSApellido";
             this.lblSApellido.Size = new System.Drawing.Size(142, 21);
             this.lblSApellido.TabIndex = 5;
@@ -310,7 +310,7 @@
             this.lblPApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblPApellido.AutoSize = true;
             this.lblPApellido.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPApellido.Location = new System.Drawing.Point(2, 138);
+            this.lblPApellido.Location = new System.Drawing.Point(49, 138);
             this.lblPApellido.Name = "lblPApellido";
             this.lblPApellido.Size = new System.Drawing.Size(127, 21);
             this.lblPApellido.TabIndex = 4;
@@ -321,7 +321,7 @@
             this.txtS_Nombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtS_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtS_Nombre.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtS_Nombre.Location = new System.Drawing.Point(223, 83);
+            this.txtS_Nombre.Location = new System.Drawing.Point(270, 83);
             this.txtS_Nombre.Name = "txtS_Nombre";
             this.txtS_Nombre.Size = new System.Drawing.Size(219, 26);
             this.txtS_Nombre.TabIndex = 3;
@@ -332,7 +332,7 @@
             this.txtP_Nombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtP_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtP_Nombre.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtP_Nombre.Location = new System.Drawing.Point(223, 36);
+            this.txtP_Nombre.Location = new System.Drawing.Point(270, 36);
             this.txtP_Nombre.Name = "txtP_Nombre";
             this.txtP_Nombre.Size = new System.Drawing.Size(219, 26);
             this.txtP_Nombre.TabIndex = 2;
@@ -343,7 +343,7 @@
             this.lblSnombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblSnombre.AutoSize = true;
             this.lblSnombre.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSnombre.Location = new System.Drawing.Point(2, 88);
+            this.lblSnombre.Location = new System.Drawing.Point(49, 88);
             this.lblSnombre.Name = "lblSnombre";
             this.lblSnombre.Size = new System.Drawing.Size(143, 21);
             this.lblSnombre.TabIndex = 1;
@@ -354,7 +354,7 @@
             this.lblPnombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblPnombre.AutoSize = true;
             this.lblPnombre.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPnombre.Location = new System.Drawing.Point(2, 38);
+            this.lblPnombre.Location = new System.Drawing.Point(49, 38);
             this.lblPnombre.Name = "lblPnombre";
             this.lblPnombre.Size = new System.Drawing.Size(128, 21);
             this.lblPnombre.TabIndex = 0;

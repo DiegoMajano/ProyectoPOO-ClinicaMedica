@@ -32,23 +32,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbEspecialidad = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
+            this.cbGenero = new System.Windows.Forms.ComboBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.gbCredenciales = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.clbPuesto = new System.Windows.Forms.CheckedListBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -70,7 +70,7 @@
             this.pnContenido.Controls.Add(this.btnBorrar);
             this.pnContenido.Controls.Add(this.btnGuardar);
             this.pnContenido.Controls.Add(this.label10);
-            this.pnContenido.Controls.Add(this.checkedListBox1);
+            this.pnContenido.Controls.Add(this.clbPuesto);
             this.pnContenido.Controls.Add(this.gbCredenciales);
             this.pnContenido.Controls.Add(this.gbInformacion);
             // 
@@ -103,8 +103,9 @@
             this.txtNombre.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(124, 31);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(269, 26);
+            this.txtNombre.Size = new System.Drawing.Size(325, 26);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApellido
             // 
@@ -113,18 +114,9 @@
             this.txtApellido.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.Location = new System.Drawing.Point(124, 76);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(269, 26);
+            this.txtApellido.Size = new System.Drawing.Size(325, 26);
             this.txtApellido.TabIndex = 3;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(124, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(269, 26);
-            this.textBox1.TabIndex = 5;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // label3
             // 
@@ -148,15 +140,20 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Especialidad:";
             // 
-            // comboBox1
+            // cbEspecialidad
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(124, 257);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(269, 29);
-            this.comboBox1.TabIndex = 7;
+            this.cbEspecialidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbEspecialidad.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEspecialidad.FormattingEnabled = true;
+            this.cbEspecialidad.Items.AddRange(new object[] {
+            "Seleccionar especialidad",
+            "General",
+            "Pediatra",
+            "NOSEQUEMASHAY"});
+            this.cbEspecialidad.Location = new System.Drawing.Point(124, 256);
+            this.cbEspecialidad.Name = "cbEspecialidad";
+            this.cbEspecialidad.Size = new System.Drawing.Size(325, 29);
+            this.cbEspecialidad.TabIndex = 7;
             // 
             // label5
             // 
@@ -184,8 +181,9 @@
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(124, 167);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(269, 26);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(325, 26);
             this.dtpFechaNacimiento.TabIndex = 10;
+            this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dtpFechaNacimiento_ValueChanged);
             // 
             // label6
             // 
@@ -198,16 +196,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Fecha de\r\nnacimiento:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(124, 214);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(269, 26);
-            this.textBox2.TabIndex = 13;
             // 
             // label7
             // 
@@ -264,15 +252,15 @@
             // 
             this.gbInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbInformacion.Controls.Add(this.textBox2);
+            this.gbInformacion.Controls.Add(this.cbGenero);
+            this.gbInformacion.Controls.Add(this.maskedTextBox1);
             this.gbInformacion.Controls.Add(this.label7);
             this.gbInformacion.Controls.Add(this.label6);
             this.gbInformacion.Controls.Add(this.dtpFechaNacimiento);
             this.gbInformacion.Controls.Add(this.pictureBox1);
             this.gbInformacion.Controls.Add(this.label5);
-            this.gbInformacion.Controls.Add(this.comboBox1);
+            this.gbInformacion.Controls.Add(this.cbEspecialidad);
             this.gbInformacion.Controls.Add(this.label4);
-            this.gbInformacion.Controls.Add(this.textBox1);
             this.gbInformacion.Controls.Add(this.label3);
             this.gbInformacion.Controls.Add(this.txtApellido);
             this.gbInformacion.Controls.Add(this.txtNombre);
@@ -285,6 +273,29 @@
             this.gbInformacion.TabIndex = 24;
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "Información personal";
+            // 
+            // cbGenero
+            // 
+            this.cbGenero.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbGenero.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGenero.FormattingEnabled = true;
+            this.cbGenero.Items.AddRange(new object[] {
+            "Seleccionar género",
+            "Femenino",
+            "Masculino"});
+            this.cbGenero.Location = new System.Drawing.Point(124, 213);
+            this.cbGenero.Name = "cbGenero";
+            this.cbGenero.Size = new System.Drawing.Size(325, 29);
+            this.cbGenero.TabIndex = 15;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.maskedTextBox1.Location = new System.Drawing.Point(124, 123);
+            this.maskedTextBox1.Mask = "0000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(325, 23);
+            this.maskedTextBox1.TabIndex = 14;
             // 
             // gbCredenciales
             // 
@@ -302,14 +313,18 @@
             this.gbCredenciales.TabStop = false;
             this.gbCredenciales.Text = "Credenciales - Inicio sesión";
             // 
-            // checkedListBox1
+            // clbPuesto
             // 
-            this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(542, 334);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(190, 88);
-            this.checkedListBox1.TabIndex = 26;
+            this.clbPuesto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clbPuesto.FormattingEnabled = true;
+            this.clbPuesto.Items.AddRange(new object[] {
+            "Médico",
+            "Administración",
+            "Soporte"});
+            this.clbPuesto.Location = new System.Drawing.Point(542, 334);
+            this.clbPuesto.Name = "clbPuesto";
+            this.clbPuesto.Size = new System.Drawing.Size(190, 88);
+            this.clbPuesto.TabIndex = 26;
             // 
             // label10
             // 
@@ -356,6 +371,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(754, 626);
             this.Name = "frmRegistrarMedico";
+            this.Load += new System.EventHandler(this.frmRegistrarMedico_Load);
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.pnContenido.ResumeLayout(false);
@@ -374,9 +390,8 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbEspecialidad;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
@@ -388,13 +403,14 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox clbPuesto;
         private System.Windows.Forms.GroupBox gbCredenciales;
         private System.Windows.Forms.GroupBox gbInformacion;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.ComboBox cbGenero;
     }
 }

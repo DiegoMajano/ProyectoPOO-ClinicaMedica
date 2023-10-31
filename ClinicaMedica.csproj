@@ -77,6 +77,12 @@
     <Compile Include="frmConsultarExpedientes.Designer.cs">
       <DependentUpon>frmConsultarExpedientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultarPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarPersonal.Designer.cs">
+      <DependentUpon>frmConsultarPersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCrearReportes.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -54,7 +54,7 @@
             this.pnContenido.Location = new System.Drawing.Point(230, 30);
             this.pnContenido.Name = "pnContenido";
             this.pnContenido.Size = new System.Drawing.Size(754, 656);
-            this.pnContenido.TabIndex = 12;
+            this.pnContenido.TabIndex = 9;
             // 
             // pnTop
             // 
@@ -174,6 +174,7 @@
             this.btnConsultarExpediente.TabIndex = 2;
             this.btnConsultarExpediente.Text = "Consultar personal";
             this.btnConsultarExpediente.UseVisualStyleBackColor = false;
+            this.btnConsultarExpediente.Click += new System.EventHandler(this.btnConsultarExpediente_Click);
             // 
             // btnRegistrarPersonal
             // 
