@@ -113,6 +113,18 @@
     <Compile Include="frmMenuDoctor.Designer.cs">
       <DependentUpon>frmMenuDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenuSoporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuSoporte.Designer.cs">
+      <DependentUpon>frmMenuSoporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarMedico.Designer.cs">
+      <DependentUpon>frmRegistrarMedico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -153,6 +165,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuDoctor.resx">
       <DependentUpon>frmMenuDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuSoporte.resx">
+      <DependentUpon>frmMenuSoporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarMedico.resx">
+      <DependentUpon>frmRegistrarMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

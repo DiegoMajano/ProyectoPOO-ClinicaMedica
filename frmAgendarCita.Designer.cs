@@ -136,6 +136,7 @@
             this.dtpFechaCita.Name = "dtpFechaCita";
             this.dtpFechaCita.Size = new System.Drawing.Size(303, 26);
             this.dtpFechaCita.TabIndex = 28;
+            this.dtpFechaCita.ValueChanged += new System.EventHandler(this.dtpFechaCita_ValueChanged);
             // 
             // cbHorarioCitas
             // 
@@ -240,6 +241,7 @@
             this.txtNombrePaciente.Name = "txtNombrePaciente";
             this.txtNombrePaciente.Size = new System.Drawing.Size(303, 26);
             this.txtNombrePaciente.TabIndex = 2;
+            this.txtNombrePaciente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombrePaciente_KeyPress);
             // 
             // lblNombrePaciente
             // 

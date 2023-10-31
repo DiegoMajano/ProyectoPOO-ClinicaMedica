@@ -47,6 +47,7 @@
             this.btnSoporte.TabIndex = 8;
             this.btnSoporte.Text = "Soporte";
             this.btnSoporte.UseVisualStyleBackColor = true;
+            this.btnSoporte.Click += new System.EventHandler(this.btnSoporte_Click);
             // 
             // btnsalir
             // 

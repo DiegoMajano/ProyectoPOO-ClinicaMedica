@@ -36,5 +36,12 @@ namespace ClinicaMedica
             DialogResult resultado = MessageBox.Show("¿Está seguro de salir de la aplicación?","Aviso",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
             if (resultado == DialogResult.Yes) Application.Exit();
         }
+
+        private void btnSoporte_Click(object sender, EventArgs e)
+        {
+            frmMenuSoporte menuSoporte = new frmMenuSoporte();
+            this.Hide();
+            menuSoporte.Show();
+        }
     }
 }

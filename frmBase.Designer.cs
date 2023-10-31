@@ -63,9 +63,9 @@
             // 
             this.pnBottom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBottom.Location = new System.Drawing.Point(0, 561);
+            this.pnBottom.Location = new System.Drawing.Point(0, 585);
             this.pnBottom.Name = "pnBottom";
-            this.pnBottom.Size = new System.Drawing.Size(754, 65);
+            this.pnBottom.Size = new System.Drawing.Size(754, 41);
             this.pnBottom.TabIndex = 26;
             // 
             // pnContenido
@@ -77,7 +77,7 @@
             this.pnContenido.Location = new System.Drawing.Point(0, 57);
             this.pnContenido.Name = "pnContenido";
             this.pnContenido.Padding = new System.Windows.Forms.Padding(5);
-            this.pnContenido.Size = new System.Drawing.Size(754, 504);
+            this.pnContenido.Size = new System.Drawing.Size(754, 528);
             this.pnContenido.TabIndex = 27;
             // 
             // frmBase
