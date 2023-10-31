@@ -35,7 +35,7 @@ namespace ClinicaMedica
         {
             if (registrarMedico == null)
             {
-                registrarMedico = new frmRegistrarMedico();
+                registrarMedico = FormFactory.CrearFormRegistrarMedico();
                 registrarMedico.TopLevel = false;
                 registrarMedico.Dock = DockStyle.Fill;
             }
@@ -53,7 +53,7 @@ namespace ClinicaMedica
         {
             if (consultarPersonal == null)
             {
-                consultarPersonal = new frmConsultarPersonal();
+                consultarPersonal = FormFactory.CrearFormConsultarPersonal();
                 consultarPersonal.TopLevel = false;
                 consultarPersonal.Dock = DockStyle.Fill;
             }

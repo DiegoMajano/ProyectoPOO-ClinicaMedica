@@ -27,7 +27,7 @@ namespace ClinicaMedica
         {
             if (agregarPaciente==null)
             {
-                agregarPaciente = new frmAgregarPaciente();
+                agregarPaciente = FormFactory.CrearFormAgregarPaciente();
                 agregarPaciente.TopLevel = false;
                 agregarPaciente.Dock = DockStyle.Fill;
             }
@@ -40,7 +40,7 @@ namespace ClinicaMedica
         {
             if(consultarExpedientes == null)
             {
-                consultarExpedientes = new frmConsultarExpedientes();
+                consultarExpedientes = FormFactory.CrearFormConsultarExpedientes();
                 consultarExpedientes.TopLevel = false;
                 consultarExpedientes.Dock = DockStyle.Fill;
             }
@@ -53,7 +53,7 @@ namespace ClinicaMedica
         {
             if (agendarCitas== null)
             {
-                agendarCitas = new frmAgendarCita();
+                agendarCitas = FormFactory.CrearFormAgendarCita();
                 agendarCitas.TopLevel = false;
                 agendarCitas.Dock = DockStyle.Fill;
             }
@@ -66,7 +66,7 @@ namespace ClinicaMedica
         {
             if (consultarCita == null)
             {
-                consultarCita = new frmConsultarCita();
+                consultarCita = FormFactory.CrarFormConsultarCita();
                 consultarCita.TopLevel = false;
                 consultarCita.Dock = DockStyle.Fill;
             }

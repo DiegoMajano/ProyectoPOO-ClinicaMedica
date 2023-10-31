@@ -93,6 +93,8 @@
             this.Name = "frmBase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCrearReceta";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBase_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmBase_FormClosed);
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.ResumeLayout(false);
