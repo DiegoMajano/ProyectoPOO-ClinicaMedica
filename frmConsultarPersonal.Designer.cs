@@ -32,8 +32,11 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.dgvConsultarExpediente = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.blcodigo = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.cbNombre = new System.Windows.Forms.ComboBox();
+            this.cbPuesto = new System.Windows.Forms.ComboBox();
+            this.lblPuesto = new System.Windows.Forms.Label();
+            this.lblBuscarPor = new System.Windows.Forms.Label();
             this.pnTop.SuspendLayout();
             this.pnContenido.SuspendLayout();
             this.gbInformacion.SuspendLayout();
@@ -63,15 +66,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbInformacion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gbInformacion.BackColor = System.Drawing.Color.White;
+            this.gbInformacion.Controls.Add(this.lblBuscarPor);
+            this.gbInformacion.Controls.Add(this.cbPuesto);
+            this.gbInformacion.Controls.Add(this.lblPuesto);
+            this.gbInformacion.Controls.Add(this.cbNombre);
             this.gbInformacion.Controls.Add(this.btnBorrar);
             this.gbInformacion.Controls.Add(this.dgvConsultarExpediente);
             this.gbInformacion.Controls.Add(this.btnBuscar);
-            this.gbInformacion.Controls.Add(this.txtBusqueda);
-            this.gbInformacion.Controls.Add(this.blcodigo);
+            this.gbInformacion.Controls.Add(this.lblNombre);
             this.gbInformacion.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Italic);
-            this.gbInformacion.Location = new System.Drawing.Point(24, 61);
+            this.gbInformacion.Location = new System.Drawing.Point(24, 20);
             this.gbInformacion.Name = "gbInformacion";
-            this.gbInformacion.Size = new System.Drawing.Size(701, 486);
+            this.gbInformacion.Size = new System.Drawing.Size(701, 527);
             this.gbInformacion.TabIndex = 25;
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "Llenar Datos del Personal";
@@ -84,7 +90,7 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(598, 34);
+            this.btnBorrar.Location = new System.Drawing.Point(598, 137);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(97, 40);
             this.btnBorrar.TabIndex = 21;
@@ -98,11 +104,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvConsultarExpediente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarExpediente.Location = new System.Drawing.Point(6, 79);
+            this.dgvConsultarExpediente.Location = new System.Drawing.Point(22, 195);
             this.dgvConsultarExpediente.Name = "dgvConsultarExpediente";
             this.dgvConsultarExpediente.ReadOnly = true;
             this.dgvConsultarExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsultarExpediente.Size = new System.Drawing.Size(689, 355);
+            this.dgvConsultarExpediente.Size = new System.Drawing.Size(657, 316);
             this.dgvConsultarExpediente.TabIndex = 3;
             // 
             // btnBuscar
@@ -113,7 +119,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(494, 34);
+            this.btnBuscar.Location = new System.Drawing.Point(598, 91);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(97, 40);
             this.btnBuscar.TabIndex = 20;
@@ -121,30 +127,64 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtBusqueda
+            // lblNombre
             // 
-            this.txtBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBusqueda.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtBusqueda.Location = new System.Drawing.Point(96, 42);
-            this.txtBusqueda.MaximumSize = new System.Drawing.Size(700, 0);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(372, 26);
-            this.txtBusqueda.TabIndex = 2;
-            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblNombre.Location = new System.Drawing.Point(18, 77);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(75, 21);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre:";
             // 
-            // blcodigo
+            // cbNombre
             // 
-            this.blcodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbNombre.FormattingEnabled = true;
+            this.cbNombre.Items.AddRange(new object[] {
+            "Digitar nombre"});
+            this.cbNombre.Location = new System.Drawing.Point(97, 74);
+            this.cbNombre.Name = "cbNombre";
+            this.cbNombre.Size = new System.Drawing.Size(393, 26);
+            this.cbNombre.TabIndex = 22;
+            // 
+            // cbPuesto
+            // 
+            this.cbPuesto.FormattingEnabled = true;
+            this.cbPuesto.Items.AddRange(new object[] {
+            "Digitar puesto",
+            "Médico",
+            "Administración",
+            "Soporte"});
+            this.cbPuesto.Location = new System.Drawing.Point(97, 116);
+            this.cbPuesto.Name = "cbPuesto";
+            this.cbPuesto.Size = new System.Drawing.Size(393, 26);
+            this.cbPuesto.TabIndex = 24;
+            // 
+            // lblPuesto
+            // 
+            this.lblPuesto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.blcodigo.AutoSize = true;
-            this.blcodigo.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.blcodigo.Location = new System.Drawing.Point(18, 44);
-            this.blcodigo.Name = "blcodigo";
-            this.blcodigo.Size = new System.Drawing.Size(64, 21);
-            this.blcodigo.TabIndex = 0;
-            this.blcodigo.Text = "Buscar:";
+            this.lblPuesto.AutoSize = true;
+            this.lblPuesto.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblPuesto.Location = new System.Drawing.Point(18, 119);
+            this.lblPuesto.Name = "lblPuesto";
+            this.lblPuesto.Size = new System.Drawing.Size(65, 21);
+            this.lblPuesto.TabIndex = 23;
+            this.lblPuesto.Text = "Puesto:";
+            // 
+            // lblBuscarPor
+            // 
+            this.lblBuscarPor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBuscarPor.AutoSize = true;
+            this.lblBuscarPor.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblBuscarPor.Location = new System.Drawing.Point(18, 35);
+            this.lblBuscarPor.Name = "lblBuscarPor";
+            this.lblBuscarPor.Size = new System.Drawing.Size(93, 21);
+            this.lblBuscarPor.TabIndex = 25;
+            this.lblBuscarPor.Text = "Buscar por:";
             // 
             // frmConsultarPersonal
             // 
@@ -167,7 +207,10 @@
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.DataGridView dgvConsultarExpediente;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtBusqueda;
-        private System.Windows.Forms.Label blcodigo;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblBuscarPor;
+        private System.Windows.Forms.ComboBox cbPuesto;
+        private System.Windows.Forms.Label lblPuesto;
+        private System.Windows.Forms.ComboBox cbNombre;
     }
 }

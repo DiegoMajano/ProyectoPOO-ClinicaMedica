@@ -13,18 +13,22 @@ namespace ClinicaMedica
         public frmRegistrarMedico()
         {
             InitializeComponent();
+            clbPuesto.SelectionMode = SelectionMode.One;            
         }
-        public void limpiar()
+        public void LimpiarCampos()
         {
             txtNombre.Clear();
             txtApellido.Clear();
             mtxtTelefono.Clear();
             dtpFechaNacimiento.Value = System.DateTime.Now;
-            cbGenero.Text = "SEleccionar Género";
-            cbEspecialidad.Text= "Seleccionar Especialidad";
+            cbGenero.SelectedIndex = 0;
+            cbEspecialidad.SelectedIndex=0;
             txtusuario.Clear();
             txtpaswoord.Clear();
-            //falta limpiar la lista del puesto (no supe como jsjsjs)
+            for (int i = 0; i < clbPuesto.Items.Count; i++)
+            {
+                clbPuesto.SetItemChecked(i, false);
+            }
         }  
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -67,12 +71,7 @@ namespace ClinicaMedica
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            limpiar();
-        }
-
-        private void txtApellido_TextChanged(object sender, EventArgs e)
-        {
-
+            LimpiarCampos();
         }
     }
 }

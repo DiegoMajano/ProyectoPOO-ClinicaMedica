@@ -14,23 +14,19 @@ namespace ClinicaMedica
         {
             InitializeComponent();
         }
-        public void limpiar()
+        public void LimpiarCampos()
         {
-            txtBusqueda.Clear();
+            //cbNombre.SelectedIndex = 0;
+            //cbPuesto.SelectedIndex = 0;
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            limpiar(); //no se si es par borrar una consulta buscada pero no creo jajaj
+            LimpiarCampos();
         }
     }
 }

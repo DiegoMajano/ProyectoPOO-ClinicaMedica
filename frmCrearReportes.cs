@@ -13,8 +13,11 @@ namespace ClinicaMedica
         public frmCrearReportes()
         {
             InitializeComponent();
+            gbSignosVitales.Enabled = false;
+            gbDReporte.Enabled = false;
+            gbMedicamento.Enabled = false;
         }
-        public void limpiar()
+        public void LimpiarCampos()
         {
             cbPacBusqueda.Items.Clear();
             txtCodPaciente.Clear();
@@ -32,43 +35,23 @@ namespace ClinicaMedica
             txtPresionArt.Clear();
             txtMotivo.Clear();
             txtDiagnostico.Clear();
-            txtIndicaciones.Clear();
-            cbMedicamentos.Items.Clear();
-
-        }
-        private void lblPeso_Click(object sender, EventArgs e)
-        {
-
+            txtIndicaciones.Clear();           
+            for (int i = 0; i < clbMedicamentos.Items.Count; i++)
+            {
+                clbMedicamentos.SetItemChecked(i, false);
+            }
         }
 
-        private void lblEstatura_Click(object sender, EventArgs e)
+        private void btnBorrar_Click(object sender, EventArgs e)
         {
-
+            LimpiarCampos();
         }
 
-        private void lblFrecCard_Click(object sender, EventArgs e)
+        private void btnbuscar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMotivo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gbSignosVitales_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnContenido_Paint(object sender, PaintEventArgs e)
-        {
-
+            gbDReporte.Enabled = true;
+            gbMedicamento.Enabled = true;
+            gbSignosVitales.Enabled = true;
         }
     }
 }

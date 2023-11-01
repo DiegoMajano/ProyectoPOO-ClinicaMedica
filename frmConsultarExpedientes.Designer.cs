@@ -34,8 +34,8 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.dgvConsultarExpediente = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.blcodigo = new System.Windows.Forms.Label();
+            this.cbBuscar = new System.Windows.Forms.ComboBox();
             this.pnTop.SuspendLayout();
             this.pnContenido.SuspendLayout();
             this.gbInformacion.SuspendLayout();
@@ -66,12 +66,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbInformacion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gbInformacion.BackColor = System.Drawing.Color.White;
+            this.gbInformacion.Controls.Add(this.cbBuscar);
             this.gbInformacion.Controls.Add(this.btnVerReportes);
             this.gbInformacion.Controls.Add(this.btnVerCitasM);
             this.gbInformacion.Controls.Add(this.btnBorrar);
             this.gbInformacion.Controls.Add(this.dgvConsultarExpediente);
             this.gbInformacion.Controls.Add(this.btnBuscar);
-            this.gbInformacion.Controls.Add(this.txtBusqueda);
             this.gbInformacion.Controls.Add(this.blcodigo);
             this.gbInformacion.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Italic);
             this.gbInformacion.Location = new System.Drawing.Point(25, 17);
@@ -119,12 +119,13 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(598, 34);
+            this.btnBorrar.Location = new System.Drawing.Point(598, 41);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(97, 40);
             this.btnBorrar.TabIndex = 21;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // dgvConsultarExpediente
             // 
@@ -132,11 +133,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvConsultarExpediente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarExpediente.Location = new System.Drawing.Point(6, 79);
+            this.dgvConsultarExpediente.Location = new System.Drawing.Point(22, 109);
             this.dgvConsultarExpediente.Name = "dgvConsultarExpediente";
             this.dgvConsultarExpediente.ReadOnly = true;
             this.dgvConsultarExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsultarExpediente.Size = new System.Drawing.Size(689, 420);
+            this.dgvConsultarExpediente.Size = new System.Drawing.Size(656, 390);
             this.dgvConsultarExpediente.TabIndex = 3;
             // 
             // btnBuscar
@@ -147,7 +148,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(494, 34);
+            this.btnBuscar.Location = new System.Drawing.Point(494, 41);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(97, 40);
             this.btnBuscar.TabIndex = 20;
@@ -155,29 +156,25 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtBusqueda
-            // 
-            this.txtBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBusqueda.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtBusqueda.Location = new System.Drawing.Point(96, 42);
-            this.txtBusqueda.MaximumSize = new System.Drawing.Size(700, 0);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(372, 26);
-            this.txtBusqueda.TabIndex = 2;
-            // 
             // blcodigo
             // 
             this.blcodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.blcodigo.AutoSize = true;
             this.blcodigo.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.blcodigo.Location = new System.Drawing.Point(18, 44);
+            this.blcodigo.Location = new System.Drawing.Point(18, 51);
             this.blcodigo.Name = "blcodigo";
             this.blcodigo.Size = new System.Drawing.Size(64, 21);
             this.blcodigo.TabIndex = 0;
             this.blcodigo.Text = "Buscar:";
+            // 
+            // cbBuscar
+            // 
+            this.cbBuscar.FormattingEnabled = true;
+            this.cbBuscar.Location = new System.Drawing.Point(88, 48);
+            this.cbBuscar.Name = "cbBuscar";
+            this.cbBuscar.Size = new System.Drawing.Size(372, 26);
+            this.cbBuscar.TabIndex = 24;
             // 
             // frmConsultarExpedientes
             // 
@@ -202,7 +199,7 @@
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.DataGridView dgvConsultarExpediente;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label blcodigo;
+        private System.Windows.Forms.ComboBox cbBuscar;
     }
 }

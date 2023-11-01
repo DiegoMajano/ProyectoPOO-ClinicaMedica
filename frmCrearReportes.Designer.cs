@@ -72,7 +72,7 @@
             this.txtIndicaciones = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblIndicaciones = new System.Windows.Forms.Label();
-            this.cbMedicamentos = new System.Windows.Forms.CheckedListBox();
+            this.clbMedicamentos = new System.Windows.Forms.CheckedListBox();
             this.lblMedicamentos = new System.Windows.Forms.Label();
             this.pnTop.SuspendLayout();
             this.pnContenido.SuspendLayout();
@@ -90,10 +90,9 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(409, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(339, 18);
             this.lblTitulo.Size = new System.Drawing.Size(150, 26);
             this.lblTitulo.Text = "Crear Reporte";
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // pnBottom
             // 
@@ -109,7 +108,6 @@
             this.pnContenido.Controls.Add(this.gbInformacion);
             this.pnContenido.Controls.Add(this.gbDReporte);
             this.pnContenido.Size = new System.Drawing.Size(853, 909);
-            this.pnContenido.Paint += new System.Windows.Forms.PaintEventHandler(this.pnContenido_Paint);
             // 
             // pnBusqueda
             // 
@@ -139,6 +137,7 @@
             this.btnbuscar.TabIndex = 35;
             this.btnbuscar.Text = "Buscar";
             this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // lblSeleccionarPaciente
             // 
@@ -445,7 +444,6 @@
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.Size = new System.Drawing.Size(352, 171);
             this.txtMotivo.TabIndex = 18;
-            this.txtMotivo.TextChanged += new System.EventHandler(this.txtMotivo_TextChanged);
             // 
             // gbSignosVitales
             // 
@@ -468,7 +466,6 @@
             this.gbSignosVitales.TabIndex = 31;
             this.gbSignosVitales.TabStop = false;
             this.gbSignosVitales.Text = "Signos Vitales";
-            this.gbSignosVitales.Enter += new System.EventHandler(this.gbSignosVitales_Enter);
             // 
             // txtFrecCar
             // 
@@ -491,7 +488,6 @@
             this.lblFrecCard.TabIndex = 25;
             this.lblFrecCard.Text = "Frecuencia\r\nCardíaca:";
             this.lblFrecCard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblFrecCard.Click += new System.EventHandler(this.lblFrecCard_Click);
             // 
             // txtEstatura
             // 
@@ -523,7 +519,6 @@
             this.lblEstatura.Size = new System.Drawing.Size(115, 21);
             this.lblEstatura.TabIndex = 23;
             this.lblEstatura.Text = "Estatura (mts)";
-            this.lblEstatura.Click += new System.EventHandler(this.lblEstatura_Click);
             // 
             // lblPresion
             // 
@@ -557,7 +552,6 @@
             this.lblPeso.Size = new System.Drawing.Size(74, 21);
             this.lblPeso.TabIndex = 21;
             this.lblPeso.Text = "Peso (lb)";
-            this.lblPeso.Click += new System.EventHandler(this.lblPeso_Click);
             // 
             // lblTemperatura
             // 
@@ -588,7 +582,7 @@
             this.gbMedicamento.Controls.Add(this.txtIndicaciones);
             this.gbMedicamento.Controls.Add(this.btnGuardar);
             this.gbMedicamento.Controls.Add(this.lblIndicaciones);
-            this.gbMedicamento.Controls.Add(this.cbMedicamentos);
+            this.gbMedicamento.Controls.Add(this.clbMedicamentos);
             this.gbMedicamento.Controls.Add(this.lblMedicamentos);
             this.gbMedicamento.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.gbMedicamento.Location = new System.Drawing.Point(10, 671);
@@ -613,6 +607,7 @@
             this.btnBorrar.TabIndex = 34;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // txtIndicaciones
             // 
@@ -652,18 +647,18 @@
             this.lblIndicaciones.TabIndex = 10;
             this.lblIndicaciones.Text = "Indicaciones:";
             // 
-            // cbMedicamentos
+            // clbMedicamentos
             // 
-            this.cbMedicamentos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbMedicamentos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cbMedicamentos.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cbMedicamentos.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.cbMedicamentos.FormattingEnabled = true;
-            this.cbMedicamentos.Location = new System.Drawing.Point(68, 44);
-            this.cbMedicamentos.Name = "cbMedicamentos";
-            this.cbMedicamentos.Size = new System.Drawing.Size(351, 107);
-            this.cbMedicamentos.Sorted = true;
-            this.cbMedicamentos.TabIndex = 9;
+            this.clbMedicamentos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.clbMedicamentos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.clbMedicamentos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.clbMedicamentos.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.clbMedicamentos.FormattingEnabled = true;
+            this.clbMedicamentos.Location = new System.Drawing.Point(68, 44);
+            this.clbMedicamentos.Name = "clbMedicamentos";
+            this.clbMedicamentos.Size = new System.Drawing.Size(351, 107);
+            this.clbMedicamentos.Sorted = true;
+            this.clbMedicamentos.TabIndex = 9;
             // 
             // lblMedicamentos
             // 
@@ -746,7 +741,7 @@
         private System.Windows.Forms.GroupBox gbMedicamento;
         private System.Windows.Forms.TextBox txtIndicaciones;
         private System.Windows.Forms.Label lblIndicaciones;
-        private System.Windows.Forms.CheckedListBox cbMedicamentos;
+        private System.Windows.Forms.CheckedListBox clbMedicamentos;
         private System.Windows.Forms.Label lblMedicamentos;
         private System.Windows.Forms.Button btnbuscar;
     }

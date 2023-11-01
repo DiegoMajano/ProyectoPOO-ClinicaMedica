@@ -28,73 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblEspecialidad = new System.Windows.Forms.Label();
             this.cbEspecialidad = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblFotografia = new System.Windows.Forms.Label();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblFechaNa = new System.Windows.Forms.Label();
+            this.lblGenero = new System.Windows.Forms.Label();
             this.txtpaswoord = new System.Windows.Forms.TextBox();
             this.txtusuario = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblPass = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
             this.cbGenero = new System.Windows.Forms.ComboBox();
             this.mtxtTelefono = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.gbCredenciales = new System.Windows.Forms.GroupBox();
             this.clbPuesto = new System.Windows.Forms.CheckedListBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblPuesto = new System.Windows.Forms.Label();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pnTop.SuspendLayout();
             this.pnContenido.SuspendLayout();
             this.gbInformacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.gbCredenciales.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
+            this.lblTitulo.Font = new System.Drawing.Font("Montserrat SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(276, 14);
-            this.lblTitulo.Size = new System.Drawing.Size(193, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(191, 26);
             this.lblTitulo.Text = "Registrar personal";
             // 
             // pnContenido
             // 
             this.pnContenido.Controls.Add(this.btnBorrar);
             this.pnContenido.Controls.Add(this.btnGuardar);
-            this.pnContenido.Controls.Add(this.label10);
+            this.pnContenido.Controls.Add(this.lblPuesto);
             this.pnContenido.Controls.Add(this.clbPuesto);
             this.pnContenido.Controls.Add(this.gbCredenciales);
             this.pnContenido.Controls.Add(this.gbInformacion);
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.label1.Location = new System.Drawing.Point(10, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre:";
+            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblNombre.Location = new System.Drawing.Point(10, 34);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(75, 21);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre:";
             // 
-            // label2
+            // lblApellido
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.label2.Location = new System.Drawing.Point(10, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Apellido:";
+            this.lblApellido.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblApellido.Location = new System.Drawing.Point(10, 79);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(74, 21);
+            this.lblApellido.TabIndex = 1;
+            this.lblApellido.Text = "Apellido:";
             // 
             // txtNombre
             // 
@@ -116,30 +117,29 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(325, 26);
             this.txtApellido.TabIndex = 3;
-            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
-            // label3
+            // lblTelefono
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.label3.Location = new System.Drawing.Point(10, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 21);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Telefono:";
+            this.lblTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblTelefono.Location = new System.Drawing.Point(10, 124);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(76, 21);
+            this.lblTelefono.TabIndex = 4;
+            this.lblTelefono.Text = "Telefono:";
             // 
-            // label4
+            // lblEspecialidad
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.label4.Location = new System.Drawing.Point(10, 260);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 21);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Especialidad:";
+            this.lblEspecialidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEspecialidad.AutoSize = true;
+            this.lblEspecialidad.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblEspecialidad.Location = new System.Drawing.Point(10, 260);
+            this.lblEspecialidad.Name = "lblEspecialidad";
+            this.lblEspecialidad.Size = new System.Drawing.Size(107, 21);
+            this.lblEspecialidad.TabIndex = 6;
+            this.lblEspecialidad.Text = "Especialidad:";
             // 
             // cbEspecialidad
             // 
@@ -158,16 +158,16 @@
             this.cbEspecialidad.Size = new System.Drawing.Size(325, 29);
             this.cbEspecialidad.TabIndex = 7;
             // 
-            // label5
+            // lblFotografia
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.label5.Location = new System.Drawing.Point(488, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 21);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Fotografía:";
+            this.lblFotografia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFotografia.AutoSize = true;
+            this.lblFotografia.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblFotografia.Location = new System.Drawing.Point(488, 34);
+            this.lblFotografia.Name = "lblFotografia";
+            this.lblFotografia.Size = new System.Drawing.Size(88, 21);
+            this.lblFotografia.TabIndex = 8;
+            this.lblFotografia.Text = "Fotografía:";
             // 
             // dtpFechaNacimiento
             // 
@@ -179,28 +179,28 @@
             this.dtpFechaNacimiento.TabIndex = 10;
             this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dtpFechaNacimiento_ValueChanged);
             // 
-            // label6
+            // lblFechaNa
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.label6.Location = new System.Drawing.Point(10, 159);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 42);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Fecha de\r\nnacimiento:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblFechaNa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFechaNa.AutoSize = true;
+            this.lblFechaNa.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblFechaNa.Location = new System.Drawing.Point(10, 159);
+            this.lblFechaNa.Name = "lblFechaNa";
+            this.lblFechaNa.Size = new System.Drawing.Size(98, 42);
+            this.lblFechaNa.TabIndex = 11;
+            this.lblFechaNa.Text = "Fecha de\r\nnacimiento:";
+            this.lblFechaNa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label7
+            // lblGenero
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.label7.Location = new System.Drawing.Point(10, 217);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 21);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Género:";
+            this.lblGenero.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblGenero.Location = new System.Drawing.Point(10, 217);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(68, 21);
+            this.lblGenero.TabIndex = 12;
+            this.lblGenero.Text = "Género:";
             // 
             // txtpaswoord
             // 
@@ -225,25 +225,25 @@
             this.txtusuario.TabIndex = 16;
             this.txtusuario.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // label8
+            // lblPass
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 83);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 18);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "contraseña";
+            this.lblPass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPass.AutoSize = true;
+            this.lblPass.Location = new System.Drawing.Point(8, 83);
+            this.lblPass.Name = "lblPass";
+            this.lblPass.Size = new System.Drawing.Size(83, 18);
+            this.lblPass.TabIndex = 15;
+            this.lblPass.Text = "contraseña";
             // 
-            // label9
+            // lblUser
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 38);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 18);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "usuario:";
+            this.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblUser.AutoSize = true;
+            this.lblUser.Location = new System.Drawing.Point(8, 38);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(60, 18);
+            this.lblUser.TabIndex = 14;
+            this.lblUser.Text = "usuario:";
             // 
             // gbInformacion
             // 
@@ -251,18 +251,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbInformacion.Controls.Add(this.cbGenero);
             this.gbInformacion.Controls.Add(this.mtxtTelefono);
-            this.gbInformacion.Controls.Add(this.label7);
-            this.gbInformacion.Controls.Add(this.label6);
+            this.gbInformacion.Controls.Add(this.lblGenero);
+            this.gbInformacion.Controls.Add(this.lblFechaNa);
             this.gbInformacion.Controls.Add(this.dtpFechaNacimiento);
-            this.gbInformacion.Controls.Add(this.pictureBox1);
-            this.gbInformacion.Controls.Add(this.label5);
+            this.gbInformacion.Controls.Add(this.pbFoto);
+            this.gbInformacion.Controls.Add(this.lblFotografia);
             this.gbInformacion.Controls.Add(this.cbEspecialidad);
-            this.gbInformacion.Controls.Add(this.label4);
-            this.gbInformacion.Controls.Add(this.label3);
+            this.gbInformacion.Controls.Add(this.lblEspecialidad);
+            this.gbInformacion.Controls.Add(this.lblTelefono);
             this.gbInformacion.Controls.Add(this.txtApellido);
             this.gbInformacion.Controls.Add(this.txtNombre);
-            this.gbInformacion.Controls.Add(this.label2);
-            this.gbInformacion.Controls.Add(this.label1);
+            this.gbInformacion.Controls.Add(this.lblApellido);
+            this.gbInformacion.Controls.Add(this.lblNombre);
             this.gbInformacion.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Italic);
             this.gbInformacion.Location = new System.Drawing.Point(18, 18);
             this.gbInformacion.Name = "gbInformacion";
@@ -296,14 +296,14 @@
             this.mtxtTelefono.Size = new System.Drawing.Size(325, 26);
             this.mtxtTelefono.TabIndex = 14;
             // 
-            // pictureBox1
+            // pbFoto
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Location = new System.Drawing.Point(582, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 120);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.pbFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbFoto.Location = new System.Drawing.Point(582, 34);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(104, 120);
+            this.pbFoto.TabIndex = 9;
+            this.pbFoto.TabStop = false;
             // 
             // gbCredenciales
             // 
@@ -311,8 +311,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbCredenciales.Controls.Add(this.txtpaswoord);
             this.gbCredenciales.Controls.Add(this.txtusuario);
-            this.gbCredenciales.Controls.Add(this.label8);
-            this.gbCredenciales.Controls.Add(this.label9);
+            this.gbCredenciales.Controls.Add(this.lblPass);
+            this.gbCredenciales.Controls.Add(this.lblUser);
             this.gbCredenciales.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Italic);
             this.gbCredenciales.Location = new System.Drawing.Point(18, 339);
             this.gbCredenciales.Name = "gbCredenciales";
@@ -327,24 +327,25 @@
             this.clbPuesto.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.clbPuesto.FormattingEnabled = true;
             this.clbPuesto.Items.AddRange(new object[] {
-            "Médico",
             "Administración",
+            "Médico",
             "Soporte"});
             this.clbPuesto.Location = new System.Drawing.Point(542, 334);
             this.clbPuesto.Name = "clbPuesto";
             this.clbPuesto.Size = new System.Drawing.Size(190, 88);
+            this.clbPuesto.Sorted = true;
             this.clbPuesto.TabIndex = 26;
             // 
-            // label10
+            // lblPuesto
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.label10.Location = new System.Drawing.Point(471, 334);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 21);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Puesto:";
+            this.lblPuesto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPuesto.AutoSize = true;
+            this.lblPuesto.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblPuesto.Location = new System.Drawing.Point(471, 334);
+            this.lblPuesto.Name = "lblPuesto";
+            this.lblPuesto.Size = new System.Drawing.Size(65, 21);
+            this.lblPuesto.TabIndex = 14;
+            this.lblPuesto.Text = "Puesto:";
             // 
             // btnBorrar
             // 
@@ -352,7 +353,7 @@
             this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
             this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
             this.btnBorrar.Location = new System.Drawing.Point(620, 464);
             this.btnBorrar.Name = "btnBorrar";
@@ -368,7 +369,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.btnGuardar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(500, 464);
             this.btnGuardar.Name = "btnGuardar";
@@ -388,7 +389,7 @@
             this.pnContenido.PerformLayout();
             this.gbInformacion.ResumeLayout(false);
             this.gbInformacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.gbCredenciales.ResumeLayout(false);
             this.gbCredenciales.PerformLayout();
             this.ResumeLayout(false);
@@ -398,23 +399,23 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.Label lblFotografia;
         private System.Windows.Forms.ComboBox cbEspecialidad;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblEspecialidad;
+        private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblFechaNa;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.TextBox txtpaswoord;
         private System.Windows.Forms.TextBox txtusuario;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblPass;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblGenero;
+        private System.Windows.Forms.Label lblPuesto;
         private System.Windows.Forms.CheckedListBox clbPuesto;
         private System.Windows.Forms.GroupBox gbCredenciales;
         private System.Windows.Forms.GroupBox gbInformacion;

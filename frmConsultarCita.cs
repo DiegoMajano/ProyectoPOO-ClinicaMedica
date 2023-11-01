@@ -16,15 +16,19 @@ namespace ClinicaMedica
         {
             InitializeComponent();
         }
-        public void limpiar()
+        public void LimpiarCampos()
         {
-            comboBox1.Items.Clear();
-            comboBox2.Items.Clear();
-            dateTimePicker1.Value = System.DateTime.Now;
+            /*cbHorario.SelectedIndex = 0;
+            cbPaciente.SelectedIndex =0;
+            cbDoctor.SelectedIndex = 0;*/
+            dtpFechaCita.Value = System.DateTime.Now;
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            limpiar();
+        }
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

@@ -33,7 +33,7 @@ namespace ClinicaMedica
 
         private void dtpFechaCita_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpFechaCita.Value <= DateTime.Now)
+            if (dtpFechaCita.Value < DateTime.Now)
             {
                 MessageBox.Show("Seleccionar una fecha válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -42,6 +42,19 @@ namespace ClinicaMedica
         private void btnAgendar_Click(object sender, EventArgs e)
         {
 
+        }
+        private void LimpiarCampos()
+        {
+            txtNombrePaciente.Clear();
+            /*cbDoctores.SelectedIndex = 0;
+            cbHorarioCitas.SelectedIndex = 0;*/
+            dtpFechaCita.Value = DateTime.Now;
+            txtObservaciones.Clear();
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

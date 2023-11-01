@@ -44,13 +44,7 @@ namespace ClinicaMedica
             {
                 this.Hide();
                 menuDoctor.Show();
-            }
-            
-        }
-
-        private void frmLoginMedico_Load(object sender, EventArgs e)
-        {
-
+            }            
         }
     }
 }

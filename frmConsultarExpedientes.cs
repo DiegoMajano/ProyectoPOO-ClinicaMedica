@@ -15,13 +15,18 @@ namespace ClinicaMedica
             InitializeComponent();
         }
 
-        public void limpiar()
+        public void LimpiarCampos()
         {
-            txtBusqueda.Clear();
+            //cbBuscar.SelectedIndex = 0;
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

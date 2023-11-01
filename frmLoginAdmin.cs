@@ -41,19 +41,8 @@ namespace ClinicaMedica
             else
             {
                 this.Hide();
-               menuAdmin.Show();
-            }
-          
-        }
-
-        private void frmLoginAdmin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
+                menuAdmin.Show();
+            }          
         }
     }
 }

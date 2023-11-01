@@ -97,3 +97,4 @@ C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\Cli
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.exe
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.pdb
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.frmConsultarPersonal.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarPersonal.resources

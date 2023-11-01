@@ -36,14 +36,14 @@
             this.btnAgregarPaciente = new System.Windows.Forms.Button();
             this.pnSlideBotones = new System.Windows.Forms.Panel();
             this.pnLogoSlide = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnLimpiarPnContenedor = new System.Windows.Forms.Button();
             this.pnContenido = new System.Windows.Forms.Panel();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnSlideBotones.SuspendLayout();
             this.pnLogoSlide.SuspendLayout();
-            this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.pnTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -69,12 +69,12 @@
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.Control;
             this.button5.Location = new System.Drawing.Point(0, 316);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(230, 64);
             this.button5.TabIndex = 5;
-            this.button5.Text = "Consultar Agenda por Doctor (creo que este no)";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // btnConsultarCita
@@ -84,6 +84,7 @@
             this.btnConsultarCita.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConsultarCita.FlatAppearance.BorderSize = 0;
             this.btnConsultarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarCita.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCita.ForeColor = System.Drawing.SystemColors.Control;
             this.btnConsultarCita.Location = new System.Drawing.Point(0, 252);
             this.btnConsultarCita.Name = "btnConsultarCita";
@@ -100,6 +101,7 @@
             this.btnAgendarCita.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAgendarCita.FlatAppearance.BorderSize = 0;
             this.btnAgendarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgendarCita.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgendarCita.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAgendarCita.Location = new System.Drawing.Point(0, 188);
             this.btnAgendarCita.Name = "btnAgendarCita";
@@ -116,6 +118,7 @@
             this.btnConsultarExpediente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConsultarExpediente.FlatAppearance.BorderSize = 0;
             this.btnConsultarExpediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarExpediente.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarExpediente.ForeColor = System.Drawing.Color.LightSlateGray;
             this.btnConsultarExpediente.Location = new System.Drawing.Point(0, 124);
             this.btnConsultarExpediente.Name = "btnConsultarExpediente";
@@ -132,6 +135,7 @@
             this.btnAgregarPaciente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAgregarPaciente.FlatAppearance.BorderSize = 0;
             this.btnAgregarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarPaciente.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarPaciente.ForeColor = System.Drawing.Color.LightSlateGray;
             this.btnAgregarPaciente.Location = new System.Drawing.Point(0, 60);
             this.btnAgregarPaciente.Name = "btnAgregarPaciente";
@@ -167,6 +171,18 @@
             this.pnLogoSlide.Padding = new System.Windows.Forms.Padding(3);
             this.pnLogoSlide.Size = new System.Drawing.Size(230, 60);
             this.pnLogoSlide.TabIndex = 0;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.Color.White;
+            this.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbLogo.Image = global::ClinicaMedica.Properties.Resources.logo_;
+            this.pbLogo.Location = new System.Drawing.Point(3, 3);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(224, 54);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
             // 
             // pnTop
             // 
@@ -205,18 +221,6 @@
             this.pnContenido.Size = new System.Drawing.Size(754, 656);
             this.pnContenido.TabIndex = 9;
             // 
-            // pbLogo
-            // 
-            this.pbLogo.BackColor = System.Drawing.Color.White;
-            this.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbLogo.Image = global::ClinicaMedica.Properties.Resources.logo_;
-            this.pbLogo.Location = new System.Drawing.Point(3, 3);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(224, 54);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo.TabIndex = 0;
-            this.pbLogo.TabStop = false;
-            // 
             // frmMenuAdministrativo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -232,8 +236,8 @@
             this.Load += new System.EventHandler(this.frmMenuAdministrativo_Load);
             this.pnSlideBotones.ResumeLayout(false);
             this.pnLogoSlide.ResumeLayout(false);
-            this.pnTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            this.pnTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

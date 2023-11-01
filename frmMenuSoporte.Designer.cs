@@ -122,6 +122,7 @@
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.Control;
             this.button5.Location = new System.Drawing.Point(0, 316);
             this.button5.Name = "button5";
@@ -136,6 +137,7 @@
             this.btnConsultarCita.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConsultarCita.FlatAppearance.BorderSize = 0;
             this.btnConsultarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarCita.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCita.ForeColor = System.Drawing.SystemColors.Control;
             this.btnConsultarCita.Location = new System.Drawing.Point(0, 252);
             this.btnConsultarCita.Name = "btnConsultarCita";
@@ -150,6 +152,7 @@
             this.btnAgendarCita.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAgendarCita.FlatAppearance.BorderSize = 0;
             this.btnAgendarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgendarCita.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgendarCita.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAgendarCita.Location = new System.Drawing.Point(0, 188);
             this.btnAgendarCita.Name = "btnAgendarCita";
@@ -164,6 +167,7 @@
             this.btnConsultarExpediente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConsultarExpediente.FlatAppearance.BorderSize = 0;
             this.btnConsultarExpediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarExpediente.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarExpediente.ForeColor = System.Drawing.Color.LightSlateGray;
             this.btnConsultarExpediente.Location = new System.Drawing.Point(0, 124);
             this.btnConsultarExpediente.Name = "btnConsultarExpediente";
@@ -180,7 +184,7 @@
             this.btnRegistrarPersonal.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRegistrarPersonal.FlatAppearance.BorderSize = 0;
             this.btnRegistrarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarPersonal.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.btnRegistrarPersonal.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarPersonal.ForeColor = System.Drawing.Color.LightSlateGray;
             this.btnRegistrarPersonal.Location = new System.Drawing.Point(0, 60);
             this.btnRegistrarPersonal.Name = "btnRegistrarPersonal";

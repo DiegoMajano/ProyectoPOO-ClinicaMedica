@@ -31,16 +31,17 @@
             this.pnTop = new System.Windows.Forms.Panel();
             this.lblConsultarCitas = new System.Windows.Forms.Label();
             this.gbCitas = new System.Windows.Forms.GroupBox();
+            this.lblDoctor = new System.Windows.Forms.Label();
+            this.cbDoctor = new System.Windows.Forms.ComboBox();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbPaciente = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
+            this.cbHorario = new System.Windows.Forms.ComboBox();
             this.lblBuscar = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dgvConsultarCitas = new System.Windows.Forms.DataGridView();
             this.pnTop.SuspendLayout();
             this.gbCitas.SuspendLayout();
@@ -75,22 +76,46 @@
             // 
             this.gbCitas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbCitas.Controls.Add(this.lblDoctor);
+            this.gbCitas.Controls.Add(this.cbDoctor);
             this.gbCitas.Controls.Add(this.btnBorrar);
             this.gbCitas.Controls.Add(this.btnBuscar);
             this.gbCitas.Controls.Add(this.label3);
-            this.gbCitas.Controls.Add(this.comboBox2);
+            this.gbCitas.Controls.Add(this.cbPaciente);
             this.gbCitas.Controls.Add(this.label2);
             this.gbCitas.Controls.Add(this.label1);
-            this.gbCitas.Controls.Add(this.dateTimePicker1);
-            this.gbCitas.Controls.Add(this.comboBox1);
+            this.gbCitas.Controls.Add(this.dtpFechaCita);
+            this.gbCitas.Controls.Add(this.cbHorario);
             this.gbCitas.Controls.Add(this.lblBuscar);
             this.gbCitas.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Italic);
             this.gbCitas.Location = new System.Drawing.Point(12, 63);
             this.gbCitas.Name = "gbCitas";
-            this.gbCitas.Size = new System.Drawing.Size(730, 180);
+            this.gbCitas.Size = new System.Drawing.Size(730, 227);
             this.gbCitas.TabIndex = 5;
             this.gbCitas.TabStop = false;
             this.gbCitas.Text = "Búsqueda";
+            // 
+            // lblDoctor
+            // 
+            this.lblDoctor.AutoSize = true;
+            this.lblDoctor.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblDoctor.Location = new System.Drawing.Point(45, 178);
+            this.lblDoctor.Name = "lblDoctor";
+            this.lblDoctor.Size = new System.Drawing.Size(63, 21);
+            this.lblDoctor.TabIndex = 11;
+            this.lblDoctor.Text = "Doctor:";
+            // 
+            // cbDoctor
+            // 
+            this.cbDoctor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbDoctor.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.cbDoctor.FormattingEnabled = true;
+            this.cbDoctor.Location = new System.Drawing.Point(145, 175);
+            this.cbDoctor.MaximumSize = new System.Drawing.Size(700, 0);
+            this.cbDoctor.Name = "cbDoctor";
+            this.cbDoctor.Size = new System.Drawing.Size(315, 29);
+            this.cbDoctor.TabIndex = 10;
             // 
             // btnBorrar
             // 
@@ -98,14 +123,15 @@
             this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
             this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(610, 127);
+            this.btnBorrar.Location = new System.Drawing.Point(610, 174);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(112, 40);
             this.btnBorrar.TabIndex = 9;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnBuscar
             // 
@@ -113,9 +139,9 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.btnBuscar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(610, 83);
+            this.btnBuscar.Location = new System.Drawing.Point(610, 130);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(112, 40);
             this.btnBuscar.TabIndex = 8;
@@ -133,17 +159,17 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Paciente:";
             // 
-            // comboBox2
+            // cbPaciente
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbPaciente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(145, 134);
-            this.comboBox2.MaximumSize = new System.Drawing.Size(700, 0);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(315, 29);
-            this.comboBox2.TabIndex = 6;
+            this.cbPaciente.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.cbPaciente.FormattingEnabled = true;
+            this.cbPaciente.Location = new System.Drawing.Point(145, 134);
+            this.cbPaciente.MaximumSize = new System.Drawing.Size(700, 0);
+            this.cbPaciente.Name = "cbPaciente";
+            this.cbPaciente.Size = new System.Drawing.Size(315, 29);
+            this.cbPaciente.TabIndex = 6;
             // 
             // label2
             // 
@@ -165,28 +191,28 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Fecha:";
             // 
-            // dateTimePicker1
+            // dtpFechaCita
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpFechaCita.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(145, 52);
-            this.dateTimePicker1.MaximumSize = new System.Drawing.Size(700, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(315, 26);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dtpFechaCita.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.dtpFechaCita.Location = new System.Drawing.Point(145, 52);
+            this.dtpFechaCita.MaximumSize = new System.Drawing.Size(700, 0);
+            this.dtpFechaCita.Name = "dtpFechaCita";
+            this.dtpFechaCita.Size = new System.Drawing.Size(315, 26);
+            this.dtpFechaCita.TabIndex = 3;
             // 
-            // comboBox1
+            // cbHorario
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbHorario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(145, 92);
-            this.comboBox1.MaximumSize = new System.Drawing.Size(700, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(315, 29);
-            this.comboBox1.TabIndex = 2;
+            this.cbHorario.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.cbHorario.FormattingEnabled = true;
+            this.cbHorario.Location = new System.Drawing.Point(145, 92);
+            this.cbHorario.MaximumSize = new System.Drawing.Size(700, 0);
+            this.cbHorario.Name = "cbHorario";
+            this.cbHorario.Size = new System.Drawing.Size(315, 29);
+            this.cbHorario.TabIndex = 2;
             // 
             // lblBuscar
             // 
@@ -204,10 +230,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvConsultarCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarCitas.Location = new System.Drawing.Point(12, 260);
+            this.dgvConsultarCitas.Location = new System.Drawing.Point(12, 309);
             this.dgvConsultarCitas.Name = "dgvConsultarCitas";
             this.dgvConsultarCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsultarCitas.Size = new System.Drawing.Size(730, 407);
+            this.dgvConsultarCitas.Size = new System.Drawing.Size(730, 358);
             this.dgvConsultarCitas.TabIndex = 6;
             // 
             // frmConsultarCita
@@ -238,15 +264,16 @@
         private System.Windows.Forms.Label lblConsultarCitas;
         private System.Windows.Forms.GroupBox gbCitas;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbPaciente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dtpFechaCita;
+        private System.Windows.Forms.ComboBox cbHorario;
         private System.Windows.Forms.Label lblBuscar;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvConsultarCitas;
+        private System.Windows.Forms.Label lblDoctor;
+        private System.Windows.Forms.ComboBox cbDoctor;
     }
 }
