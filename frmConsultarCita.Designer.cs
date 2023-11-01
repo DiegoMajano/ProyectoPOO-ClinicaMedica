@@ -62,11 +62,11 @@
             // 
             this.lblConsultarCitas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConsultarCitas.AutoSize = true;
-            this.lblConsultarCitas.Font = new System.Drawing.Font("Montserrat Thin SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarCitas.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblConsultarCitas.ForeColor = System.Drawing.SystemColors.Control;
             this.lblConsultarCitas.Location = new System.Drawing.Point(288, 12);
             this.lblConsultarCitas.Name = "lblConsultarCitas";
-            this.lblConsultarCitas.Size = new System.Drawing.Size(162, 26);
+            this.lblConsultarCitas.Size = new System.Drawing.Size(164, 26);
             this.lblConsultarCitas.TabIndex = 23;
             this.lblConsultarCitas.Text = "Consultar Citas";
             this.lblConsultarCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -84,7 +84,7 @@
             this.gbCitas.Controls.Add(this.dateTimePicker1);
             this.gbCitas.Controls.Add(this.comboBox1);
             this.gbCitas.Controls.Add(this.lblBuscar);
-            this.gbCitas.Font = new System.Drawing.Font("Montserrat Thin", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbCitas.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Italic);
             this.gbCitas.Location = new System.Drawing.Point(12, 63);
             this.gbCitas.Name = "gbCitas";
             this.gbCitas.Size = new System.Drawing.Size(730, 180);
@@ -98,7 +98,7 @@
             this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
             this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
             this.btnBorrar.Location = new System.Drawing.Point(610, 127);
             this.btnBorrar.Name = "btnBorrar";
@@ -113,7 +113,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(610, 83);
             this.btnBuscar.Name = "btnBuscar";
@@ -125,7 +125,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.label3.Location = new System.Drawing.Point(45, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 21);
@@ -136,17 +136,18 @@
             // 
             this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox2.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(145, 134);
             this.comboBox2.MaximumSize = new System.Drawing.Size(700, 0);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(315, 26);
+            this.comboBox2.Size = new System.Drawing.Size(315, 29);
             this.comboBox2.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.label2.Location = new System.Drawing.Point(45, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 21);
@@ -156,7 +157,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.label1.Location = new System.Drawing.Point(45, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 21);
@@ -167,30 +168,32 @@
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.dateTimePicker1.Location = new System.Drawing.Point(145, 52);
             this.dateTimePicker1.MaximumSize = new System.Drawing.Size(700, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(315, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(315, 26);
             this.dateTimePicker1.TabIndex = 3;
             // 
             // comboBox1
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(145, 92);
             this.comboBox1.MaximumSize = new System.Drawing.Size(700, 0);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(315, 26);
+            this.comboBox1.Size = new System.Drawing.Size(315, 29);
             this.comboBox1.TabIndex = 2;
             // 
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.lblBuscar.Location = new System.Drawing.Point(15, 25);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(94, 21);
+            this.lblBuscar.Size = new System.Drawing.Size(93, 21);
             this.lblBuscar.TabIndex = 0;
             this.lblBuscar.Text = "Buscar por:";
             // 

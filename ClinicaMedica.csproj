@@ -155,6 +155,9 @@
     <EmbeddedResource Include="frmConsultarExpedientes.resx">
       <DependentUpon>frmConsultarExpedientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarPersonal.resx">
+      <DependentUpon>frmConsultarPersonal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCrearReportes.resx">
       <DependentUpon>frmCrearReportes.cs</DependentUpon>
     </EmbeddedResource>

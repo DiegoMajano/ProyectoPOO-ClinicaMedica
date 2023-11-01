@@ -50,11 +50,11 @@
             // 
             this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Montserrat Thin SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTitulo.Location = new System.Drawing.Point(338, 14);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(66, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(69, 26);
             this.lblTitulo.TabIndex = 23;
             this.lblTitulo.Text = "Titulo";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

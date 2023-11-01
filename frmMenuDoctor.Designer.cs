@@ -72,7 +72,7 @@
             this.btnLimpiarPnContenedor.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnLimpiarPnContenedor.FlatAppearance.BorderSize = 0;
             this.btnLimpiarPnContenedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarPnContenedor.Font = new System.Drawing.Font("Montserrat Thin Black", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarPnContenedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarPnContenedor.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarPnContenedor.Location = new System.Drawing.Point(716, 0);
             this.btnLimpiarPnContenedor.Name = "btnLimpiarPnContenedor";
@@ -222,7 +222,7 @@
             this.Controls.Add(this.pnContenido);
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.pnSlideBotones);
-            this.Font = new System.Drawing.Font("Montserrat Thin Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.Name = "frmMenuDoctor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Doctor";

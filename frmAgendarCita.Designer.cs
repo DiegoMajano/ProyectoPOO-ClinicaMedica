@@ -51,8 +51,9 @@
             // 
             // lblTitulo
             // 
+            this.lblTitulo.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.Location = new System.Drawing.Point(304, 13);
-            this.lblTitulo.Size = new System.Drawing.Size(138, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(140, 26);
             this.lblTitulo.Text = "Agendar cita";
             // 
             // pnBottom
@@ -98,7 +99,7 @@
             this.txtObservaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtObservaciones.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservaciones.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.txtObservaciones.Location = new System.Drawing.Point(159, 204);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
@@ -108,7 +109,7 @@
             // lblObservaciones
             // 
             this.lblObservaciones.AutoSize = true;
-            this.lblObservaciones.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObservaciones.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.lblObservaciones.Location = new System.Drawing.Point(31, 204);
             this.lblObservaciones.Name = "lblObservaciones";
             this.lblObservaciones.Size = new System.Drawing.Size(122, 21);
@@ -130,7 +131,7 @@
             // 
             this.dtpFechaCita.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpFechaCita.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaCita.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.dtpFechaCita.Location = new System.Drawing.Point(105, 167);
             this.dtpFechaCita.MaximumSize = new System.Drawing.Size(650, 26);
             this.dtpFechaCita.Name = "dtpFechaCita";
@@ -142,7 +143,7 @@
             // 
             this.cbHorarioCitas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbHorarioCitas.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHorarioCitas.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.cbHorarioCitas.FormattingEnabled = true;
             this.cbHorarioCitas.Location = new System.Drawing.Point(105, 124);
             this.cbHorarioCitas.MaximumSize = new System.Drawing.Size(700, 0);
@@ -153,7 +154,7 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.lblFecha.Location = new System.Drawing.Point(31, 170);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(55, 21);
@@ -163,7 +164,7 @@
             // lblHorario
             // 
             this.lblHorario.AutoSize = true;
-            this.lblHorario.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorario.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.lblHorario.Location = new System.Drawing.Point(31, 128);
             this.lblHorario.Name = "lblHorario";
             this.lblHorario.Size = new System.Drawing.Size(64, 21);
@@ -173,7 +174,7 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.monthCalendar1.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthCalendar1.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.monthCalendar1.Location = new System.Drawing.Point(444, 28);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 24;
@@ -182,7 +183,7 @@
             // 
             this.cbDoctores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbDoctores.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDoctores.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.cbDoctores.FormattingEnabled = true;
             this.cbDoctores.Location = new System.Drawing.Point(105, 82);
             this.cbDoctores.MaximumSize = new System.Drawing.Size(700, 0);
@@ -193,7 +194,7 @@
             // lblDoctor
             // 
             this.lblDoctor.AutoSize = true;
-            this.lblDoctor.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoctor.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.lblDoctor.Location = new System.Drawing.Point(31, 86);
             this.lblDoctor.Name = "lblDoctor";
             this.lblDoctor.Size = new System.Drawing.Size(63, 21);
@@ -206,7 +207,7 @@
             this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
             this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
             this.btnBorrar.Location = new System.Drawing.Point(580, 504);
             this.btnBorrar.Name = "btnBorrar";
@@ -221,7 +222,7 @@
             this.btnAgendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
             this.btnAgendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
             this.btnAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgendar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgendar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnAgendar.ForeColor = System.Drawing.Color.White;
             this.btnAgendar.Location = new System.Drawing.Point(462, 504);
             this.btnAgendar.Name = "btnAgendar";
@@ -235,7 +236,7 @@
             this.txtNombrePaciente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombrePaciente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombrePaciente.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombrePaciente.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.txtNombrePaciente.Location = new System.Drawing.Point(105, 41);
             this.txtNombrePaciente.MaximumSize = new System.Drawing.Size(700, 26);
             this.txtNombrePaciente.Name = "txtNombrePaciente";
@@ -246,7 +247,7 @@
             // lblNombrePaciente
             // 
             this.lblNombrePaciente.AutoSize = true;
-            this.lblNombrePaciente.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombrePaciente.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.lblNombrePaciente.Location = new System.Drawing.Point(31, 44);
             this.lblNombrePaciente.Name = "lblNombrePaciente";
             this.lblNombrePaciente.Size = new System.Drawing.Size(75, 21);

@@ -73,7 +73,7 @@
             this.btnLimpiarPnContenedor.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnLimpiarPnContenedor.FlatAppearance.BorderSize = 0;
             this.btnLimpiarPnContenedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarPnContenedor.Font = new System.Drawing.Font("Montserrat Thin Black", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarPnContenedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarPnContenedor.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarPnContenedor.Location = new System.Drawing.Point(716, 0);
             this.btnLimpiarPnContenedor.Name = "btnLimpiarPnContenedor";
@@ -183,6 +183,7 @@
             this.btnRegistrarPersonal.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRegistrarPersonal.FlatAppearance.BorderSize = 0;
             this.btnRegistrarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarPersonal.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnRegistrarPersonal.ForeColor = System.Drawing.Color.LightSlateGray;
             this.btnRegistrarPersonal.Location = new System.Drawing.Point(0, 60);
             this.btnRegistrarPersonal.Name = "btnRegistrarPersonal";
@@ -222,7 +223,7 @@
             this.Controls.Add(this.pnContenido);
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.pnSlideBotones);
-            this.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.Name = "frmMenuSoporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Soporte";

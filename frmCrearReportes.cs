@@ -29,5 +29,15 @@ namespace ClinicaMedica
         {
 
         }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMotivo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

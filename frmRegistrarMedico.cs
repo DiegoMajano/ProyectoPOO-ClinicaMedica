@@ -47,5 +47,10 @@ namespace ClinicaMedica
             cbGenero.SelectedIndex = 0;
             cbEspecialidad.SelectedIndex = 0;
         }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
