@@ -127,7 +127,6 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(230, 64);
             this.button5.TabIndex = 5;
-            this.button5.Text = "algo mas x3";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // btnConsultarCita
@@ -142,7 +141,6 @@
             this.btnConsultarCita.Name = "btnConsultarCita";
             this.btnConsultarCita.Size = new System.Drawing.Size(230, 64);
             this.btnConsultarCita.TabIndex = 4;
-            this.btnConsultarCita.Text = "algo mas x2";
             this.btnConsultarCita.UseVisualStyleBackColor = false;
             // 
             // btnAgendarCita
@@ -157,7 +155,6 @@
             this.btnAgendarCita.Name = "btnAgendarCita";
             this.btnAgendarCita.Size = new System.Drawing.Size(230, 64);
             this.btnAgendarCita.TabIndex = 3;
-            this.btnAgendarCita.Text = "algo mas";
             this.btnAgendarCita.UseVisualStyleBackColor = false;
             // 
             // btnConsultarExpediente

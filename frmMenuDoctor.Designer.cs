@@ -126,7 +126,6 @@
             this.btnConsultarMedicamento.Name = "btnConsultarMedicamento";
             this.btnConsultarMedicamento.Size = new System.Drawing.Size(230, 64);
             this.btnConsultarMedicamento.TabIndex = 5;
-            this.btnConsultarMedicamento.Text = "algomasx2";
             this.btnConsultarMedicamento.UseVisualStyleBackColor = false;
             // 
             // btnCrearReceta
@@ -141,7 +140,6 @@
             this.btnCrearReceta.Name = "btnCrearReceta";
             this.btnCrearReceta.Size = new System.Drawing.Size(230, 64);
             this.btnCrearReceta.TabIndex = 4;
-            this.btnCrearReceta.Text = "algomas";
             this.btnCrearReceta.UseVisualStyleBackColor = false;
             // 
             // btnCrearReporte

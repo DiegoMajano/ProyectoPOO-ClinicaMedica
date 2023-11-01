@@ -39,5 +39,10 @@ namespace ClinicaMedica
         {
 
         }
+
+        private void gbSignosVitales_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

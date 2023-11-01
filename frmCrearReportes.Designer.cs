@@ -73,6 +73,7 @@
             this.lblIndicaciones = new System.Windows.Forms.Label();
             this.cbMedicamentos = new System.Windows.Forms.CheckedListBox();
             this.lblMedicamentos = new System.Windows.Forms.Label();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.pnTop.SuspendLayout();
             this.pnContenido.SuspendLayout();
             this.pnBusqueda.SuspendLayout();
@@ -89,7 +90,7 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(405, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(360, 9);
             this.lblTitulo.Size = new System.Drawing.Size(150, 26);
             this.lblTitulo.Text = "Crear Reporte";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
@@ -112,6 +113,7 @@
             // pnBusqueda
             // 
             this.pnBusqueda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnBusqueda.Controls.Add(this.btnbuscar);
             this.pnBusqueda.Controls.Add(this.lblSeleccionarPaciente);
             this.pnBusqueda.Controls.Add(this.cbPacBusqueda);
             this.pnBusqueda.Dock = System.Windows.Forms.DockStyle.Top;
@@ -126,7 +128,7 @@
             this.lblSeleccionarPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSeleccionarPaciente.AutoSize = true;
             this.lblSeleccionarPaciente.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblSeleccionarPaciente.Location = new System.Drawing.Point(79, 25);
+            this.lblSeleccionarPaciente.Location = new System.Drawing.Point(22, 25);
             this.lblSeleccionarPaciente.Name = "lblSeleccionarPaciente";
             this.lblSeleccionarPaciente.Size = new System.Drawing.Size(167, 21);
             this.lblSeleccionarPaciente.TabIndex = 3;
@@ -137,7 +139,7 @@
             this.cbPacBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbPacBusqueda.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.cbPacBusqueda.FormattingEnabled = true;
-            this.cbPacBusqueda.Location = new System.Drawing.Point(263, 21);
+            this.cbPacBusqueda.Location = new System.Drawing.Point(206, 21);
             this.cbPacBusqueda.Name = "cbPacBusqueda";
             this.cbPacBusqueda.Size = new System.Drawing.Size(458, 29);
             this.cbPacBusqueda.TabIndex = 4;
@@ -449,6 +451,7 @@
             this.gbSignosVitales.TabIndex = 31;
             this.gbSignosVitales.TabStop = false;
             this.gbSignosVitales.Text = "Signos Vitales";
+            this.gbSignosVitales.Enter += new System.EventHandler(this.gbSignosVitales_Enter);
             // 
             // txtFrecCar
             // 
@@ -656,6 +659,22 @@
             this.lblMedicamentos.TabIndex = 8;
             this.lblMedicamentos.Text = "Medicamento(s):";
             // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnbuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnbuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
+            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Italic);
+            this.btnbuscar.ForeColor = System.Drawing.Color.White;
+            this.btnbuscar.Location = new System.Drawing.Point(699, 15);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(112, 40);
+            this.btnbuscar.TabIndex = 35;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = false;
+            // 
             // frmCrearReportes
             // 
             this.AutoScroll = true;
@@ -728,5 +747,6 @@
         private System.Windows.Forms.Label lblIndicaciones;
         private System.Windows.Forms.CheckedListBox cbMedicamentos;
         private System.Windows.Forms.Label lblMedicamentos;
+        private System.Windows.Forms.Button btnbuscar;
     }
 }

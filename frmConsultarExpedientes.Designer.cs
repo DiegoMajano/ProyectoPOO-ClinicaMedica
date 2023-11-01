@@ -44,9 +44,9 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Font = new System.Drawing.Font("Montserrat", 14.25F);
+            this.lblTitulo.Font = new System.Drawing.Font("Montserrat SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(252, 12);
-            this.lblTitulo.Size = new System.Drawing.Size(225, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(233, 26);
             this.lblTitulo.Text = "Consultar expedientes";
             // 
             // pnBottom
