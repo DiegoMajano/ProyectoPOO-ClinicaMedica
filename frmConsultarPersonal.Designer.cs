@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gbInformacion = new System.Windows.Forms.GroupBox();
+            this.mtxtCodigo = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.lblBuscarPor = new System.Windows.Forms.Label();
             this.cbPuesto = new System.Windows.Forms.ComboBox();
@@ -38,8 +40,6 @@
             this.dgvConsultarExpediente = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.mtxtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.pnTop.SuspendLayout();
             this.pnContenido.SuspendLayout();
             this.gbInformacion.SuspendLayout();
@@ -87,6 +87,27 @@
             this.gbInformacion.TabIndex = 25;
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "Llenar Datos del Personal";
+            // 
+            // mtxtCodigo
+            // 
+            this.mtxtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxtCodigo.Location = new System.Drawing.Point(97, 156);
+            this.mtxtCodigo.Mask = "LLL0000";
+            this.mtxtCodigo.Name = "mtxtCodigo";
+            this.mtxtCodigo.Size = new System.Drawing.Size(393, 23);
+            this.mtxtCodigo.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.label1.Location = new System.Drawing.Point(18, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 21);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Código:";
             // 
             // btnEditar
             // 
@@ -206,28 +227,6 @@
             this.lblNombre.Size = new System.Drawing.Size(75, 21);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.label1.Location = new System.Drawing.Point(18, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 21);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Código:";
-            // 
-            // mtxtCodigo
-            // 
-            this.mtxtCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mtxtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtxtCodigo.Location = new System.Drawing.Point(97, 156);
-            this.mtxtCodigo.Mask = "LLL0000";
-            this.mtxtCodigo.Name = "mtxtCodigo";
-            this.mtxtCodigo.Size = new System.Drawing.Size(393, 23);
-            this.mtxtCodigo.TabIndex = 28;
             // 
             // frmConsultarPersonal
             // 

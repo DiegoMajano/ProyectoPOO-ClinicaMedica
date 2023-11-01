@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.gbInformacion = new System.Windows.Forms.GroupBox();
+            this.mtxtCodPaci = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.cbBuscar = new System.Windows.Forms.ComboBox();
             this.btnVerReportes = new System.Windows.Forms.Button();
@@ -37,9 +40,6 @@
             this.dgvConsultarExpediente = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.blcodigo = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.mtxtCodPaci = new System.Windows.Forms.MaskedTextBox();
             this.pnTop.SuspendLayout();
             this.pnContenido.SuspendLayout();
             this.gbInformacion.SuspendLayout();
@@ -88,6 +88,39 @@
             this.gbInformacion.TabIndex = 24;
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "Llenar Datos del Paciente";
+            // 
+            // mtxtCodPaci
+            // 
+            this.mtxtCodPaci.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxtCodPaci.Location = new System.Drawing.Point(167, 104);
+            this.mtxtCodPaci.Mask = "LLL0000";
+            this.mtxtCodPaci.Name = "mtxtCodPaci";
+            this.mtxtCodPaci.Size = new System.Drawing.Size(304, 23);
+            this.mtxtCodPaci.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.label1.Location = new System.Drawing.Point(28, 104);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 21);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Código Paciente";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblNombre.Location = new System.Drawing.Point(28, 62);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(72, 21);
+            this.lblNombre.TabIndex = 26;
+            this.lblNombre.Text = "Nombre";
             // 
             // btnEditar
             // 
@@ -198,39 +231,6 @@
             this.blcodigo.Size = new System.Drawing.Size(93, 21);
             this.blcodigo.TabIndex = 0;
             this.blcodigo.Text = "Buscar por:";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblNombre.Location = new System.Drawing.Point(28, 62);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(72, 21);
-            this.lblNombre.TabIndex = 26;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.label1.Location = new System.Drawing.Point(28, 104);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 21);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Código Paciente";
-            // 
-            // mtxtCodPaci
-            // 
-            this.mtxtCodPaci.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mtxtCodPaci.Location = new System.Drawing.Point(167, 104);
-            this.mtxtCodPaci.Mask = "LLL0000";
-            this.mtxtCodPaci.Name = "mtxtCodPaci";
-            this.mtxtCodPaci.Size = new System.Drawing.Size(304, 23);
-            this.mtxtCodPaci.TabIndex = 28;
             // 
             // frmConsultarExpedientes
             // 
