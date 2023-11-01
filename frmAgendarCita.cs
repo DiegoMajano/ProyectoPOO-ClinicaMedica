@@ -13,6 +13,7 @@ namespace ClinicaMedica
         public frmAgendarCita()
         {
             InitializeComponent();
+            txtNombrePaciente.Focus();
         }
         public void limpiar()
         {
@@ -41,7 +42,8 @@ namespace ClinicaMedica
 
         private void btnAgendar_Click(object sender, EventArgs e)
         {
-
+            LimpiarCampos();
+            txtNombrePaciente.Focus();
         }
         private void LimpiarCampos()
         {

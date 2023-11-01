@@ -52,6 +52,7 @@ namespace ClinicaMedica
             gbDReporte.Enabled = true;
             gbMedicamento.Enabled = true;
             gbSignosVitales.Enabled = true;
+            mtxtPeso.Focus();
         }
     }
 }

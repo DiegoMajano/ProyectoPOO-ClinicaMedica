@@ -94,11 +94,13 @@ namespace ClinicaMedica
             paciente.Dui = mtxtDUI.Text;
             paciente.Nit = mtxtNIT.Text;
             LimpiarCampos();
+            txtP_Nombre.Focus();
             //falta mostrar mensaje que se guardo correctamente, uso de catch
         }
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+            txtP_Nombre.Focus();
             //falta mostrar que se borro correctamente o mal, uso de catch
         }
 
