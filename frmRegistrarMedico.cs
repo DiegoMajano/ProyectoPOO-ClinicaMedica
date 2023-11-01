@@ -64,11 +64,6 @@ namespace ClinicaMedica
             cbEspecialidad.SelectedIndex = 0;
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();

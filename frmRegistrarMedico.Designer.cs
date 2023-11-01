@@ -223,7 +223,6 @@
             this.txtusuario.ReadOnly = true;
             this.txtusuario.Size = new System.Drawing.Size(269, 26);
             this.txtusuario.TabIndex = 16;
-            this.txtusuario.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // lblPass
             // 
