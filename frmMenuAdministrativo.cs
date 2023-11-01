@@ -91,5 +91,10 @@ namespace ClinicaMedica
                 home.Show();
             }
         }
+
+        private void frmMenuAdministrativo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

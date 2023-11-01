@@ -74,7 +74,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(230, 64);
             this.button5.TabIndex = 5;
-            this.button5.Text = "Consultar Agenda por Doctor";
+            this.button5.Text = "Consultar Agenda por Doctor (creo que este no)";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // btnConsultarCita
@@ -229,6 +229,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Administrativo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMenuAdministrativo_Load);
             this.pnSlideBotones.ResumeLayout(false);
             this.pnLogoSlide.ResumeLayout(false);
             this.pnTop.ResumeLayout(false);

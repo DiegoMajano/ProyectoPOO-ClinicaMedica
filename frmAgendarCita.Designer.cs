@@ -51,7 +51,6 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.Location = new System.Drawing.Point(304, 13);
             this.lblTitulo.Size = new System.Drawing.Size(140, 26);
             this.lblTitulo.Text = "Agendar cita";
@@ -230,6 +229,7 @@
             this.btnAgendar.TabIndex = 20;
             this.btnAgendar.Text = "Agendar";
             this.btnAgendar.UseVisualStyleBackColor = false;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
             // txtNombrePaciente
             // 

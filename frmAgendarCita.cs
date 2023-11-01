@@ -14,7 +14,14 @@ namespace ClinicaMedica
         {
             InitializeComponent();
         }
-
+        public void limpiar()
+        {
+            txtNombrePaciente.Clear();
+            cbDoctores.Items.Clear();
+            cbHorarioCitas.Items.Clear();
+            txtObservaciones.Clear();
+            dtpFechaCita.Value = System.DateTime.Now;
+        }
         private void txtNombrePaciente_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
@@ -30,6 +37,11 @@ namespace ClinicaMedica
             {
                 MessageBox.Show("Seleccionar una fecha válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void btnAgendar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

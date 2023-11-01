@@ -61,5 +61,10 @@ namespace ClinicaMedica
             consultarPersonal.Show();
             consultarPersonal.BringToFront();
         }
+
+        private void frmMenuSoporte_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

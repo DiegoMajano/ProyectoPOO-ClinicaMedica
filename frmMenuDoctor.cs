@@ -78,5 +78,10 @@ namespace ClinicaMedica
             consultarCita.Show();
             consultarCita.BringToFront();
         }
+
+        private void frmMenuDoctor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

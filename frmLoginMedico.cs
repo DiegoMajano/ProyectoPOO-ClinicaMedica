@@ -20,8 +20,22 @@ namespace ClinicaMedica
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             frmHome home = new frmHome();
-            this.Hide();
-            home.Show();
+           
+            
+
+            if (txtUser.Text == "" || txtPassword.Text == "")
+            {
+                MessageBox.Show("Ingreso invalido, Campos no llenos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }//validacion sera con las contras de la base
+            else if (txtUser.Text != "usuario" && txtPassword.Text != "contraseña")//validacion para ver si si existe el user y si la contra es buena
+            {
+                MessageBox.Show("Las credenciales ingresadas son incorrectas, Intentar de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                this.Hide();
+                home.Show();
+            }
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)

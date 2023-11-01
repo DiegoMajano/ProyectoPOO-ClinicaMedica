@@ -14,5 +14,14 @@ namespace ClinicaMedica
         {
             InitializeComponent();
         }
+
+        public void limpiar()
+        {
+            txtBusqueda.Clear();
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

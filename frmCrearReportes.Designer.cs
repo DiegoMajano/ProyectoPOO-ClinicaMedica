@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnBusqueda = new System.Windows.Forms.Panel();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.lblSeleccionarPaciente = new System.Windows.Forms.Label();
             this.cbPacBusqueda = new System.Windows.Forms.ComboBox();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
@@ -73,7 +74,6 @@
             this.lblIndicaciones = new System.Windows.Forms.Label();
             this.cbMedicamentos = new System.Windows.Forms.CheckedListBox();
             this.lblMedicamentos = new System.Windows.Forms.Label();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.pnTop.SuspendLayout();
             this.pnContenido.SuspendLayout();
             this.pnBusqueda.SuspendLayout();
@@ -90,7 +90,7 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(360, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(409, 9);
             this.lblTitulo.Size = new System.Drawing.Size(150, 26);
             this.lblTitulo.Text = "Crear Reporte";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
@@ -109,6 +109,7 @@
             this.pnContenido.Controls.Add(this.gbInformacion);
             this.pnContenido.Controls.Add(this.gbDReporte);
             this.pnContenido.Size = new System.Drawing.Size(853, 909);
+            this.pnContenido.Paint += new System.Windows.Forms.PaintEventHandler(this.pnContenido_Paint);
             // 
             // pnBusqueda
             // 
@@ -122,6 +123,22 @@
             this.pnBusqueda.Name = "pnBusqueda";
             this.pnBusqueda.Size = new System.Drawing.Size(843, 71);
             this.pnBusqueda.TabIndex = 27;
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnbuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnbuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
+            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Italic);
+            this.btnbuscar.ForeColor = System.Drawing.Color.White;
+            this.btnbuscar.Location = new System.Drawing.Point(699, 15);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(112, 40);
+            this.btnbuscar.TabIndex = 35;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = false;
             // 
             // lblSeleccionarPaciente
             // 
@@ -658,22 +675,6 @@
             this.lblMedicamentos.Size = new System.Drawing.Size(134, 21);
             this.lblMedicamentos.TabIndex = 8;
             this.lblMedicamentos.Text = "Medicamento(s):";
-            // 
-            // btnbuscar
-            // 
-            this.btnbuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
-            this.btnbuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
-            this.btnbuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
-            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Italic);
-            this.btnbuscar.ForeColor = System.Drawing.Color.White;
-            this.btnbuscar.Location = new System.Drawing.Point(699, 15);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(112, 40);
-            this.btnbuscar.TabIndex = 35;
-            this.btnbuscar.Text = "Buscar";
-            this.btnbuscar.UseVisualStyleBackColor = false;
             // 
             // frmCrearReportes
             // 

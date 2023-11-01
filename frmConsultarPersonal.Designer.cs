@@ -42,7 +42,6 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.Location = new System.Drawing.Point(280, 9);
             this.lblTitulo.Size = new System.Drawing.Size(206, 26);
             this.lblTitulo.Text = "Consultar  Personal";
@@ -55,8 +54,7 @@
             // pnContenido
             // 
             this.pnContenido.Controls.Add(this.gbInformacion);
-            this.pnContenido.Location = new System.Drawing.Point(0, 0);
-            this.pnContenido.Size = new System.Drawing.Size(754, 664);
+            this.pnContenido.Size = new System.Drawing.Size(754, 561);
             // 
             // gbInformacion
             // 
@@ -73,7 +71,7 @@
             this.gbInformacion.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Italic);
             this.gbInformacion.Location = new System.Drawing.Point(24, 61);
             this.gbInformacion.Name = "gbInformacion";
-            this.gbInformacion.Size = new System.Drawing.Size(701, 589);
+            this.gbInformacion.Size = new System.Drawing.Size(701, 486);
             this.gbInformacion.TabIndex = 25;
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "Llenar Datos del Personal";
@@ -92,6 +90,7 @@
             this.btnBorrar.TabIndex = 21;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // dgvConsultarExpediente
             // 
@@ -103,7 +102,7 @@
             this.dgvConsultarExpediente.Name = "dgvConsultarExpediente";
             this.dgvConsultarExpediente.ReadOnly = true;
             this.dgvConsultarExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsultarExpediente.Size = new System.Drawing.Size(689, 458);
+            this.dgvConsultarExpediente.Size = new System.Drawing.Size(689, 355);
             this.dgvConsultarExpediente.TabIndex = 3;
             // 
             // btnBuscar
@@ -120,6 +119,7 @@
             this.btnBuscar.TabIndex = 20;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBusqueda
             // 
@@ -132,6 +132,7 @@
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(372, 26);
             this.txtBusqueda.TabIndex = 2;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // blcodigo
             // 

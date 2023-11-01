@@ -39,29 +39,28 @@
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtpaswoord = new System.Windows.Forms.TextBox();
+            this.txtusuario = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
             this.cbGenero = new System.Windows.Forms.ComboBox();
             this.mtxtTelefono = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbCredenciales = new System.Windows.Forms.GroupBox();
             this.clbPuesto = new System.Windows.Forms.CheckedListBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnTop.SuspendLayout();
             this.pnContenido.SuspendLayout();
             this.gbInformacion.SuspendLayout();
-            this.gbCredenciales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbCredenciales.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.Location = new System.Drawing.Point(276, 14);
             this.lblTitulo.Size = new System.Drawing.Size(193, 26);
             this.lblTitulo.Text = "Registrar personal";
@@ -117,6 +116,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(325, 26);
             this.txtApellido.TabIndex = 3;
+            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // label3
@@ -148,9 +148,11 @@
             this.cbEspecialidad.FormattingEnabled = true;
             this.cbEspecialidad.Items.AddRange(new object[] {
             "Seleccionar especialidad",
-            "General",
+            "Medicina General",
             "Pediatra",
-            "NOSEQUEMASHAY"});
+            "Ginecología",
+            "Odontología",
+            "Meicina Interna "});
             this.cbEspecialidad.Location = new System.Drawing.Point(124, 256);
             this.cbEspecialidad.Name = "cbEspecialidad";
             this.cbEspecialidad.Size = new System.Drawing.Size(325, 29);
@@ -200,28 +202,28 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Género:";
             // 
-            // textBox3
+            // txtpaswoord
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.textBox3.Location = new System.Drawing.Point(122, 80);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(269, 26);
-            this.textBox3.TabIndex = 17;
+            this.txtpaswoord.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtpaswoord.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtpaswoord.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.txtpaswoord.Location = new System.Drawing.Point(122, 80);
+            this.txtpaswoord.Name = "txtpaswoord";
+            this.txtpaswoord.ReadOnly = true;
+            this.txtpaswoord.Size = new System.Drawing.Size(269, 26);
+            this.txtpaswoord.TabIndex = 17;
             // 
-            // textBox4
+            // txtusuario
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.textBox4.Location = new System.Drawing.Point(122, 35);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(269, 26);
-            this.textBox4.TabIndex = 16;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtusuario.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.txtusuario.Location = new System.Drawing.Point(122, 35);
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.ReadOnly = true;
+            this.txtusuario.Size = new System.Drawing.Size(269, 26);
+            this.txtusuario.TabIndex = 16;
+            this.txtusuario.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label8
             // 
@@ -294,12 +296,21 @@
             this.mtxtTelefono.Size = new System.Drawing.Size(325, 26);
             this.mtxtTelefono.TabIndex = 14;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Location = new System.Drawing.Point(582, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(104, 120);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // gbCredenciales
             // 
             this.gbCredenciales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbCredenciales.Controls.Add(this.textBox3);
-            this.gbCredenciales.Controls.Add(this.textBox4);
+            this.gbCredenciales.Controls.Add(this.txtpaswoord);
+            this.gbCredenciales.Controls.Add(this.txtusuario);
             this.gbCredenciales.Controls.Add(this.label8);
             this.gbCredenciales.Controls.Add(this.label9);
             this.gbCredenciales.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Italic);
@@ -349,6 +360,7 @@
             this.btnBorrar.TabIndex = 28;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnGuardar
             // 
@@ -365,15 +377,6 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Location = new System.Drawing.Point(582, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 120);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmRegistrarMedico
             // 
             this.ClientSize = new System.Drawing.Size(754, 626);
@@ -385,9 +388,9 @@
             this.pnContenido.PerformLayout();
             this.gbInformacion.ResumeLayout(false);
             this.gbInformacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbCredenciales.ResumeLayout(false);
             this.gbCredenciales.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,8 +409,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtpaswoord;
+        private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;

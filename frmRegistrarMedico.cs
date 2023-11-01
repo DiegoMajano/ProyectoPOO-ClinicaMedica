@@ -14,6 +14,18 @@ namespace ClinicaMedica
         {
             InitializeComponent();
         }
+        public void limpiar()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            mtxtTelefono.Clear();
+            dtpFechaNacimiento.Value = System.DateTime.Now;
+            cbGenero.Text = "SEleccionar Género";
+            cbEspecialidad.Text= "Seleccionar Especialidad";
+            txtusuario.Clear();
+            txtpaswoord.Clear();
+            //falta limpiar la lista del puesto (no supe como jsjsjs)
+        }  
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -49,6 +61,16 @@ namespace ClinicaMedica
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
         {
 
         }

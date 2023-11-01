@@ -62,7 +62,7 @@
             this.btnsalir.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnsalir.Size = new System.Drawing.Size(122, 62);
             this.btnsalir.TabIndex = 7;
-            this.btnsalir.Text = "   Salir";
+            this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
