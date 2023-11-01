@@ -18,6 +18,7 @@ namespace ClinicaMedica
         public void LimpiarCampos()
         {
             //cbBuscar.SelectedIndex = 0;
+            mtxtCodPaci.Clear();
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {

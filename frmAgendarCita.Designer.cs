@@ -132,7 +132,7 @@
             this.dtpFechaCita.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFechaCita.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.dtpFechaCita.Location = new System.Drawing.Point(105, 167);
+            this.dtpFechaCita.Location = new System.Drawing.Point(105, 125);
             this.dtpFechaCita.MaximumSize = new System.Drawing.Size(650, 26);
             this.dtpFechaCita.Name = "dtpFechaCita";
             this.dtpFechaCita.Size = new System.Drawing.Size(303, 26);
@@ -145,7 +145,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbHorarioCitas.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.cbHorarioCitas.FormattingEnabled = true;
-            this.cbHorarioCitas.Location = new System.Drawing.Point(105, 124);
+            this.cbHorarioCitas.Location = new System.Drawing.Point(105, 161);
             this.cbHorarioCitas.MaximumSize = new System.Drawing.Size(700, 0);
             this.cbHorarioCitas.Name = "cbHorarioCitas";
             this.cbHorarioCitas.Size = new System.Drawing.Size(303, 29);
@@ -155,7 +155,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblFecha.Location = new System.Drawing.Point(31, 170);
+            this.lblFecha.Location = new System.Drawing.Point(31, 128);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(55, 21);
             this.lblFecha.TabIndex = 26;
@@ -165,7 +165,7 @@
             // 
             this.lblHorario.AutoSize = true;
             this.lblHorario.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblHorario.Location = new System.Drawing.Point(31, 128);
+            this.lblHorario.Location = new System.Drawing.Point(31, 165);
             this.lblHorario.Name = "lblHorario";
             this.lblHorario.Size = new System.Drawing.Size(64, 21);
             this.lblHorario.TabIndex = 25;

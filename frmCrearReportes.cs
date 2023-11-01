@@ -28,11 +28,11 @@ namespace ClinicaMedica
             txtGenero.Clear();
             txtCodCita.Clear();
             txtFechaCita.Clear();
-            txtPeso.Clear();
-            txtEstatura.Clear();
-            txtFrecCar.Clear();
-            txtTemp.Clear();
-            txtPresionArt.Clear();
+            mtxtPeso.Clear();
+            mtxtEstatura.Clear();
+            mtxtFrecCar.Clear();
+            mtxtTemp.Clear();
+            mtxtPresionArt.Clear();
             txtMotivo.Clear();
             txtDiagnostico.Clear();
             txtIndicaciones.Clear();           

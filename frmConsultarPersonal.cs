@@ -18,6 +18,7 @@ namespace ClinicaMedica
         {
             //cbNombre.SelectedIndex = 0;
             //cbPuesto.SelectedIndex = 0;
+            mtxtCodigo.Clear();
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
