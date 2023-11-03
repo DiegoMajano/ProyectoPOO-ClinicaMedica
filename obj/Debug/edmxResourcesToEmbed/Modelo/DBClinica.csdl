@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Prueba_1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="citasMedicas">
+    <Key>
+      <PropertyRef Name="codCita" />
+    </Key>
+    <Property Name="codCita" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="codPaciente" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="codMedico" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fechaHora" Type="DateTime" Precision="3" />
+    <Property Name="hora" Type="String" MaxLength="8" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="medicos">
+    <Key>
+      <PropertyRef Name="codMedico" />
+    </Key>
+    <Property Name="codMedico" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="primerNombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="primerApellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="9" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="especialidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pacientes">
+    <Key>
+      <PropertyRef Name="codPaciente" />
+    </Key>
+    <Property Name="codPaciente" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="primerNombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="segundoNombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="primerApellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="segundoApellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="9" FixedLength="true" Unicode="false" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="dui" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="nit" Type="String" MaxLength="17" FixedLength="true" Unicode="false" />
+    <Property Name="edad" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="recetas">
+    <Key>
+      <PropertyRef Name="codReceta" />
+    </Key>
+    <Property Name="codReceta" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fechaEmitida" Type="DateTime" Precision="0" />
+    <Property Name="codReporte" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportes">
+    <Key>
+      <PropertyRef Name="codReporte" />
+    </Key>
+    <Property Name="codReporte" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="codCita" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="motivo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="diagnostico" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="medicamentos">
+    <Key>
+      <PropertyRef Name="codReceta" />
+      <PropertyRef Name="nombreMedicamento" />
+      <PropertyRef Name="indicaciones" />
+    </Key>
+    <Property Name="codReceta" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="nombreMedicamento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="indicaciones" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="signosVitales">
+    <Key>
+      <PropertyRef Name="codReporte" />
+    </Key>
+    <Property Name="codReporte" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="peso" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="talla" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="temperatura" Type="Decimal" Precision="3" Scale="1" />
+    <Property Name="presionArterial" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="fk_codCitaR">
+    <End Role="citasMedicas" Type="Self.citasMedicas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reportes" Type="Self.reportes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="citasMedicas">
+        <PropertyRef Name="codCita" />
+      </Principal>
+      <Dependent Role="reportes">
+        <PropertyRef Name="codCita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_codMedicoC">
+    <End Role="medicos" Type="Self.medicos" Multiplicity="1" />
+    <End Role="citasMedicas" Type="Self.citasMedicas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="medicos">
+        <PropertyRef Name="codMedico" />
+      </Principal>
+      <Dependent Role="citasMedicas">
+        <PropertyRef Name="codMedico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_codPacienteC">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="citasMedicas" Type="Self.citasMedicas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="codPaciente" />
+      </Principal>
+      <Dependent Role="citasMedicas">
+        <PropertyRef Name="codPaciente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_codRecetaM">
+    <End Role="recetas" Type="Self.recetas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="medicamentos" Type="Self.medicamentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="recetas">
+        <PropertyRef Name="codReceta" />
+      </Principal>
+      <Dependent Role="medicamentos">
+        <PropertyRef Name="codReceta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_codReporetR">
+    <End Role="reportes" Type="Self.reportes" Multiplicity="1" />
+    <End Role="recetas" Type="Self.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="reportes">
+        <PropertyRef Name="codReporte" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="codReporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_codReporteSV">
+    <End Role="reportes" Type="Self.reportes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="signosVitales" Type="Self.signosVitales" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="reportes">
+        <PropertyRef Name="codReporte" />
+      </Principal>
+      <Dependent Role="signosVitales">
+        <PropertyRef Name="codReporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Prueba_1Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="citasMedicas" EntityType="Self.citasMedicas" />
+    <EntitySet Name="medicos" EntityType="Self.medicos" />
+    <EntitySet Name="pacientes" EntityType="Self.pacientes" />
+    <EntitySet Name="recetas" EntityType="Self.recetas" />
+    <EntitySet Name="reportes" EntityType="Self.reportes" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="medicamentos" EntityType="Self.medicamentos" />
+    <EntitySet Name="signosVitales" EntityType="Self.signosVitales" />
+    <AssociationSet Name="fk_codCitaR" Association="Self.fk_codCitaR">
+      <End Role="citasMedicas" EntitySet="citasMedicas" />
+      <End Role="reportes" EntitySet="reportes" />
+    </AssociationSet>
+    <AssociationSet Name="fk_codMedicoC" Association="Self.fk_codMedicoC">
+      <End Role="medicos" EntitySet="medicos" />
+      <End Role="citasMedicas" EntitySet="citasMedicas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_codPacienteC" Association="Self.fk_codPacienteC">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="citasMedicas" EntitySet="citasMedicas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_codRecetaM" Association="Self.fk_codRecetaM">
+      <End Role="recetas" EntitySet="recetas" />
+      <End Role="medicamentos" EntitySet="medicamentos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_codReporetR" Association="Self.fk_codReporetR">
+      <End Role="reportes" EntitySet="reportes" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_codReporteSV" Association="Self.fk_codReporteSV">
+      <End Role="reportes" EntitySet="reportes" />
+      <End Role="signosVitales" EntitySet="signosVitales" />
+    </AssociationSet>
+    <FunctionImport Name="AgregarMedicamento">
+      <Parameter Name="codR" Mode="In" Type="String" />
+      <Parameter Name="nom" Mode="In" Type="String" />
+      <Parameter Name="indi" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CrearReceta">
+      <Parameter Name="codRe" Mode="In" Type="String" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CrearReporte">
+      <Parameter Name="codcita" Mode="In" Type="String" />
+      <Parameter Name="mot" Mode="In" Type="String" />
+      <Parameter Name="diag" Mode="In" Type="String" />
+      <Parameter Name="peso" Mode="In" Type="Decimal" />
+      <Parameter Name="tal" Mode="In" Type="Decimal" />
+      <Parameter Name="temp" Mode="In" Type="Decimal" />
+      <Parameter Name="presi" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="IngresarCita">
+      <Parameter Name="codP" Mode="In" Type="String" />
+      <Parameter Name="codM" Mode="In" Type="String" />
+      <Parameter Name="fechaH" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="InscribirMedico">
+      <Parameter Name="pnom" Mode="In" Type="String" />
+      <Parameter Name="pape" Mode="In" Type="String" />
+      <Parameter Name="tel" Mode="In" Type="String" />
+      <Parameter Name="esp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InscribirPaciente">
+      <Parameter Name="pnom" Mode="In" Type="String" />
+      <Parameter Name="snom" Mode="In" Type="String" />
+      <Parameter Name="pape" Mode="In" Type="String" />
+      <Parameter Name="sape" Mode="In" Type="String" />
+      <Parameter Name="dir" Mode="In" Type="String" />
+      <Parameter Name="tel" Mode="In" Type="String" />
+      <Parameter Name="sex" Mode="In" Type="String" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="dui" Mode="In" Type="String" />
+      <Parameter Name="nit" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Prueba_1Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Prueba_1Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

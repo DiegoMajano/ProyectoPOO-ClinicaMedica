@@ -32,19 +32,19 @@ namespace ClinicaMedica
             frmMenuDoctor menuDoctor = new frmMenuDoctor();
             
 
-            if (txtUser.Text == "" || txtPassword.Text == "")
+            /*if (txtUser.Text == "" || txtPassword.Text == "")
             {
                 MessageBox.Show("Ingreso invalido, Campos no llenos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            /*else if (txtUser.Text != "usuario" && txtPassword.Text != "contraseña")//validacion para ver si si existe el user y si la contra es buena
+            else if (txtUser.Text != "usuario" && txtPassword.Text != "contraseña")//validacion para ver si si existe el user y si la contra es buena
             {
                 MessageBox.Show("Las credenciales ingresadas son incorrectas, Intentar de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+            }
             else
-            {
+            {*/
                 this.Hide();
                 menuDoctor.Show();
-            }            
+            //}            
         }
     }
 }

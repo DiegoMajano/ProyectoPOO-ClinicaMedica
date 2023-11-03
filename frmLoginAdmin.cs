@@ -29,7 +29,7 @@ namespace ClinicaMedica
             // codigo para validar el login
             
             frmMenuAdministrativo menuAdmin = new frmMenuAdministrativo();
-
+            /*
             if (txtUser.Text=="" ||txtPassword.Text=="")
             {
                 MessageBox.Show("Ingreso invalido, Campos no llenos","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -39,10 +39,10 @@ namespace ClinicaMedica
                 MessageBox.Show("Las credenciales ingresadas son incorrectas, Intentar de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-            {
+            {*/
                 this.Hide();
                 menuAdmin.Show();
-            }          
+            //}          
         }
     }
 }

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.gbInformacion = new System.Windows.Forms.GroupBox();
+            this.txtBuscarNombre = new System.Windows.Forms.TextBox();
             this.mtxtCodPaci = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.cbBuscar = new System.Windows.Forms.ComboBox();
             this.btnVerReportes = new System.Windows.Forms.Button();
             this.btnVerCitasM = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
@@ -70,11 +70,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbInformacion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gbInformacion.BackColor = System.Drawing.Color.White;
+            this.gbInformacion.Controls.Add(this.txtBuscarNombre);
             this.gbInformacion.Controls.Add(this.mtxtCodPaci);
             this.gbInformacion.Controls.Add(this.label1);
             this.gbInformacion.Controls.Add(this.lblNombre);
             this.gbInformacion.Controls.Add(this.btnEditar);
-            this.gbInformacion.Controls.Add(this.cbBuscar);
             this.gbInformacion.Controls.Add(this.btnVerReportes);
             this.gbInformacion.Controls.Add(this.btnVerCitasM);
             this.gbInformacion.Controls.Add(this.btnBorrar);
@@ -88,6 +88,15 @@
             this.gbInformacion.TabIndex = 24;
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "Llenar Datos del Paciente";
+            // 
+            // txtBuscarNombre
+            // 
+            this.txtBuscarNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBuscarNombre.Location = new System.Drawing.Point(167, 61);
+            this.txtBuscarNombre.Name = "txtBuscarNombre";
+            this.txtBuscarNombre.Size = new System.Drawing.Size(304, 23);
+            this.txtBuscarNombre.TabIndex = 29;
+            this.txtBuscarNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarNombre_KeyPress);
             // 
             // mtxtCodPaci
             // 
@@ -136,14 +145,6 @@
             this.btnEditar.TabIndex = 25;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
-            // 
-            // cbBuscar
-            // 
-            this.cbBuscar.FormattingEnabled = true;
-            this.cbBuscar.Location = new System.Drawing.Point(165, 59);
-            this.cbBuscar.Name = "cbBuscar";
-            this.cbBuscar.Size = new System.Drawing.Size(306, 26);
-            this.cbBuscar.TabIndex = 24;
             // 
             // btnVerReportes
             // 
@@ -203,6 +204,7 @@
             this.dgvConsultarExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsultarExpediente.Size = new System.Drawing.Size(656, 349);
             this.dgvConsultarExpediente.TabIndex = 3;
+            this.dgvConsultarExpediente.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvConsultarExpediente_DataError);
             // 
             // btnBuscar
             // 
@@ -256,10 +258,10 @@
         private System.Windows.Forms.DataGridView dgvConsultarExpediente;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label blcodigo;
-        private System.Windows.Forms.ComboBox cbBuscar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.MaskedTextBox mtxtCodPaci;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtBuscarNombre;
     }
 }

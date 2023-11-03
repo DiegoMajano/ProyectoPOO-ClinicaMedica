@@ -61,7 +61,6 @@ C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-Cl
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmCrearReportes.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmMenuDoctor.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Nueva carpeta\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.Resources.RecursoFuente.resources
-C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmRegistrarMedico.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmMenuSoporte.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\bin\Debug\Resources\278158071_329692962482837_3178279064538201005_n.jpg
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\bin\Debug\Resources\copia.jpg
@@ -103,3 +102,4 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaM
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\bin\Debug\EntityFramework.xml
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.csproj.CopyComplete
+C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmRegistrarPersonal.resources

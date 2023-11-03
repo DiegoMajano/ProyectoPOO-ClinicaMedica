@@ -17,7 +17,7 @@ namespace ClinicaMedica
             InitializeComponent();
         }
 
-        private static frmRegistrarMedico registrarMedico;
+        private static frmRegistrarPersonal registrarMedico;
         private static frmConsultarPersonal consultarPersonal;
 
         private void btnSalir_Click(object sender, EventArgs e)

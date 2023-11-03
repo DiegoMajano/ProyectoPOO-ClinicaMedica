@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Prueba_1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="citasMedicas">
+    <Key>
+      <PropertyRef Name="codCita" />
+    </Key>
+    <Property Name="codCita" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="codPaciente" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="codMedico" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="fechaHora" Type="datetime" />
+    <Property Name="hora" Type="varchar" MaxLength="8" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Prueba_1.dbo.medicamentos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="medicamentos">
+    <Key>
+      <PropertyRef Name="codReceta" />
+      <PropertyRef Name="nombreMedicamento" />
+      <PropertyRef Name="indicaciones" />
+    </Key>
+    <Property Name="codReceta" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="nombreMedicamento" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="indicaciones" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="medicos">
+    <Key>
+      <PropertyRef Name="codMedico" />
+    </Key>
+    <Property Name="codMedico" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="primerNombre" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="primerApellido" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="telefono" Type="char" MaxLength="9" Nullable="false" />
+    <Property Name="especialidad" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pacientes">
+    <Key>
+      <PropertyRef Name="codPaciente" />
+    </Key>
+    <Property Name="codPaciente" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="primerNombre" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="segundoNombre" Type="varchar" MaxLength="20" />
+    <Property Name="primerApellido" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="segundoApellido" Type="varchar" MaxLength="20" />
+    <Property Name="direccion" Type="varchar" MaxLength="200" />
+    <Property Name="telefono" Type="char" MaxLength="9" />
+    <Property Name="sexo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="date" Nullable="false" />
+    <Property Name="dui" Type="char" MaxLength="10" />
+    <Property Name="nit" Type="char" MaxLength="17" />
+    <Property Name="edad" Type="int" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="recetas">
+    <Key>
+      <PropertyRef Name="codReceta" />
+    </Key>
+    <Property Name="codReceta" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="fechaEmitida" Type="date" />
+    <Property Name="codReporte" Type="char" MaxLength="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportes">
+    <Key>
+      <PropertyRef Name="codReporte" />
+    </Key>
+    <Property Name="codReporte" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="codCita" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="motivo" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="diagnostico" Type="varchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Prueba_1.dbo.signosVitales' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="signosVitales">
+    <Key>
+      <PropertyRef Name="codReporte" />
+    </Key>
+    <Property Name="codReporte" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="peso" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="talla" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="temperatura" Type="numeric" Precision="3" Scale="1" />
+    <Property Name="presionArterial" Type="varchar" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="fk_codCitaR">
+    <End Role="citasMedicas" Type="Self.citasMedicas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reportes" Type="Self.reportes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="citasMedicas">
+        <PropertyRef Name="codCita" />
+      </Principal>
+      <Dependent Role="reportes">
+        <PropertyRef Name="codCita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_codMedicoC">
+    <End Role="medicos" Type="Self.medicos" Multiplicity="1" />
+    <End Role="citasMedicas" Type="Self.citasMedicas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="medicos">
+        <PropertyRef Name="codMedico" />
+      </Principal>
+      <Dependent Role="citasMedicas">
+        <PropertyRef Name="codMedico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_codPacienteC">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="citasMedicas" Type="Self.citasMedicas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="codPaciente" />
+      </Principal>
+      <Dependent Role="citasMedicas">
+        <PropertyRef Name="codPaciente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_codRecetaM">
+    <End Role="recetas" Type="Self.recetas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="medicamentos" Type="Self.medicamentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="recetas">
+        <PropertyRef Name="codReceta" />
+      </Principal>
+      <Dependent Role="medicamentos">
+        <PropertyRef Name="codReceta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_codReporetR">
+    <End Role="reportes" Type="Self.reportes" Multiplicity="1" />
+    <End Role="recetas" Type="Self.recetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="reportes">
+        <PropertyRef Name="codReporte" />
+      </Principal>
+      <Dependent Role="recetas">
+        <PropertyRef Name="codReporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_codReporteSV">
+    <End Role="reportes" Type="Self.reportes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="signosVitales" Type="Self.signosVitales" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="reportes">
+        <PropertyRef Name="codReporte" />
+      </Principal>
+      <Dependent Role="signosVitales">
+        <PropertyRef Name="codReporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AgregarMedicamento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codR" Type="char" Mode="In" />
+    <Parameter Name="nom" Type="varchar" Mode="In" />
+    <Parameter Name="indi" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="CrearReceta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codRe" Type="char" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+  </Function>
+  <Function Name="CrearReporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codcita" Type="char" Mode="In" />
+    <Parameter Name="mot" Type="varchar" Mode="In" />
+    <Parameter Name="diag" Type="varchar" Mode="In" />
+    <Parameter Name="peso" Type="numeric" Mode="In" />
+    <Parameter Name="tal" Type="numeric" Mode="In" />
+    <Parameter Name="temp" Type="numeric" Mode="In" />
+    <Parameter Name="presi" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="IngresarCita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codP" Type="char" Mode="In" />
+    <Parameter Name="codM" Type="char" Mode="In" />
+    <Parameter Name="fechaH" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="InscribirMedico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pnom" Type="varchar" Mode="In" />
+    <Parameter Name="pape" Type="varchar" Mode="In" />
+    <Parameter Name="tel" Type="char" Mode="In" />
+    <Parameter Name="esp" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="InscribirPaciente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pnom" Type="varchar" Mode="In" />
+    <Parameter Name="snom" Type="varchar" Mode="In" />
+    <Parameter Name="pape" Type="varchar" Mode="In" />
+    <Parameter Name="sape" Type="varchar" Mode="In" />
+    <Parameter Name="dir" Type="varchar" Mode="In" />
+    <Parameter Name="tel" Type="char" Mode="In" />
+    <Parameter Name="sex" Type="char" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+    <Parameter Name="dui" Type="char" Mode="In" />
+    <Parameter Name="nit" Type="char" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="Prueba_1ModelStoreContainer">
+    <EntitySet Name="citasMedicas" EntityType="Self.citasMedicas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="medicos" EntityType="Self.medicos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pacientes" EntityType="Self.pacientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="recetas" EntityType="Self.recetas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reportes" EntityType="Self.reportes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="medicamentos" EntityType="Self.medicamentos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [medicamentos].[codReceta] AS [codReceta], 
+    [medicamentos].[nombreMedicamento] AS [nombreMedicamento], 
+    [medicamentos].[indicaciones] AS [indicaciones]
+    FROM [dbo].[medicamentos] AS [medicamentos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="signosVitales" EntityType="Self.signosVitales" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [signosVitales].[codReporte] AS [codReporte], 
+    [signosVitales].[peso] AS [peso], 
+    [signosVitales].[talla] AS [talla], 
+    [signosVitales].[temperatura] AS [temperatura], 
+    [signosVitales].[presionArterial] AS [presionArterial]
+    FROM [dbo].[signosVitales] AS [signosVitales]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="fk_codCitaR" Association="Self.fk_codCitaR">
+      <End Role="citasMedicas" EntitySet="citasMedicas" />
+      <End Role="reportes" EntitySet="reportes" />
+    </AssociationSet>
+    <AssociationSet Name="fk_codMedicoC" Association="Self.fk_codMedicoC">
+      <End Role="medicos" EntitySet="medicos" />
+      <End Role="citasMedicas" EntitySet="citasMedicas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_codPacienteC" Association="Self.fk_codPacienteC">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="citasMedicas" EntitySet="citasMedicas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_codRecetaM" Association="Self.fk_codRecetaM">
+      <End Role="recetas" EntitySet="recetas" />
+      <End Role="medicamentos" EntitySet="medicamentos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_codReporetR" Association="Self.fk_codReporetR">
+      <End Role="reportes" EntitySet="reportes" />
+      <End Role="recetas" EntitySet="recetas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_codReporteSV" Association="Self.fk_codReporteSV">
+      <End Role="reportes" EntitySet="reportes" />
+      <End Role="signosVitales" EntitySet="signosVitales" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

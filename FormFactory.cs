@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClinicaMedica.Modelo;
 
 namespace ClinicaMedica
 {
@@ -32,10 +33,16 @@ namespace ClinicaMedica
         public static frmCrearReportes CrearFormCrearReportes()
         {
             return new frmCrearReportes();
-        }        
-        public static frmRegistrarMedico CrearFormRegistrarMedico()
+        }
+        public static frmRegistrarPersonal CrearFormRegistrarMedico()
         {
-            return new frmRegistrarMedico();
+            return new frmRegistrarPersonal();
+        }
+
+        // CREAR INSTANCIA DEL CONTEXTO DE LA BASE DE DATOS
+        public static Prueba_1Entities1 CrearEntidadDB()
+        {
+            return new Prueba_1Entities1();
         }
     }
 }

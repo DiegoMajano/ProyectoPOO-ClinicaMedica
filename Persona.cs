@@ -14,9 +14,7 @@ namespace ClinicaMedica
         private string segundoNombre;
         private string primerApellido;
         private string segundoApellido;
-        private int edad;
-        private string genero;
-        private DateTime fechaNacimiento;
+        private string telefono;
 
         // Propiedades
         public string PrimerNombre
@@ -35,58 +33,35 @@ namespace ClinicaMedica
         {
             get { return segundoApellido; } set { segundoApellido = value; }
         }
-        public DateTime FechaNacimiento
+        public string Telefono
         {
-            get { return fechaNacimiento; } set { fechaNacimiento = value; }
-        }
-        public int Edad
-        {
-            get { return CalcularEdad(); }
-        }
-        public string Genero
-        {
-            get { return genero; } set { genero = value; }
+            get { return telefono; } set { telefono = value; }
         }
 
-        // Métodos
-        public int CalcularEdad()
-        {
-            DateTime fechaActual = DateTime.Now;
-            int edad = fechaActual.Year - fechaNacimiento.Year;
-
-            // Ajustar la edad si aún no ha cumplido años
-            if (System.DateTime.Now.Subtract(fechaNacimiento.AddYears(edad)).TotalDays < 0)
-            {
-                edad--;
-            }
-
-            return edad;
-        }
     }
 
     public class Paciente : Persona
     {
         // Atributos
-        private int idPaciente;
         private string direccion;
-        private string telefono;
         private string dui;
         private string nit;
+        private string genero;
+        private DateTime fechaNacimiento;
 
-        // Propiedades
-        public int IdPaciente
+        public DateTime FechaNacimiento
         {
-            get { return idPaciente; } set { idPaciente = value; }
+            get { return fechaNacimiento; } set { fechaNacimiento = value; }
         }
 
+        public string Genero
+        {
+            get { return genero; } set { genero = value; }
+        }
         public string Direccion
         {
             get { return direccion; } set { direccion = value; }
-        }
-        public string Telefono
-        {
-            get { return telefono; } set { telefono = value; }
-        }
+        }        
 
         public string Dui
         {
@@ -101,18 +76,12 @@ namespace ClinicaMedica
     public class Medico : Persona
     {
         // Atributos
-        private int idMedico;
         private string especialidad;
 
-        // Propiedades
-        public int IdMedico
-        {
-            get { return idMedico; } set { idMedico = value; }
-        }
+        // Propiedades        
         public string Especialidad
         {
             get { return especialidad; } set { especialidad = value; }
         }
-        // Metodos
     }
 }

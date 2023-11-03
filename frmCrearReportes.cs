@@ -5,14 +5,30 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using ClinicaMedica.Modelo;
+using System.Linq;
 
 namespace ClinicaMedica
 {
     public partial class frmCrearReportes : ClinicaMedica.frmBase
     {
+        Paciente p = new Paciente();
+        private List<string> pacientes = new List<string>();
+
+        Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
         public frmCrearReportes()
         {
             InitializeComponent();
+        }
+
+        private void frmCrearReportes_Load(object sender, EventArgs e)
+        {
+            Utilidades.LlenarCBPacientes(cbPacBusqueda);
+            DeshabilidarGroupBox();
+        }
+        
+        private void DeshabilidarGroupBox()
+        {
             gbSignosVitales.Enabled = false;
             gbDReporte.Enabled = false;
             gbMedicamento.Enabled = false;
@@ -47,12 +63,31 @@ namespace ClinicaMedica
             LimpiarCampos();
         }
 
+        private void LlenarDatosPaciente()
+        {
+            string nombrePaciente = cbPacBusqueda.Text;
+            string codigoPaciente = Utilidades.ObtenerCodigoPaciente(nombrePaciente);
+            var nombre = from paciente in db.pacientes
+                         where (paciente.primerNombre + " " + paciente.segundoNombre + " " + paciente.primerApellido + " " + paciente.segundoApellido).Equals(nombrePaciente)
+                         select new
+                         {
+                             paciente.primerNombre
+                         }.ToString(); 
+        }
+
         private void btnbuscar_Click(object sender, EventArgs e)
         {
+            LlenarDatosPaciente();
+
             gbDReporte.Enabled = true;
             gbMedicamento.Enabled = true;
             gbSignosVitales.Enabled = true;
             mtxtPeso.Focus();
+        }
+
+        private void cbPacBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
