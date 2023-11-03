@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClinicaMedica.Modelo;
-using System.Linq;
 
 namespace ClinicaMedica
 {
@@ -34,7 +33,7 @@ namespace ClinicaMedica
         public void LimpiarCampos()
         {
             cbHorario.SelectedIndex = 0;
-            cbPaciente.SelectedIndex =0;
+            cbPaciente.SelectedIndex = 0;
             cbMedico.SelectedIndex = 0;
             dtpFechaCita.Value = System.DateTime.Now;
             filtroMedico = false;

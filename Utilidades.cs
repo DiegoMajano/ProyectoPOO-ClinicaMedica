@@ -19,8 +19,8 @@ namespace ClinicaMedica
                 .Select(p => p.primerNombre + " " + p.segundoNombre + " " + p.primerApellido + " " + p.segundoApellido)
                 .ToList();
             nombresPacientes.Insert(0, "");
-            comboBox.DataSource = nombresPacientes;
 
+            comboBox.DataSource=nombresPacientes;
             // autocompletar el nombre escrito con los nombres traidos de la base de datos
 
             AutoCompleteStringCollection autocompletarPacientes = new AutoCompleteStringCollection();
@@ -35,8 +35,7 @@ namespace ClinicaMedica
                 .Select(m => m.primerNombre + " " + m.primerApellido)
                 .ToList();
             nombresMedicos.Insert(0, "");
-            comboBox.DataSource = nombresMedicos;
-
+            comboBox.DataSource=nombresMedicos;
             // autocompletar el nombre escrito con los nombres traidos de la base de datos
 
             AutoCompleteStringCollection autocompletarDoctor = new AutoCompleteStringCollection();

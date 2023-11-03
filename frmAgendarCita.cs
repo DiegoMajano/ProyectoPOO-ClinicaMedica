@@ -40,7 +40,6 @@ namespace ClinicaMedica
             cbNombreMedico.SelectedIndex = 0;
             cbHorarioCitas.SelectedIndex = 0;
             dtpFechaCita.Value = DateTime.Now;
-            txtObservaciones.Clear();
         }
 
         // --- Validaciones 
@@ -83,9 +82,6 @@ namespace ClinicaMedica
             nuevaCita.CodMedico = codigoMedico;
             nuevaCita.FechaHora = fechahora;
 
-            label1.Text = hora.ToString();
-            label2.Text = fechahora.ToString();
-
             db.IngresarCita(nuevaCita.CodPaciente,nuevaCita.CodMedico,nuevaCita.FechaHora);
 
             LimpiarCampos();
@@ -97,5 +93,9 @@ namespace ClinicaMedica
             LimpiarCampos();
         }
 
+        private void dgvCitas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

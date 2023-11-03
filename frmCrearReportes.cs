@@ -13,7 +13,7 @@ namespace ClinicaMedica
     public partial class frmCrearReportes : ClinicaMedica.frmBase
     {
         Paciente p = new Paciente();
-        private List<string> pacientes = new List<string>();
+        private List<Paciente> pacientes = new List<Paciente>();
 
         Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
         public frmCrearReportes()
@@ -69,10 +69,8 @@ namespace ClinicaMedica
             string codigoPaciente = Utilidades.ObtenerCodigoPaciente(nombrePaciente);
             var nombre = from paciente in db.pacientes
                          where (paciente.primerNombre + " " + paciente.segundoNombre + " " + paciente.primerApellido + " " + paciente.segundoApellido).Equals(nombrePaciente)
-                         select new
-                         {
-                             paciente.primerNombre
-                         }.ToString(); 
+                         select paciente;
+
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)

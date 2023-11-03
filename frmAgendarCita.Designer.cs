@@ -30,8 +30,6 @@
         {
             this.gbAgendarCitaa = new System.Windows.Forms.GroupBox();
             this.cbNombrePaciente = new System.Windows.Forms.ComboBox();
-            this.txtObservaciones = new System.Windows.Forms.TextBox();
-            this.lblObservaciones = new System.Windows.Forms.Label();
             this.dgvCitas = new System.Windows.Forms.DataGridView();
             this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
             this.cbHorarioCitas = new System.Windows.Forms.ComboBox();
@@ -43,8 +41,6 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnAgendar = new System.Windows.Forms.Button();
             this.lblNombrePaciente = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnTop.SuspendLayout();
             this.pnContenido.SuspendLayout();
             this.gbAgendarCitaa.SuspendLayout();
@@ -74,11 +70,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbAgendarCitaa.BackColor = System.Drawing.Color.White;
-            this.gbAgendarCitaa.Controls.Add(this.label2);
-            this.gbAgendarCitaa.Controls.Add(this.label1);
             this.gbAgendarCitaa.Controls.Add(this.cbNombrePaciente);
-            this.gbAgendarCitaa.Controls.Add(this.txtObservaciones);
-            this.gbAgendarCitaa.Controls.Add(this.lblObservaciones);
             this.gbAgendarCitaa.Controls.Add(this.dgvCitas);
             this.gbAgendarCitaa.Controls.Add(this.dtpFechaCita);
             this.gbAgendarCitaa.Controls.Add(this.cbHorarioCitas);
@@ -112,28 +104,6 @@
             this.cbNombrePaciente.TabIndex = 32;
             this.cbNombrePaciente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNombrePaciente_KeyPress);
             // 
-            // txtObservaciones
-            // 
-            this.txtObservaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtObservaciones.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtObservaciones.Location = new System.Drawing.Point(352, 204);
-            this.txtObservaciones.Multiline = true;
-            this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(340, 70);
-            this.txtObservaciones.TabIndex = 31;
-            // 
-            // lblObservaciones
-            // 
-            this.lblObservaciones.AutoSize = true;
-            this.lblObservaciones.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblObservaciones.Location = new System.Drawing.Point(31, 204);
-            this.lblObservaciones.Name = "lblObservaciones";
-            this.lblObservaciones.Size = new System.Drawing.Size(122, 21);
-            this.lblObservaciones.TabIndex = 30;
-            this.lblObservaciones.Text = "Observaciones:";
-            // 
             // dgvCitas
             // 
             this.dgvCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -147,6 +117,7 @@
             this.dgvCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCitas.Size = new System.Drawing.Size(679, 213);
             this.dgvCitas.TabIndex = 29;
+            this.dgvCitas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCitas_CellContentClick);
             // 
             // dtpFechaCita
             // 
@@ -266,24 +237,6 @@
             this.lblNombrePaciente.TabIndex = 0;
             this.lblNombrePaciente.Text = "Nombre:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 225);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 18);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 259);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 18);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "label2";
-            // 
             // frmAgendarCita
             // 
             this.ClientSize = new System.Drawing.Size(754, 648);
@@ -303,8 +256,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbAgendarCitaa;
-        private System.Windows.Forms.TextBox txtObservaciones;
-        private System.Windows.Forms.Label lblObservaciones;
         private System.Windows.Forms.DataGridView dgvCitas;
         private System.Windows.Forms.DateTimePicker dtpFechaCita;
         private System.Windows.Forms.ComboBox cbHorarioCitas;
@@ -317,7 +268,5 @@
         private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Label lblNombrePaciente;
         private System.Windows.Forms.ComboBox cbNombrePaciente;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
     }
 }
