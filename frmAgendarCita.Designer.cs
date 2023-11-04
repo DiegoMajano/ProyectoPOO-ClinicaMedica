@@ -108,12 +108,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCitas.Location = new System.Drawing.Point(13, 283);
+            this.dgvCitas.Location = new System.Drawing.Point(13, 222);
             this.dgvCitas.Name = "dgvCitas";
             this.dgvCitas.ReadOnly = true;
             this.dgvCitas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCitas.Size = new System.Drawing.Size(679, 213);
+            this.dgvCitas.Size = new System.Drawing.Size(679, 261);
             this.dgvCitas.TabIndex = 29;
             this.dgvCitas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCitas_CellContentClick);
             // 
@@ -166,6 +166,8 @@
             // 
             this.cbNombreMedico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbNombreMedico.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbNombreMedico.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbNombreMedico.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.cbNombreMedico.FormattingEnabled = true;
             this.cbNombreMedico.Location = new System.Drawing.Point(105, 82);

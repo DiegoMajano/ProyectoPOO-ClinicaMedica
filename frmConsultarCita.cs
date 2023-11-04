@@ -30,6 +30,7 @@ namespace ClinicaMedica
             LimpiarCampos();
         }
 
+
         public void LimpiarCampos()
         {
             cbHorario.SelectedIndex = 0;

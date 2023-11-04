@@ -49,12 +49,13 @@ namespace ClinicaMedica
                 var busqueda = from datos in db.pacientes
                                where datos.codPaciente == busquedaCodigo
                                select datos;
+
                 dgvConsultarExpediente.DataSource = busqueda.ToList();
             }
             else if (!string.IsNullOrEmpty(busquedaNombre))
             {
                 var busqueda = from datos in db.pacientes
-                               where datos.primerNombre == busquedaNombre || datos.segundoNombre == busquedaNombre
+                               where datos.primerNombre.Contains(busquedaNombre) || datos.segundoNombre.Contains(busquedaNombre)
                                select datos;
                 dgvConsultarExpediente.DataSource = busqueda.ToList();
             }
@@ -77,6 +78,11 @@ namespace ClinicaMedica
         }
 
         private void dgvConsultarExpediente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnVerReportes_Click(object sender, EventArgs e)
         {
 
         }

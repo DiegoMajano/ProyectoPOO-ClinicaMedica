@@ -23,9 +23,24 @@ namespace ClinicaMedica
         }
         private void frmAgendarCita_Load(object sender, EventArgs e)
         {
+            Refrescar();
             LlenarComboBox();
             cbNombrePaciente.Focus();
             LimpiarCampos();
+        }
+
+        private void Refrescar()
+        {
+            var citas = from cita in db.citasMedicas
+                        select new
+                        {
+                            Codigo = cita.codCita,
+                            paciente = cita.codPaciente
+                        };
+
+            dgvCitas.DataSource = citas.ToList();
+
+            //dgvCitas.Columns["Codigo"].HeaderText = "Codigo Cita";
         }
         private void LlenarComboBox()
         {
@@ -81,9 +96,9 @@ namespace ClinicaMedica
             nuevaCita.CodPaciente = codigoPaciente;
             nuevaCita.CodMedico = codigoMedico;
             nuevaCita.FechaHora = fechahora;
-
+            
             db.IngresarCita(nuevaCita.CodPaciente,nuevaCita.CodMedico,nuevaCita.FechaHora);
-
+            Refrescar();
             LimpiarCampos();
             cbNombrePaciente.Focus();
         }

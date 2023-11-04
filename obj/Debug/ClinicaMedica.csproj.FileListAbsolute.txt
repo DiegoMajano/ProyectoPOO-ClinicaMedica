@@ -109,3 +109,4 @@ C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\bin\Debug\Ent
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.frmRegistrarPersonal.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.csproj.CopyComplete
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.frmConsultarExpedienteReporte.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarExpedienteReporte.resources

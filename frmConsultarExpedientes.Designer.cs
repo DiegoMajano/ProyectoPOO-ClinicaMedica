@@ -160,6 +160,7 @@
             this.btnVerReportes.TabIndex = 23;
             this.btnVerReportes.Text = "Reportes";
             this.btnVerReportes.UseVisualStyleBackColor = false;
+            this.btnVerReportes.Click += new System.EventHandler(this.btnVerReportes_Click);
             // 
             // btnVerCitasM
             // 
@@ -197,6 +198,8 @@
             this.dgvConsultarExpediente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvConsultarExpediente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvConsultarExpediente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvConsultarExpediente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultarExpediente.Location = new System.Drawing.Point(22, 150);
             this.dgvConsultarExpediente.Name = "dgvConsultarExpediente";
