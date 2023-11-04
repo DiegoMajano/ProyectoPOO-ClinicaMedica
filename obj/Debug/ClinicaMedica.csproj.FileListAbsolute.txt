@@ -88,7 +88,6 @@ C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\Cli
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.frmMenuAdministrativo.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.frmMenuDoctor.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.frmMenuSoporte.resources
-C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.frmRegistrarMedico.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.Properties.Resources.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.Resources.RecursoFuente.resources
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.csproj.GenerateResource.cache
@@ -103,3 +102,10 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaM
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.csproj.CopyComplete
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmRegistrarPersonal.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\bin\Debug\EntityFramework.dll
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\bin\Debug\EntityFramework.xml
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.frmRegistrarPersonal.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.csproj.CopyComplete
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.frmConsultarExpedienteReporte.resources

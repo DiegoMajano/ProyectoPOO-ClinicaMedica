@@ -159,5 +159,10 @@ namespace ClinicaMedica
         {
             // agregar la funcionalidad de editar cuando el agendar cita esté listo
         }
+
+        private void dgvConsultarCitas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

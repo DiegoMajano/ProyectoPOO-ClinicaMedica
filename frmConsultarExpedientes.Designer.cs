@@ -204,6 +204,7 @@
             this.dgvConsultarExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsultarExpediente.Size = new System.Drawing.Size(656, 349);
             this.dgvConsultarExpediente.TabIndex = 3;
+            this.dgvConsultarExpediente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarExpediente_CellContentClick);
             this.dgvConsultarExpediente.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvConsultarExpediente_DataError);
             // 
             // btnBuscar

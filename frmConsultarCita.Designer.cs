@@ -268,6 +268,7 @@
             this.dgvConsultarCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsultarCitas.Size = new System.Drawing.Size(730, 358);
             this.dgvConsultarCitas.TabIndex = 6;
+            this.dgvConsultarCitas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarCitas_CellContentClick);
             // 
             // frmConsultarCita
             // 

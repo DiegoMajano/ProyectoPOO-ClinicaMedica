@@ -35,7 +35,6 @@
             this.cbHorarioCitas = new System.Windows.Forms.ComboBox();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHorario = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.cbNombreMedico = new System.Windows.Forms.ComboBox();
             this.lblDoctor = new System.Windows.Forms.Label();
             this.btnBorrar = new System.Windows.Forms.Button();
@@ -76,7 +75,6 @@
             this.gbAgendarCitaa.Controls.Add(this.cbHorarioCitas);
             this.gbAgendarCitaa.Controls.Add(this.lblFecha);
             this.gbAgendarCitaa.Controls.Add(this.lblHorario);
-            this.gbAgendarCitaa.Controls.Add(this.monthCalendar1);
             this.gbAgendarCitaa.Controls.Add(this.cbNombreMedico);
             this.gbAgendarCitaa.Controls.Add(this.lblDoctor);
             this.gbAgendarCitaa.Controls.Add(this.btnBorrar);
@@ -100,7 +98,7 @@
             this.cbNombrePaciente.Location = new System.Drawing.Point(105, 41);
             this.cbNombrePaciente.MaximumSize = new System.Drawing.Size(700, 0);
             this.cbNombrePaciente.Name = "cbNombrePaciente";
-            this.cbNombrePaciente.Size = new System.Drawing.Size(303, 26);
+            this.cbNombrePaciente.Size = new System.Drawing.Size(566, 26);
             this.cbNombrePaciente.TabIndex = 32;
             this.cbNombrePaciente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNombrePaciente_KeyPress);
             // 
@@ -127,7 +125,7 @@
             this.dtpFechaCita.Location = new System.Drawing.Point(105, 125);
             this.dtpFechaCita.MaximumSize = new System.Drawing.Size(650, 26);
             this.dtpFechaCita.Name = "dtpFechaCita";
-            this.dtpFechaCita.Size = new System.Drawing.Size(303, 26);
+            this.dtpFechaCita.Size = new System.Drawing.Size(566, 26);
             this.dtpFechaCita.TabIndex = 28;
             this.dtpFechaCita.ValueChanged += new System.EventHandler(this.dtpFechaCita_ValueChanged);
             // 
@@ -141,7 +139,7 @@
             this.cbHorarioCitas.Location = new System.Drawing.Point(105, 161);
             this.cbHorarioCitas.MaximumSize = new System.Drawing.Size(700, 0);
             this.cbHorarioCitas.Name = "cbHorarioCitas";
-            this.cbHorarioCitas.Size = new System.Drawing.Size(303, 29);
+            this.cbHorarioCitas.Size = new System.Drawing.Size(566, 29);
             this.cbHorarioCitas.TabIndex = 27;
             // 
             // lblFecha
@@ -164,14 +162,6 @@
             this.lblHorario.TabIndex = 25;
             this.lblHorario.Text = "Horario";
             // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.monthCalendar1.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.monthCalendar1.Location = new System.Drawing.Point(444, 28);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 24;
-            // 
             // cbNombreMedico
             // 
             this.cbNombreMedico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -181,7 +171,7 @@
             this.cbNombreMedico.Location = new System.Drawing.Point(105, 82);
             this.cbNombreMedico.MaximumSize = new System.Drawing.Size(700, 0);
             this.cbNombreMedico.Name = "cbNombreMedico";
-            this.cbNombreMedico.Size = new System.Drawing.Size(303, 29);
+            this.cbNombreMedico.Size = new System.Drawing.Size(566, 29);
             this.cbNombreMedico.TabIndex = 23;
             this.cbNombreMedico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbDoctores_KeyPress);
             // 
@@ -261,7 +251,6 @@
         private System.Windows.Forms.ComboBox cbHorarioCitas;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHorario;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.ComboBox cbNombreMedico;
         private System.Windows.Forms.Label lblDoctor;
         private System.Windows.Forms.Button btnBorrar;

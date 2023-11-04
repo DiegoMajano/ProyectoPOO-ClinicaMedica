@@ -75,5 +75,10 @@ namespace ClinicaMedica
         {
             MessageBox.Show(e.Context.ToString(), "Error");
         }
+
+        private void dgvConsultarExpediente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

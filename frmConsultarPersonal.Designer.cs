@@ -206,6 +206,7 @@
             this.dgvConsultarMedicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsultarMedicos.Size = new System.Drawing.Size(657, 316);
             this.dgvConsultarMedicos.TabIndex = 3;
+            this.dgvConsultarMedicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarMedicos_CellContentClick);
             // 
             // btnBuscar
             // 
