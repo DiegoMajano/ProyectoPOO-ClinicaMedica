@@ -100,7 +100,7 @@ namespace ClinicaMedica
         private string validador;
         private bool VerificarCitaPaciente(DateTime fechahora, string paciente)
         {
-            validador = "";
+            
             var verificacion = from citas in db.citasMedicas
                                where citas.fechaHora == fechahora || citas.codPaciente == paciente
                                select new
@@ -123,7 +123,6 @@ namespace ClinicaMedica
 
         private bool VerificarCitaMedico(DateTime fechahora, string medico)
         {
-            validador = "";
             var verificacion = from citas in db.citasMedicas
                                  where citas.fechaHora == fechahora && citas.codMedico == medico
                                  select citas.codMedico;
@@ -164,12 +163,15 @@ namespace ClinicaMedica
                 {
                     case "paciente":
                         MessageBox.Show("El paciente ya posee una cita este dia", "Registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        validador = "";
                         break;
                     case "medico":
                         MessageBox.Show("El medidco ya posee una cita este dia a esa hora", "Registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        validador = "";
                         break;
                     default:
                         MessageBox.Show("El paciente y el medico ya posee una cita este dia", "Registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        validador = "";
                         break;
                 }
             }
