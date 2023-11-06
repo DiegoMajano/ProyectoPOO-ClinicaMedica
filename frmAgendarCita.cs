@@ -35,10 +35,13 @@ namespace ClinicaMedica
                         select new
                         {
                             Codigo = cita.codCita,
-                            paciente = cita.codPaciente
+                            Paciente = cita.codPaciente,
+                            Fecha = cita.fechaHora,
+                            Hora = cita.hora
                         };
 
             dgvCitas.DataSource = citas.ToList();
+            dgvCitas.Columns["Fecha"].DefaultCellStyle.Format = "dd/MM/yyyy";
 
             //dgvCitas.Columns["Codigo"].HeaderText = "Codigo Cita";
         }
@@ -51,8 +54,8 @@ namespace ClinicaMedica
 
         private void LimpiarCampos()
         {
-            cbNombrePaciente.SelectedIndex = 0;
-            cbNombreMedico.SelectedIndex = 0;
+            cbNombrePaciente.Text = "";
+            cbNombreMedico.Text = "";
             cbHorarioCitas.SelectedIndex = 0;
             dtpFechaCita.Value = DateTime.Now;
         }

@@ -17,13 +17,13 @@ namespace ClinicaMedica
             InitializeComponent();
         }
 
-        private void frmBase_FormClosed(object sender, FormClosedEventArgs e)
+        protected void frmBase_FormClosed(object sender, FormClosedEventArgs e)
         {
             // librerar recursos del formulario
             this.Dispose();
         }
 
-        private void frmBase_FormClosing(object sender, FormClosingEventArgs e)
+        protected void frmBase_FormClosing(object sender, FormClosingEventArgs e)
         {
             // cerrar el formulario correctamente
             e.Cancel = false;

@@ -48,7 +48,7 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(280, 15);
+            this.lblTitulo.Location = new System.Drawing.Point(274, 15);
             this.lblTitulo.Size = new System.Drawing.Size(206, 26);
             this.lblTitulo.Text = "Consultar  Personal";
             // 

@@ -34,6 +34,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // pnTop
+            // 
+            this.pnTop.Paint += new System.Windows.Forms.PaintEventHandler(this.pnTop_Paint);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Location = new System.Drawing.Point(343, 14);
+            // 
             // pnContenido
             // 
             this.pnContenido.Controls.Add(this.dataGridView1);

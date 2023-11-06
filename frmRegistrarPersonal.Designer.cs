@@ -56,7 +56,7 @@
             // lblTitulo
             // 
             this.lblTitulo.Font = new System.Drawing.Font("Montserrat SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(276, 14);
+            this.lblTitulo.Location = new System.Drawing.Point(282, 14);
             this.lblTitulo.Size = new System.Drawing.Size(191, 26);
             this.lblTitulo.Text = "Registrar personal";
             // 

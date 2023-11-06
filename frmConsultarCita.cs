@@ -11,7 +11,7 @@ using ClinicaMedica.Modelo;
 
 namespace ClinicaMedica
 {
-    public partial class frmConsultarCita : Form
+    public partial class frmConsultarCita : frmBase
     {
         Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
         private bool filtroFecha;
@@ -30,12 +30,11 @@ namespace ClinicaMedica
             LimpiarCampos();
         }
 
-
         public void LimpiarCampos()
         {
-            cbHorario.SelectedIndex = 0;
-            cbPaciente.SelectedIndex = 0;
-            cbMedico.SelectedIndex = 0;
+            cbHorario.SelectedIndex=0;
+            cbPaciente.Text="";
+            cbMedico.Text="";
             dtpFechaCita.Value = System.DateTime.Now;
             filtroMedico = false;
             filtroFecha = false;

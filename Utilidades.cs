@@ -14,13 +14,11 @@ namespace ClinicaMedica
 
         public static void LlenarCBPacientes(ComboBox comboBox)
         {
-            // --- LLenar el combobox con los nombres de los pacientes 
+            // --- seleccionar los nombres de los pacientes y convertirlos en una lista
             var nombresPacientes = db.pacientes
                 .Select(p => p.primerNombre + " " + p.segundoNombre + " " + p.primerApellido + " " + p.segundoApellido)
                 .ToList();
-            nombresPacientes.Insert(0, "");
-
-            comboBox.DataSource=nombresPacientes;
+            
             // autocompletar el nombre escrito con los nombres traidos de la base de datos
 
             AutoCompleteStringCollection autocompletarPacientes = new AutoCompleteStringCollection();
@@ -30,12 +28,11 @@ namespace ClinicaMedica
 
         public static void LlenarCBMedicos(ComboBox comboBox)
         {
-            // --- llenar el combobox con los nombres de los pacientes
+            // --- seleccionar los nombres de los medicos y convertirlos en una lista
             var nombresMedicos = db.medicos
-                .Select(m => m.primerNombre + " " + m.primerApellido)
+                .Select(m => m.primerNombre + " " +  m.primerApellido)
                 .ToList();
-            nombresMedicos.Insert(0, "");
-            comboBox.DataSource=nombresMedicos;
+
             // autocompletar el nombre escrito con los nombres traidos de la base de datos
 
             AutoCompleteStringCollection autocompletarDoctor = new AutoCompleteStringCollection();

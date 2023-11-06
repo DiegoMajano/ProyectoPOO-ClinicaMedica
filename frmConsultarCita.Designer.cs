@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnTop = new System.Windows.Forms.Panel();
-            this.lblConsultarCitas = new System.Windows.Forms.Label();
             this.gbCitas = new System.Windows.Forms.GroupBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.lblDoctor = new System.Windows.Forms.Label();
@@ -45,39 +43,33 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvConsultarCitas = new System.Windows.Forms.DataGridView();
             this.pnTop.SuspendLayout();
+            this.pnContenido.SuspendLayout();
             this.gbCitas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarCitas)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnTop
+            // lblTitulo
             // 
-            this.pnTop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(64)))), ((int)(((byte)(139)))));
-            this.pnTop.Controls.Add(this.lblConsultarCitas);
-            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTop.Location = new System.Drawing.Point(0, 0);
-            this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(754, 57);
-            this.pnTop.TabIndex = 4;
+            this.lblTitulo.Location = new System.Drawing.Point(311, 15);
+            this.lblTitulo.Size = new System.Drawing.Size(133, 26);
+            this.lblTitulo.Text = "Buscar citas";
             // 
-            // lblConsultarCitas
+            // pnBottom
             // 
-            this.lblConsultarCitas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblConsultarCitas.AutoSize = true;
-            this.lblConsultarCitas.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblConsultarCitas.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblConsultarCitas.Location = new System.Drawing.Point(288, 12);
-            this.lblConsultarCitas.Name = "lblConsultarCitas";
-            this.lblConsultarCitas.Size = new System.Drawing.Size(164, 26);
-            this.lblConsultarCitas.TabIndex = 23;
-            this.lblConsultarCitas.Text = "Consultar Citas";
-            this.lblConsultarCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnBottom.Location = new System.Drawing.Point(0, 682);
+            this.pnBottom.Size = new System.Drawing.Size(754, 18);
+            // 
+            // pnContenido
+            // 
+            this.pnContenido.Controls.Add(this.btnEditar);
+            this.pnContenido.Controls.Add(this.gbCitas);
+            this.pnContenido.Controls.Add(this.dgvConsultarCitas);
+            this.pnContenido.Size = new System.Drawing.Size(754, 625);
             // 
             // gbCitas
             // 
             this.gbCitas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbCitas.Controls.Add(this.btnEditar);
             this.gbCitas.Controls.Add(this.lblDoctor);
             this.gbCitas.Controls.Add(this.cbMedico);
             this.gbCitas.Controls.Add(this.btnBorrar);
@@ -90,7 +82,7 @@
             this.gbCitas.Controls.Add(this.cbHorario);
             this.gbCitas.Controls.Add(this.lblBuscar);
             this.gbCitas.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Italic);
-            this.gbCitas.Location = new System.Drawing.Point(12, 63);
+            this.gbCitas.Location = new System.Drawing.Point(12, 26);
             this.gbCitas.Name = "gbCitas";
             this.gbCitas.Size = new System.Drawing.Size(730, 227);
             this.gbCitas.TabIndex = 5;
@@ -105,7 +97,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(610, 127);
+            this.btnEditar.Location = new System.Drawing.Point(601, 566);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(112, 40);
             this.btnEditar.TabIndex = 12;
@@ -163,7 +155,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(610, 81);
+            this.btnBuscar.Location = new System.Drawing.Point(610, 123);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(112, 40);
             this.btnBuscar.TabIndex = 8;
@@ -261,42 +253,35 @@
             this.dgvConsultarCitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvConsultarCitas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvConsultarCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarCitas.Location = new System.Drawing.Point(12, 309);
+            this.dgvConsultarCitas.Location = new System.Drawing.Point(42, 272);
             this.dgvConsultarCitas.Name = "dgvConsultarCitas";
             this.dgvConsultarCitas.ReadOnly = true;
             this.dgvConsultarCitas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvConsultarCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsultarCitas.Size = new System.Drawing.Size(730, 358);
+            this.dgvConsultarCitas.Size = new System.Drawing.Size(671, 288);
             this.dgvConsultarCitas.TabIndex = 6;
             this.dgvConsultarCitas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarCitas_CellContentClick);
             // 
             // frmConsultarCita
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(754, 700);
-            this.Controls.Add(this.dgvConsultarCitas);
-            this.Controls.Add(this.gbCitas);
-            this.Controls.Add(this.pnTop);
             this.Font = new System.Drawing.Font("Montserrat Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConsultarCita";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultarCita";
             this.Load += new System.EventHandler(this.frmConsultarCita_Load);
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
+            this.pnContenido.ResumeLayout(false);
             this.gbCitas.ResumeLayout(false);
             this.gbCitas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarCitas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnTop;
-        private System.Windows.Forms.Label lblConsultarCitas;
         private System.Windows.Forms.GroupBox gbCitas;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbPaciente;
