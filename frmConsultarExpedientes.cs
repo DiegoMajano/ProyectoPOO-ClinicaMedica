@@ -13,24 +13,37 @@ namespace ClinicaMedica
     public partial class frmConsultarExpedientes : ClinicaMedica.frmBase
     {
         Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
+        private bool filtroNombre=false;
+        private bool filtroCodigo=false;
         public frmConsultarExpedientes()
         {
             InitializeComponent();
         }
+
+        private void frmConsultarExpedientes_Load(object sender, EventArgs e)
+        {
+            Utilidades.LlenarCBPacientes(cbNombrePaciente);
+            LimpiarCampos();
+            dgvConsultarExpediente.DataSource = null;
+        }
+
         public void Refrescar()
         {                       
             var lista = from datos in db.pacientes
                 select datos;                    
             dgvConsultarExpediente.DataSource = lista.ToList();   
         }
+
         public void LimpiarCampos()
         {
-            txtBuscarNombre.Clear();
+            cbNombrePaciente.SelectedIndex = 0;
             mtxtCodPaci.Clear();
+            filtroCodigo = false; 
+            filtroNombre = false;
         }
 
         // --- Validaciones
-        private void txtBuscarNombre_KeyPress(object sender, KeyPressEventArgs e)
+        private void cbNombrePaciente_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
@@ -39,30 +52,47 @@ namespace ClinicaMedica
             }
         }
 
+        private void Busqueda()
+        {
+            string busquedaNombre = cbNombrePaciente.Text;
+            string busquedaCodigo = mtxtCodPaci.Text;
+
+            var busqueda = from pacientes in db.pacientes
+                           where (!filtroCodigo || pacientes.codPaciente == busquedaCodigo) &&
+                                 (!filtroNombre || pacientes.primerNombre + " " + pacientes.segundoNombre + " " + pacientes.primerApellido + " " + pacientes.segundoApellido == busquedaNombre)
+                           select new
+                           {
+                               codPaciente = pacientes.codPaciente,
+                               Nombre = pacientes.primerNombre + " " + pacientes.segundoNombre + " " + pacientes.primerApellido + " " + pacientes.segundoApellido,
+                               Dirección = pacientes.direccion,
+                               Teléfono = pacientes.telefono,
+                               Género = pacientes.sexo,
+                               FechaNacimiento = pacientes.fechaNacimiento,
+                               Edad = pacientes.edad,
+                               DUI = pacientes.dui,
+                               NIT = pacientes.nit
+                           };
+        
+            dgvConsultarExpediente.DataSource = busqueda.ToList();
+            dgvConsultarExpediente.Columns["codPaciente"].HeaderText = "Código Paciente";
+            dgvConsultarExpediente.Columns["FechaNacimiento"].HeaderText = "Fecha Nacimiento";
+        }
+        private void cbNombrePaciente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbNombrePaciente.SelectedIndex != 0)
+            {
+                filtroNombre = true;
+            }
+        }
+
+        private void mtxtCodPaci_TextChanged(object sender, EventArgs e)
+        {
+            filtroCodigo = true;
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string busquedaNombre = txtBuscarNombre.Text;
-            string busquedaCodigo = mtxtCodPaci.Text;
-            
-            if (!string.IsNullOrEmpty(busquedaCodigo))
-            {
-                var busqueda = from datos in db.pacientes
-                               where datos.codPaciente == busquedaCodigo
-                               select datos;
-
-                dgvConsultarExpediente.DataSource = busqueda.ToList();
-            }
-            else if (!string.IsNullOrEmpty(busquedaNombre))
-            {
-                var busqueda = from datos in db.pacientes
-                               where datos.primerNombre.Contains(busquedaNombre) || datos.segundoNombre.Contains(busquedaNombre)
-                               select datos;
-                dgvConsultarExpediente.DataSource = busqueda.ToList();
-            }
-            else
-            {
-                Refrescar();
-            }
+            Busqueda();
             LimpiarCampos();
         }
 
@@ -75,11 +105,6 @@ namespace ClinicaMedica
         private void dgvConsultarExpediente_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             MessageBox.Show(e.Context.ToString(), "Error");
-        }
-
-        private void dgvConsultarExpediente_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void btnVerReportes_Click(object sender, EventArgs e)

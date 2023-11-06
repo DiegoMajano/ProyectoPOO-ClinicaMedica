@@ -35,7 +35,7 @@ namespace ClinicaMedica
         }
         public void LimpiarCampos()
         {
-            cbPacBusqueda.Items.Clear();
+            cbPacBusqueda.SelectedIndex=0;
             txtCodPaciente.Clear();
             txtCodExp.Clear();
             txtP_Nombre.Clear();

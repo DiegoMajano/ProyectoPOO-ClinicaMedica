@@ -39,6 +39,11 @@ namespace ClinicaMedica
             return new frmRegistrarPersonal();
         }
 
+        public static frmInicio CrearFormInicio()
+        {
+            return new frmInicio();
+        }
+
         // CREAR INSTANCIA DEL CONTEXTO DE LA BASE DE DATOS
         public static Prueba_1Entities1 CrearEntidadDB()
         {

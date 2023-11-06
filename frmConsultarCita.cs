@@ -33,8 +33,8 @@ namespace ClinicaMedica
         public void LimpiarCampos()
         {
             cbHorario.SelectedIndex=0;
-            cbPaciente.Text="";
-            cbMedico.Text="";
+            cbPaciente.SelectedIndex=0;
+            cbMedico.SelectedIndex = 0;
             dtpFechaCita.Value = System.DateTime.Now;
             filtroMedico = false;
             filtroFecha = false;
@@ -135,7 +135,7 @@ namespace ClinicaMedica
                                CodMedico = medico.codMedico,
                                NombreMedico = medico.primerNombre + " " + medico.primerApellido,
                                CodPaciente = paciente.codPaciente,
-                               NombrePaciente = paciente.primerNombre + " " + paciente.primerApellido,
+                               NombrePaciente = paciente.primerNombre + " " + paciente.segundoNombre + " " + paciente.primerApellido + " " + paciente.segundoApellido,
                                Fecha = cita.fechaHora,
                                Hora = cita.hora,
                            };
@@ -158,11 +158,6 @@ namespace ClinicaMedica
         private void btnEditar_Click(object sender, EventArgs e)
         {
             // agregar la funcionalidad de editar cuando el agendar cita esté listo
-        }
-
-        private void dgvConsultarCitas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.gbInformacion = new System.Windows.Forms.GroupBox();
-            this.txtBuscarNombre = new System.Windows.Forms.TextBox();
+            this.cbNombrePaciente = new System.Windows.Forms.ComboBox();
             this.mtxtCodPaci = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -69,8 +69,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbInformacion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.gbInformacion.BackColor = System.Drawing.Color.White;
-            this.gbInformacion.Controls.Add(this.txtBuscarNombre);
+            this.gbInformacion.BackColor = System.Drawing.SystemColors.Control;
+            this.gbInformacion.Controls.Add(this.cbNombrePaciente);
             this.gbInformacion.Controls.Add(this.mtxtCodPaci);
             this.gbInformacion.Controls.Add(this.label1);
             this.gbInformacion.Controls.Add(this.lblNombre);
@@ -89,23 +89,27 @@
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "Llenar Datos del Paciente";
             // 
-            // txtBuscarNombre
+            // cbNombrePaciente
             // 
-            this.txtBuscarNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBuscarNombre.Location = new System.Drawing.Point(175, 61);
-            this.txtBuscarNombre.Name = "txtBuscarNombre";
-            this.txtBuscarNombre.Size = new System.Drawing.Size(304, 23);
-            this.txtBuscarNombre.TabIndex = 29;
-            this.txtBuscarNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarNombre_KeyPress);
+            this.cbNombrePaciente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbNombrePaciente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbNombrePaciente.FormattingEnabled = true;
+            this.cbNombrePaciente.Location = new System.Drawing.Point(184, 59);
+            this.cbNombrePaciente.Name = "cbNombrePaciente";
+            this.cbNombrePaciente.Size = new System.Drawing.Size(304, 26);
+            this.cbNombrePaciente.TabIndex = 29;
+            this.cbNombrePaciente.SelectedIndexChanged += new System.EventHandler(this.cbNombrePaciente_SelectedIndexChanged);
+            this.cbNombrePaciente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNombrePaciente_KeyPress);
             // 
             // mtxtCodPaci
             // 
             this.mtxtCodPaci.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtxtCodPaci.Location = new System.Drawing.Point(175, 104);
+            this.mtxtCodPaci.Location = new System.Drawing.Point(184, 104);
             this.mtxtCodPaci.Mask = "LLL0000";
             this.mtxtCodPaci.Name = "mtxtCodPaci";
             this.mtxtCodPaci.Size = new System.Drawing.Size(304, 23);
             this.mtxtCodPaci.TabIndex = 28;
+            this.mtxtCodPaci.TextChanged += new System.EventHandler(this.mtxtCodPaci_TextChanged);
             // 
             // label1
             // 
@@ -140,7 +144,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(348, 534);
+            this.btnEditar.Location = new System.Drawing.Point(331, 522);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(112, 40);
             this.btnEditar.TabIndex = 25;
@@ -156,7 +160,7 @@
             this.btnVerReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerReportes.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnVerReportes.ForeColor = System.Drawing.Color.White;
-            this.btnVerReportes.Location = new System.Drawing.Point(583, 534);
+            this.btnVerReportes.Location = new System.Drawing.Point(566, 522);
             this.btnVerReportes.Name = "btnVerReportes";
             this.btnVerReportes.Size = new System.Drawing.Size(112, 40);
             this.btnVerReportes.TabIndex = 23;
@@ -173,7 +177,7 @@
             this.btnVerCitasM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerCitasM.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnVerCitasM.ForeColor = System.Drawing.Color.White;
-            this.btnVerCitasM.Location = new System.Drawing.Point(466, 534);
+            this.btnVerCitasM.Location = new System.Drawing.Point(449, 522);
             this.btnVerCitasM.Name = "btnVerCitasM";
             this.btnVerCitasM.Size = new System.Drawing.Size(112, 40);
             this.btnVerCitasM.TabIndex = 22;
@@ -183,15 +187,15 @@
             // btnBorrar
             // 
             this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
-            this.btnBorrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(105)))), ((int)(((byte)(255)))));
-            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnBorrar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnBorrar.FlatAppearance.BorderSize = 2;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(581, 94);
+            this.btnBorrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnBorrar.Location = new System.Drawing.Point(566, 94);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(97, 40);
+            this.btnBorrar.Size = new System.Drawing.Size(112, 40);
             this.btnBorrar.TabIndex = 21;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = false;
@@ -202,16 +206,16 @@
             this.dgvConsultarExpediente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvConsultarExpediente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvConsultarExpediente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvConsultarExpediente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvConsultarExpediente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarExpediente.Location = new System.Drawing.Point(22, 201);
+            this.dgvConsultarExpediente.Location = new System.Drawing.Point(22, 191);
             this.dgvConsultarExpediente.Name = "dgvConsultarExpediente";
             this.dgvConsultarExpediente.ReadOnly = true;
+            this.dgvConsultarExpediente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvConsultarExpediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsultarExpediente.Size = new System.Drawing.Size(656, 314);
             this.dgvConsultarExpediente.TabIndex = 3;
-            this.dgvConsultarExpediente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarExpediente_CellContentClick);
             this.dgvConsultarExpediente.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvConsultarExpediente_DataError);
             // 
             // btnBuscar
@@ -224,9 +228,9 @@
             this.btnBuscar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(581, 48);
+            this.btnBuscar.Location = new System.Drawing.Point(566, 48);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(97, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(112, 40);
             this.btnBuscar.TabIndex = 20;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -249,6 +253,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(754, 701);
             this.Name = "frmConsultarExpedientes";
+            this.Load += new System.EventHandler(this.frmConsultarExpedientes_Load);
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.pnContenido.ResumeLayout(false);
@@ -273,6 +278,6 @@
         private System.Windows.Forms.MaskedTextBox mtxtCodPaci;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtBuscarNombre;
+        private System.Windows.Forms.ComboBox cbNombrePaciente;
     }
 }

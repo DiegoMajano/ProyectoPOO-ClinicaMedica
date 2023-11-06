@@ -32,18 +32,29 @@ namespace ClinicaMedica
         private void Refrescar()
         {
             var citas = from cita in db.citasMedicas
+                        join paciente in db.pacientes
+                        on cita.codPaciente equals paciente.codPaciente
+                        join medico in db.medicos
+                        on cita.codMedico equals medico.codMedico
+                        orderby cita.fechaHora
                         select new
                         {
                             Codigo = cita.codCita,
-                            Paciente = cita.codPaciente,
+                            CodigoMedico = cita.codMedico,
+                            medico = medico.primerNombre + " " + medico.primerApellido,
+                            Especialidad = medico.especialidad,
+                            codPaciente = cita.codPaciente,
+                            Paciente = paciente.primerNombre + " " + paciente.segundoNombre + " " + paciente.primerApellido + " " + paciente.segundoApellido,
                             Fecha = cita.fechaHora,
                             Hora = cita.hora
                         };
 
             dgvCitas.DataSource = citas.ToList();
             dgvCitas.Columns["Fecha"].DefaultCellStyle.Format = "dd/MM/yyyy";
-
-            //dgvCitas.Columns["Codigo"].HeaderText = "Codigo Cita";
+            dgvCitas.Columns["medico"].HeaderText = "Médico";
+            dgvCitas.Columns["CodigoMedico"].HeaderText = "Código Médico";
+            dgvCitas.Columns["codPaciente"].HeaderText = "Código Paciente";
+            dgvCitas.Columns["Codigo"].HeaderText = "Código Cita";
         }
         private void LlenarComboBox()
         {

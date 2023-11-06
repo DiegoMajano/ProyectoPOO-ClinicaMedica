@@ -16,12 +16,18 @@ namespace ClinicaMedica
         {
             InitializeComponent();
         }
-        
+
         // variable estatica para almacenar la referencia a los formularios
+        private static frmInicio inicio;
         private static frmAgendarCita agendarCitas;
         private static frmAgregarPaciente agregarPaciente;
         private static frmConsultarExpedientes consultarExpedientes;
         private static frmConsultarCita consultarCita;
+
+        private void frmMenuAdministrativo_Load(object sender, EventArgs e)
+        {
+            mostrarInicio();
+        }
 
         private void btnAgregarPaciente_Click(object sender, EventArgs e)
         {
@@ -75,9 +81,29 @@ namespace ClinicaMedica
             consultarCita.BringToFront();
         }
 
+        private void mostrarInicio()
+        {
+            if (inicio == null)
+            {
+                inicio = FormFactory.CrearFormInicio();
+                inicio.TopLevel = false;
+                inicio.Dock = DockStyle.Fill;
+            }
+            pnContenido.Controls.Add(inicio);
+            inicio.Show();
+            inicio.BringToFront();
+        }
+
         private void btnLimpiarPnContenedor_Click(object sender, EventArgs e)
         {
             pnContenido.Controls.Clear();
+            inicio = null;
+            agendarCitas = null;
+            agregarPaciente = null;
+            consultarCita = null;
+            consultarExpedientes = null;
+            mostrarInicio();            
+            inicio.Recordatorios();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -92,9 +118,6 @@ namespace ClinicaMedica
             }
         }
 
-        private void frmMenuAdministrativo_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

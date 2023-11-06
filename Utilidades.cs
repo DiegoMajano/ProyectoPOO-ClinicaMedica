@@ -16,9 +16,11 @@ namespace ClinicaMedica
         {
             // --- seleccionar los nombres de los pacientes y convertirlos en una lista
             var nombresPacientes = db.pacientes
-                .Select(p => p.primerNombre + " " + p.segundoNombre + " " + p.primerApellido + " " + p.segundoApellido)
-                .ToList();
-            
+                                    .Select(p => p.primerNombre + " " + p.segundoNombre + " " + p.primerApellido + " " + p.segundoApellido)
+                                    .ToList();
+
+            nombresPacientes.Insert(0, "");
+            comboBox.DataSource = nombresPacientes;
             // autocompletar el nombre escrito con los nombres traidos de la base de datos
 
             AutoCompleteStringCollection autocompletarPacientes = new AutoCompleteStringCollection();
@@ -30,8 +32,11 @@ namespace ClinicaMedica
         {
             // --- seleccionar los nombres de los medicos y convertirlos en una lista
             var nombresMedicos = db.medicos
-                .Select(m => m.primerNombre + " " +  m.primerApellido)
-                .ToList();
+                                .Select(m => m.primerNombre + " " +  m.primerApellido)
+                                .ToList();
+
+            nombresMedicos.Insert(0, "");
+            comboBox.DataSource = nombresMedicos;
 
             // autocompletar el nombre escrito con los nombres traidos de la base de datos
 
@@ -76,7 +81,7 @@ namespace ClinicaMedica
         public static string ObtenerCodigoPaciente(string nombrePaciente)
         {
             var codigoPaciente = db.pacientes
-                .Where(p => p.primerNombre + " " + p.segundoNombre + " " + p.primerApellido + " " + p.segundoApellido == nombrePaciente)
+               .Where(p => p.primerNombre + " " + p.segundoNombre + " " + p.primerApellido + " " + p.segundoApellido == nombrePaciente)
                 .Select(p => p.codPaciente)
                 .FirstOrDefault();
 
