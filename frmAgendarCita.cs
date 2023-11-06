@@ -91,9 +91,51 @@ namespace ClinicaMedica
 
         private void dtpFechaCita_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpFechaCita.Value < DateTime.Now)
+            /*if (dtpFechaCita.Value < DateTime.Now)
             {
                 MessageBox.Show("Seleccionar una fecha válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }*/
+        }
+
+        private string validador;
+        private bool VerificarCitaPaciente(DateTime fechahora, string paciente)
+        {
+            validador = "";
+            var verificacion = from citas in db.citasMedicas
+                               where citas.fechaHora == fechahora || citas.codPaciente == paciente
+                               select new
+                               {
+                                   codpaciente = citas.codPaciente,
+                                   fecha = citas.fechaHora
+                               };                              
+
+            if (verificacion.Any(cp => cp.codpaciente == paciente || cp.fecha.Value.Day == fechahora.Day))
+            {
+                validador = validador + "paciente";
+                return false;
+            }
+            else
+            {
+                return true;
+
+            }
+        }
+
+        private bool VerificarCitaMedico(DateTime fechahora, string medico)
+        {
+            validador = "";
+            var verificacion = from citas in db.citasMedicas
+                                 where citas.fechaHora == fechahora && citas.codMedico == medico
+                                 select citas.codMedico;
+
+            if (verificacion.Any(cm => cm == medico))
+            {
+                validador = validador + "medico";
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
 
@@ -110,8 +152,28 @@ namespace ClinicaMedica
             nuevaCita.CodPaciente = codigoPaciente;
             nuevaCita.CodMedico = codigoMedico;
             nuevaCita.FechaHora = fechahora;
-            
-            db.IngresarCita(nuevaCita.CodPaciente,nuevaCita.CodMedico,nuevaCita.FechaHora);
+
+            if (VerificarCitaPaciente(fechahora,codigoPaciente)&& VerificarCitaMedico(fechahora, codigoMedico))
+            {
+                db.IngresarCita(nuevaCita.CodPaciente, nuevaCita.CodMedico, nuevaCita.FechaHora);
+                MessageBox.Show("La cita se ha registrado exitosamente", "Registro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                switch (validador)
+                {
+                    case "paciente":
+                        MessageBox.Show("El paciente ya posee una cita este dia", "Registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case "medico":
+                        MessageBox.Show("El medidco ya posee una cita este dia a esa hora", "Registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    default:
+                        MessageBox.Show("El paciente y el medico ya posee una cita este dia", "Registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                }
+            }
+            validador = "";
             Refrescar();
             LimpiarCampos();
             cbNombrePaciente.Focus();
