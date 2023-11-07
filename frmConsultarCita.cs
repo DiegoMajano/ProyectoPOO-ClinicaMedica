@@ -141,11 +141,14 @@ namespace ClinicaMedica
                            };
 
             dgvConsultarCitas.DataSource = consulta.ToList();
-
-            dgvConsultarCitas.Columns["NombreMedico"].HeaderText = "Nombre Medico";
+            dgvConsultarCitas.Columns["CodCita"].HeaderText = "Código Cita";
+            dgvConsultarCitas.Columns["codMedico"].HeaderText = "Código Médico";
+            dgvConsultarCitas.Columns["codPaciente"].HeaderText = "Código Paciente";
+            dgvConsultarCitas.Columns["NombreMedico"].HeaderText = "Nombre Médico";
             dgvConsultarCitas.Columns["NombrePaciente"].HeaderText = "Nombre Paciente";
             dgvConsultarCitas.Columns["Fecha"].DefaultCellStyle.Format = "dd/MM/yyyy";
-
+            dgvConsultarCitas.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dgvConsultarCitas.ClearSelection();
             LimpiarCampos();
         }
 

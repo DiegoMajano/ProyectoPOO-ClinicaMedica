@@ -81,6 +81,8 @@ namespace ClinicaMedica
                                Especialidad = medico.especialidad
                            };            
             dgvConsultarMedicos.DataSource = busqueda.ToList();
+            dgvConsultarMedicos.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dgvConsultarMedicos.ClearSelection();
             LimpiarCampos();
         }
 

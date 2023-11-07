@@ -24,14 +24,14 @@ namespace ClinicaMedica
         private void frmAgendarCita_Load(object sender, EventArgs e)
         {
             Refrescar();
+            dgvCitas.ClearSelection();
             LlenarComboBox();
             cbNombrePaciente.Focus();
             LimpiarCampos();
         }
 
         private void Refrescar()
-        {
-            
+        {            
             var citas = from cita in db.citasMedicas
                         join paciente in db.pacientes
                         on cita.codPaciente equals paciente.codPaciente
@@ -51,12 +51,14 @@ namespace ClinicaMedica
                         };
 
             dgvCitas.DataSource = citas.ToList();
+            dgvCitas.ClearSelection();
             dgvCitas.Columns["Fecha"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvCitas.Columns["medico"].HeaderText = "Médico";
             dgvCitas.Columns["CodigoMedico"].HeaderText = "Código Médico";
             dgvCitas.Columns["codPaciente"].HeaderText = "Código Paciente";
             dgvCitas.Columns["Codigo"].HeaderText = "Código Cita";
-           
+            dgvCitas.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
         }
         private void LlenarComboBox()
         {
@@ -154,7 +156,7 @@ namespace ClinicaMedica
             nuevaCita.CodMedico = codigoMedico;
             nuevaCita.FechaHora = fechahora;
 
-           
+            
             if ( fechahora > DateTime.Now && VerificarCitaPaciente(fechahora,codigoPaciente)&& VerificarCitaMedico(fechahora, codigoMedico))
             {
                 db.IngresarCita(nuevaCita.CodPaciente, nuevaCita.CodMedico, nuevaCita.FechaHora);

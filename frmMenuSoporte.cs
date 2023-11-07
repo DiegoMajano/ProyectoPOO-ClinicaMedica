@@ -76,8 +76,8 @@ namespace ClinicaMedica
         private void LimpiarTodo()
         {
             pnContenido.Controls.Clear();
-            registrarMedico.Dispose();
-            consultarPersonal.Dispose();
+            registrarMedico?.Dispose();
+            consultarPersonal?.Dispose();
 
             registrarMedico = null;
             consultarPersonal = null;

@@ -65,6 +65,8 @@ namespace ClinicaMedica
             dgvCitasDia.Columns["npaciente"].HeaderText = "Nombre Paciente";
             dgvCitasDia.Columns["nmedico"].HeaderText = "Nombre Médico";
             dgvCitasDia.Columns["Fecha"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvCitasDia.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dgvCitasDia.ClearSelection();
 
         }
         /*private void RecordatorioAdmin(DataGridView dgv)

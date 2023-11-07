@@ -76,6 +76,8 @@ namespace ClinicaMedica
             dgvConsultarExpediente.DataSource = busqueda.ToList();
             dgvConsultarExpediente.Columns["codPaciente"].HeaderText = "Código Paciente";
             dgvConsultarExpediente.Columns["FechaNacimiento"].HeaderText = "Fecha Nacimiento";
+            dgvConsultarExpediente.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dgvConsultarExpediente.ClearSelection();
         }
         private void cbNombrePaciente_SelectedIndexChanged(object sender, EventArgs e)
         {
