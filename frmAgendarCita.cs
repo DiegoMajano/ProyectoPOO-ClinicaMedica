@@ -31,6 +31,7 @@ namespace ClinicaMedica
 
         private void Refrescar()
         {
+            
             var citas = from cita in db.citasMedicas
                         join paciente in db.pacientes
                         on cita.codPaciente equals paciente.codPaciente
@@ -55,6 +56,7 @@ namespace ClinicaMedica
             dgvCitas.Columns["CodigoMedico"].HeaderText = "Código Médico";
             dgvCitas.Columns["codPaciente"].HeaderText = "Código Paciente";
             dgvCitas.Columns["Codigo"].HeaderText = "Código Cita";
+           
         }
         private void LlenarComboBox()
         {
@@ -91,10 +93,10 @@ namespace ClinicaMedica
 
         private void dtpFechaCita_ValueChanged(object sender, EventArgs e)
         {
-            /*if (dtpFechaCita.Value < DateTime.Now)
+            if (dtpFechaCita.Value.Day < DateTime.Now.Day || dtpFechaCita.Value.Hour < DateTime.Now.Hour)
             {
-                MessageBox.Show("Seleccionar una fecha válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }*/
+                MessageBox.Show("Seleccionar una fecha y hora válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private string validador;
@@ -152,7 +154,8 @@ namespace ClinicaMedica
             nuevaCita.CodMedico = codigoMedico;
             nuevaCita.FechaHora = fechahora;
 
-            if (VerificarCitaPaciente(fechahora,codigoPaciente)&& VerificarCitaMedico(fechahora, codigoMedico))
+           
+            if ( fechahora > DateTime.Now && VerificarCitaPaciente(fechahora,codigoPaciente)&& VerificarCitaMedico(fechahora, codigoMedico))
             {
                 db.IngresarCita(nuevaCita.CodPaciente, nuevaCita.CodMedico, nuevaCita.FechaHora);
                 MessageBox.Show("La cita se ha registrado exitosamente", "Registro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -170,7 +173,7 @@ namespace ClinicaMedica
                         validador = "";
                         break;
                     default:
-                        MessageBox.Show("El paciente y el medico ya posee una cita este dia", "Registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error al agendar una cita en la fecha y/o hora seleccionada", "Registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         validador = "";
                         break;
                 }
@@ -184,11 +187,6 @@ namespace ClinicaMedica
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
-        }
-
-        private void dgvCitas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

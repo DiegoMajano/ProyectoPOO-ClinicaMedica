@@ -42,18 +42,11 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dgvConsultarCitas = new System.Windows.Forms.DataGridView();
-            this.pnContenido.SuspendLayout();
             this.pnTop.SuspendLayout();
+            this.pnContenido.SuspendLayout();
             this.gbCitas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarCitas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnContenido
-            // 
-            this.pnContenido.Controls.Add(this.btnEditar);
-            this.pnContenido.Controls.Add(this.gbCitas);
-            this.pnContenido.Controls.Add(this.dgvConsultarCitas);
-            this.pnContenido.Size = new System.Drawing.Size(754, 625);
             // 
             // lblTitulo
             // 
@@ -65,6 +58,13 @@
             // 
             this.pnBottom.Location = new System.Drawing.Point(0, 682);
             this.pnBottom.Size = new System.Drawing.Size(754, 18);
+            // 
+            // pnContenido
+            // 
+            this.pnContenido.Controls.Add(this.btnEditar);
+            this.pnContenido.Controls.Add(this.gbCitas);
+            this.pnContenido.Controls.Add(this.dgvConsultarCitas);
+            this.pnContenido.Size = new System.Drawing.Size(754, 625);
             // 
             // gbCitas
             // 
@@ -251,7 +251,7 @@
             this.dgvConsultarCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvConsultarCitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvConsultarCitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConsultarCitas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvConsultarCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultarCitas.Location = new System.Drawing.Point(42, 272);
@@ -270,9 +270,9 @@
             this.Name = "frmConsultarCita";
             this.Text = "frmConsultarCita";
             this.Load += new System.EventHandler(this.frmConsultarCita_Load);
-            this.pnContenido.ResumeLayout(false);
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
+            this.pnContenido.ResumeLayout(false);
             this.gbCitas.ResumeLayout(false);
             this.gbCitas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarCitas)).EndInit();

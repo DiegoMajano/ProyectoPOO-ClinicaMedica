@@ -40,16 +40,11 @@
             this.dgvConsultarMedicos = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.pnContenido.SuspendLayout();
             this.pnTop.SuspendLayout();
+            this.pnContenido.SuspendLayout();
             this.gbInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarMedicos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnContenido
-            // 
-            this.pnContenido.Controls.Add(this.gbInformacion);
-            this.pnContenido.Size = new System.Drawing.Size(754, 591);
             // 
             // lblTitulo
             // 
@@ -61,6 +56,11 @@
             // 
             this.pnBottom.Location = new System.Drawing.Point(0, 648);
             this.pnBottom.Size = new System.Drawing.Size(754, 16);
+            // 
+            // pnContenido
+            // 
+            this.pnContenido.Controls.Add(this.gbInformacion);
+            this.pnContenido.Size = new System.Drawing.Size(754, 591);
             // 
             // gbInformacion
             // 
@@ -203,7 +203,7 @@
             this.dgvConsultarMedicos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvConsultarMedicos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvConsultarMedicos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConsultarMedicos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvConsultarMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultarMedicos.Location = new System.Drawing.Point(22, 201);
@@ -248,9 +248,9 @@
             this.ClientSize = new System.Drawing.Size(754, 664);
             this.Name = "frmConsultarPersonal";
             this.Load += new System.EventHandler(this.frmConsultarPersonal_Load);
-            this.pnContenido.ResumeLayout(false);
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
+            this.pnContenido.ResumeLayout(false);
             this.gbInformacion.ResumeLayout(false);
             this.gbInformacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarMedicos)).EndInit();

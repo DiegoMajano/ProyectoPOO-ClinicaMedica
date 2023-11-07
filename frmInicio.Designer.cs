@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnInfoUser = new System.Windows.Forms.Panel();
             this.lblespecialidad = new System.Windows.Forms.Label();
             this.lblEspecialidadUser = new System.Windows.Forms.Label();
@@ -48,11 +49,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitasDia)).BeginInit();
             this.SuspendLayout();
             // 
+            // pnTop
+            // 
+            this.pnTop.Size = new System.Drawing.Size(900, 57);
+            // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(344, 14);
+            this.lblTitulo.Location = new System.Drawing.Point(490, 14);
             this.lblTitulo.Size = new System.Drawing.Size(66, 26);
             this.lblTitulo.Text = "Inicio";
+            // 
+            // pnBottom
+            // 
+            this.pnBottom.Size = new System.Drawing.Size(900, 41);
             // 
             // pnContenido
             // 
@@ -60,6 +69,7 @@
             this.pnContenido.Controls.Add(this.Calendar);
             this.pnContenido.Controls.Add(this.pnInfoUser);
             this.pnContenido.Controls.Add(this.lblCitasDia);
+            this.pnContenido.Size = new System.Drawing.Size(900, 528);
             // 
             // pnInfoUser
             // 
@@ -71,7 +81,7 @@
             this.pnInfoUser.Controls.Add(this.lblNombreUser);
             this.pnInfoUser.Controls.Add(this.lblPuesto);
             this.pnInfoUser.Controls.Add(this.lblNombre);
-            this.pnInfoUser.Location = new System.Drawing.Point(24, 18);
+            this.pnInfoUser.Location = new System.Drawing.Point(97, 18);
             this.pnInfoUser.Name = "pnInfoUser";
             this.pnInfoUser.Size = new System.Drawing.Size(442, 162);
             this.pnInfoUser.TabIndex = 0;
@@ -141,7 +151,7 @@
             this.lblCitasDia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCitasDia.AutoSize = true;
             this.lblCitasDia.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCitasDia.Location = new System.Drawing.Point(312, 198);
+            this.lblCitasDia.Location = new System.Drawing.Point(385, 198);
             this.lblCitasDia.Name = "lblCitasDia";
             this.lblCitasDia.Size = new System.Drawing.Size(134, 26);
             this.lblCitasDia.TabIndex = 2;
@@ -151,59 +161,62 @@
             // 
             this.Calendar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Calendar.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calendar.Location = new System.Drawing.Point(482, 18);
+            this.Calendar.Location = new System.Drawing.Point(555, 18);
             this.Calendar.Name = "Calendar";
             this.Calendar.TabIndex = 1;
             this.Calendar.TrailingForeColor = System.Drawing.SystemColors.Highlight;
             // 
             // dgvCitasDia
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
+            this.dgvCitasDia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCitasDia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvCitasDia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvCitasDia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCitasDia.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvCitasDia.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvCitasDia.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCitasDia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCitasDia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.NullValue = "Null";
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCitasDia.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCitasDia.Location = new System.Drawing.Point(53, 241);
-            this.dgvCitasDia.Name = "dgvCitasDia";
-            this.dgvCitasDia.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dgvCitasDia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCitasDia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.NullValue = "Null";
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCitasDia.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvCitasDia.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvCitasDia.Location = new System.Drawing.Point(23, 241);
+            this.dgvCitasDia.Name = "dgvCitasDia";
+            this.dgvCitasDia.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCitasDia.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvCitasDia.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCitasDia.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCitasDia.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvCitasDia.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCitasDia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCitasDia.Size = new System.Drawing.Size(644, 276);
+            this.dgvCitasDia.Size = new System.Drawing.Size(852, 276);
             this.dgvCitasDia.TabIndex = 2;
             // 
             // frmInicio
             // 
-            this.ClientSize = new System.Drawing.Size(754, 626);
+            this.ClientSize = new System.Drawing.Size(900, 626);
             this.Name = "frmInicio";
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.pnTop.ResumeLayout(false);

@@ -81,7 +81,7 @@ namespace ClinicaMedica
             consultarCita.BringToFront();
         }
 
-        private void mostrarInicio()
+        public void mostrarInicio()
         {
             if (inicio == null)
             {
@@ -92,18 +92,31 @@ namespace ClinicaMedica
             pnContenido.Controls.Add(inicio);
             inicio.Show();
             inicio.BringToFront();
+            inicio.Recordatorios();
         }
 
-        private void btnLimpiarPnContenedor_Click(object sender, EventArgs e)
+        private void LimpiarTodo()
         {
+            // liberar recursos del sistema llamando el método 'Dispose':
             pnContenido.Controls.Clear();
-            inicio = null;
+            //inicio?.Dispose();
+            agendarCitas?.Dispose();
+            agregarPaciente?.Dispose();
+            consultarCita?.Dispose();
+            consultarExpedientes?.Dispose();
+            // reestableciendo a null las instancias de los formularios
+            //inicio = null;
             agendarCitas = null;
             agregarPaciente = null;
             consultarCita = null;
             consultarExpedientes = null;
-            mostrarInicio();            
+            mostrarInicio();
             inicio.Recordatorios();
+        }
+
+        private void btnLimpiarPnContenedor_Click(object sender, EventArgs e)
+        {
+            LimpiarTodo();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -113,7 +126,7 @@ namespace ClinicaMedica
             {
                 frmHome home = new frmHome();
                 this.Hide();
-                pnContenido.Controls.Clear();
+                LimpiarTodo();
                 home.Show();
             }
         }

@@ -15,6 +15,12 @@ namespace ClinicaMedica
         public frmMenuDoctor()
         {
             InitializeComponent();
+        } 
+
+        private void frmMenuDoctor_Load(object sender, EventArgs e)
+        {
+            mostrarInicio();
+            inicio.Recordatorios();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -29,13 +35,32 @@ namespace ClinicaMedica
             }
         }
 
-        private void btnLimpiarPnContenedor_Click(object sender, EventArgs e)
+        private void LimpiarTodo()
         {
             pnContenido.Controls.Clear();
+
+            // liberar recursos del sistema llamando el método 'Dispose':
+            pnContenido.Controls.Clear();
+            //inicio?.Dispose();
+            crearReporte?.Dispose();
+            consultarExpediente?.Dispose();
+            consultarCita?.Dispose();
+            // reestableciendo a null las instancias de los formularios
+            //inicio = null;
+            crearReporte = null;
+            consultarExpediente = null;
+            consultarCita = null;
+            mostrarInicio();
+            inicio.Recordatorios();
+        }
+
+        private void btnLimpiarPnContenedor_Click(object sender, EventArgs e)
+        {
+            LimpiarTodo();
         }
 
         // variable estatica para almacenar la referencia a los formularios
-
+        private static frmInicio inicio;
         private static frmCrearReportes crearReporte;
         private static frmConsultarExpedientes consultarExpediente;
         private static frmConsultarCita consultarCita;
@@ -79,9 +104,17 @@ namespace ClinicaMedica
             consultarCita.BringToFront();
         }
 
-        private void frmMenuDoctor_Load(object sender, EventArgs e)
+        private void mostrarInicio()
         {
-
+            if (inicio == null)
+            {
+                inicio = FormFactory.CrearFormInicio();
+                inicio.TopLevel = false;
+                inicio.Dock = DockStyle.Fill;
+            }
+            pnContenido.Controls.Add(inicio);
+            inicio.Show();
+            inicio.BringToFront(); 
         }
     }
 }
