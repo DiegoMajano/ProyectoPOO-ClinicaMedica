@@ -10,7 +10,7 @@ namespace ClinicaMedica
 {
     public class Utilidades
     {
-        private static Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
+        private static ClinicaEntities db = FormFactory.CrearEntidadDB();
 
         public static void LlenarCBPacientes(ComboBox comboBox)
         {

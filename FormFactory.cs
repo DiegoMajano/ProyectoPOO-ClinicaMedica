@@ -44,9 +44,9 @@ namespace ClinicaMedica
         }
 
         // CREAR INSTANCIA DEL CONTEXTO DE LA BASE DE DATOS
-        public static Prueba_1Entities1 CrearEntidadDB()
+        public static ClinicaEntities CrearEntidadDB()
         {
-            return new Prueba_1Entities1();
+            return new ClinicaEntities();
         }
     }
 }

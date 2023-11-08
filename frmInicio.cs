@@ -12,7 +12,7 @@ namespace ClinicaMedica
 {
     public partial class frmInicio : ClinicaMedica.frmBase
     {
-        private static Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
+        ClinicaEntities db = FormFactory.CrearEntidadDB();
 
         public frmInicio()
         {

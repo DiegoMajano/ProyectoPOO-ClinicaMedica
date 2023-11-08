@@ -14,7 +14,7 @@ namespace ClinicaMedica
     {
         Paciente p = new Paciente();
         List<Paciente> pacienteslist = new List<Paciente>();
-        Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
+        ClinicaEntities db = FormFactory.CrearEntidadDB();
 
         public frmAgregarPaciente()
         {
@@ -159,9 +159,31 @@ namespace ClinicaMedica
                     {
                         p.Genero = "M";
                     }
-                    p.Telefono = mtxtTelefono.Text;
-                    p.Dui = mtxtDUI.Text;
-                    p.Nit = mtxtNIT.Text;
+                    if (mtxtTelefono.Text!="    -")
+                    {
+                        p.Telefono = mtxtTelefono.Text;
+                    }
+                    else
+                    {
+                        p.Telefono = "";
+                    }
+                    if (mtxtDUI.Text!="        -")
+                    {
+                        p.Dui = mtxtDUI.Text;
+
+                    }
+                    else
+                    {
+                        p.Dui = "";
+                    }
+                    if (mtxtNIT.Text!="    -      -   -")
+                    {
+                        p.Nit = mtxtNIT.Text;
+                    }
+                    else
+                    {
+                        p.Nit = "";
+                    }
                     db.InscribirPaciente(p.PrimerNombre, p.SegundoNombre, p.PrimerApellido, p.SegundoApellido, p.Direccion, p.Telefono, p.Genero, p.FechaNacimiento, p.Dui, p.Nit);
                     db.SaveChanges();
                     MessageBox.Show("El paciente se ha registrado correctamente", "Registro hecho", MessageBoxButtons.OK, MessageBoxIcon.Information);

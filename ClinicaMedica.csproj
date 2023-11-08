@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CrearCita.cs" />
+    <Compile Include="CrearReporte.cs" />
     <Compile Include="FormFactory.cs" />
     <Compile Include="frmAgendarCita.cs">
       <SubType>Form</SubType>
@@ -154,50 +155,41 @@
     <Compile Include="frmRegistrarPersonal.Designer.cs">
       <DependentUpon>frmRegistrarPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\BDClinica.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDClinica.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDClinica.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDClinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDClinica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDClinica.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\citasMedicas.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\DBClinica.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBClinica.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\DBClinica.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBClinica.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\DBClinica.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBClinica.edmx</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\medicamentos.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\medicos.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\pacientes.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\recetas.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\reportes.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\signosVitales.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\sp_helpdiagrams_Result.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\sysdiagrams.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
@@ -265,12 +257,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>RecursoFuente.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Modelo\DBClinica.edmx">
+    <EntityDeploy Include="Modelo\BDClinica.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBClinica.Designer.cs</LastGenOutput>
+      <LastGenOutput>BDClinica.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Modelo\DBClinica.edmx.diagram">
-      <DependentUpon>DBClinica.edmx</DependentUpon>
+    <None Include="Modelo\BDClinica.edmx.diagram">
+      <DependentUpon>BDClinica.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -362,19 +354,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Modelo\DBClinica.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBClinica.edmx</DependentUpon>
-      <LastGenOutput>DBClinica.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Modelo\DBClinica.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBClinica.edmx</DependentUpon>
-      <LastGenOutput>DBClinica.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Modelo\BDClinica.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDClinica.edmx</DependentUpon>
+      <LastGenOutput>BDClinica.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\BDClinica.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDClinica.edmx</DependentUpon>
+      <LastGenOutput>BDClinica.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

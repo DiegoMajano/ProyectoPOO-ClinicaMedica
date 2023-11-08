@@ -41,8 +41,6 @@
             this.lblFechaCita = new System.Windows.Forms.Label();
             this.txtCodCita = new System.Windows.Forms.TextBox();
             this.lblCodCita = new System.Windows.Forms.Label();
-            this.txtCodExp = new System.Windows.Forms.TextBox();
-            this.lblCodExpediente = new System.Windows.Forms.Label();
             this.txtCodPaciente = new System.Windows.Forms.TextBox();
             this.lblCodPaciente = new System.Windows.Forms.Label();
             this.txtApellidos = new System.Windows.Forms.TextBox();
@@ -90,7 +88,7 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(441, 15);
+            this.lblTitulo.Location = new System.Drawing.Point(515, 14);
             this.lblTitulo.Size = new System.Drawing.Size(150, 26);
             this.lblTitulo.Text = "Crear Reporte";
             // 
@@ -175,8 +173,6 @@
             this.gbInformacion.Controls.Add(this.lblFechaCita);
             this.gbInformacion.Controls.Add(this.txtCodCita);
             this.gbInformacion.Controls.Add(this.lblCodCita);
-            this.gbInformacion.Controls.Add(this.txtCodExp);
-            this.gbInformacion.Controls.Add(this.lblCodExpediente);
             this.gbInformacion.Controls.Add(this.txtCodPaciente);
             this.gbInformacion.Controls.Add(this.lblCodPaciente);
             this.gbInformacion.Controls.Add(this.txtApellidos);
@@ -196,7 +192,7 @@
             this.txtGenero.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtGenero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGenero.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtGenero.Location = new System.Drawing.Point(519, 70);
+            this.txtGenero.Location = new System.Drawing.Point(524, 36);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.ReadOnly = true;
             this.txtGenero.Size = new System.Drawing.Size(219, 26);
@@ -207,7 +203,7 @@
             this.lblGenero.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGenero.AutoSize = true;
             this.lblGenero.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblGenero.Location = new System.Drawing.Point(421, 72);
+            this.lblGenero.Location = new System.Drawing.Point(426, 38);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(65, 21);
             this.lblGenero.TabIndex = 15;
@@ -218,7 +214,7 @@
             this.txtEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEdad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEdad.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtEdad.Location = new System.Drawing.Point(519, 38);
+            this.txtEdad.Location = new System.Drawing.Point(165, 134);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.ReadOnly = true;
             this.txtEdad.Size = new System.Drawing.Size(219, 26);
@@ -229,7 +225,7 @@
             this.lblEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEdad.AutoSize = true;
             this.lblEdad.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblEdad.Location = new System.Drawing.Point(421, 40);
+            this.lblEdad.Location = new System.Drawing.Point(25, 136);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(49, 21);
             this.lblEdad.TabIndex = 13;
@@ -240,7 +236,7 @@
             this.txtFechaCita.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFechaCita.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFechaCita.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtFechaCita.Location = new System.Drawing.Point(519, 134);
+            this.txtFechaCita.Location = new System.Drawing.Point(524, 100);
             this.txtFechaCita.Name = "txtFechaCita";
             this.txtFechaCita.ReadOnly = true;
             this.txtFechaCita.Size = new System.Drawing.Size(219, 26);
@@ -251,7 +247,7 @@
             this.lblFechaCita.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFechaCita.AutoSize = true;
             this.lblFechaCita.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblFechaCita.Location = new System.Drawing.Point(421, 136);
+            this.lblFechaCita.Location = new System.Drawing.Point(426, 102);
             this.lblFechaCita.Name = "lblFechaCita";
             this.lblFechaCita.Size = new System.Drawing.Size(89, 21);
             this.lblFechaCita.TabIndex = 11;
@@ -262,7 +258,7 @@
             this.txtCodCita.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCodCita.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodCita.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtCodCita.Location = new System.Drawing.Point(519, 102);
+            this.txtCodCita.Location = new System.Drawing.Point(524, 68);
             this.txtCodCita.Name = "txtCodCita";
             this.txtCodCita.ReadOnly = true;
             this.txtCodCita.Size = new System.Drawing.Size(219, 26);
@@ -273,33 +269,11 @@
             this.lblCodCita.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCodCita.AutoSize = true;
             this.lblCodCita.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblCodCita.Location = new System.Drawing.Point(421, 104);
+            this.lblCodCita.Location = new System.Drawing.Point(426, 70);
             this.lblCodCita.Name = "lblCodCita";
             this.lblCodCita.Size = new System.Drawing.Size(77, 21);
             this.lblCodCita.TabIndex = 9;
             this.lblCodCita.Text = "Cod. Cita";
-            // 
-            // txtCodExp
-            // 
-            this.txtCodExp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodExp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCodExp.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtCodExp.Location = new System.Drawing.Point(165, 68);
-            this.txtCodExp.Name = "txtCodExp";
-            this.txtCodExp.ReadOnly = true;
-            this.txtCodExp.Size = new System.Drawing.Size(219, 26);
-            this.txtCodExp.TabIndex = 8;
-            // 
-            // lblCodExpediente
-            // 
-            this.lblCodExpediente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCodExpediente.AutoSize = true;
-            this.lblCodExpediente.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblCodExpediente.Location = new System.Drawing.Point(25, 70);
-            this.lblCodExpediente.Name = "lblCodExpediente";
-            this.lblCodExpediente.Size = new System.Drawing.Size(132, 21);
-            this.lblCodExpediente.TabIndex = 7;
-            this.lblCodExpediente.Text = "Cod. Expediente";
             // 
             // txtCodPaciente
             // 
@@ -328,7 +302,7 @@
             this.txtApellidos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellidos.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtApellidos.Location = new System.Drawing.Point(165, 132);
+            this.txtApellidos.Location = new System.Drawing.Point(165, 102);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.ReadOnly = true;
             this.txtApellidos.Size = new System.Drawing.Size(219, 26);
@@ -339,7 +313,7 @@
             this.lblApellidos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblApellidos.AutoSize = true;
             this.lblApellidos.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblApellidos.Location = new System.Drawing.Point(25, 134);
+            this.lblApellidos.Location = new System.Drawing.Point(25, 104);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(78, 21);
             this.lblApellidos.TabIndex = 3;
@@ -350,7 +324,7 @@
             this.txtP_Nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtP_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtP_Nombre.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtP_Nombre.Location = new System.Drawing.Point(165, 100);
+            this.txtP_Nombre.Location = new System.Drawing.Point(165, 70);
             this.txtP_Nombre.Name = "txtP_Nombre";
             this.txtP_Nombre.ReadOnly = true;
             this.txtP_Nombre.Size = new System.Drawing.Size(219, 26);
@@ -361,7 +335,7 @@
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblNombre.Location = new System.Drawing.Point(25, 102);
+            this.lblNombre.Location = new System.Drawing.Point(25, 72);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(79, 21);
             this.lblNombre.TabIndex = 0;
@@ -639,6 +613,7 @@
             this.btnGuardar.TabIndex = 33;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblIndicaciones
             // 
@@ -715,8 +690,6 @@
         private System.Windows.Forms.Label lblFechaCita;
         private System.Windows.Forms.TextBox txtCodCita;
         private System.Windows.Forms.Label lblCodCita;
-        private System.Windows.Forms.TextBox txtCodExp;
-        private System.Windows.Forms.Label lblCodExpediente;
         private System.Windows.Forms.TextBox txtCodPaciente;
         private System.Windows.Forms.Label lblCodPaciente;
         private System.Windows.Forms.TextBox txtApellidos;

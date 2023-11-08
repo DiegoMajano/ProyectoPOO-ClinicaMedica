@@ -15,7 +15,7 @@ namespace ClinicaMedica
 {
     public partial class frmAgendarCita : ClinicaMedica.frmBase
     {
-        private static Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
+        private static ClinicaEntities db = FormFactory.CrearEntidadDB();
 
         public frmAgendarCita()
         {
@@ -98,6 +98,7 @@ namespace ClinicaMedica
             if (dtpFechaCita.Value.Day < DateTime.Now.Day || dtpFechaCita.Value.Hour < DateTime.Now.Hour)
             {
                 MessageBox.Show("Seleccionar una fecha y hora válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                dtpFechaCita.Value = DateTime.Now;
             }
         }
 
@@ -106,14 +107,14 @@ namespace ClinicaMedica
         {
             
             var verificacion = from citas in db.citasMedicas
-                               where citas.fechaHora == fechahora || citas.codPaciente == paciente
+                               where citas.fechaHora == fechahora && citas.codPaciente == paciente
                                select new
                                {
                                    codpaciente = citas.codPaciente,
                                    fecha = citas.fechaHora
                                };                              
 
-            if (verificacion.Any(cp => cp.codpaciente == paciente || cp.fecha.Value.Day == fechahora.Day))
+            if (verificacion.Any(cp => cp.codpaciente == paciente && cp.fecha.Value.Hour == fechahora.Hour))
             {
                 validador = validador + "paciente";
                 return false;

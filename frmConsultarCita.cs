@@ -13,7 +13,7 @@ namespace ClinicaMedica
 {
     public partial class frmConsultarCita : frmBase
     {
-        Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
+        ClinicaEntities db = FormFactory.CrearEntidadDB();
         private bool filtroFecha;
         private bool filtroHora;
         private bool filtroPaciente;

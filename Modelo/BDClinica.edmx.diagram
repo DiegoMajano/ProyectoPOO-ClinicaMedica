@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d884f376847e4b84bc4243c4ee0babdf" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="ClinicaModel.citasMedicas" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaModel.pacientes" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaModel.recetas" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaModel.reportes" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaModel.medicos" Width="1.5" PointX="4.375" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaModel.medicamentos" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaModel.signosVitales" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="ClinicaModel.fk_codCitaR" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaModel.fk_codMedicoC" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaModel.fk_codPacienteC" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaModel.fk_codRecetaM" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaModel.fk_codReporetR" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaModel.fk_codReporteSV" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
