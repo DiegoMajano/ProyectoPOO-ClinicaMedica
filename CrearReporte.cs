@@ -8,6 +8,8 @@ namespace ClinicaMedica
 {
     public class CrearReporte
     {
+        // cambiar a reporte
+
         private string codCita;
 
         // atributos para tabla signos vitales
@@ -63,6 +65,11 @@ namespace ClinicaMedica
             get { return diagnostico; } set { diagnostico = value; }
         }
 
+        /// <summary>
+        /// 
+        /// Se separará esta parte de la clase para clase receta donde estara receta y medicamento
+        /// 
+        /// </summary>
         // propiedades de tabla receta
         public string CodReporte
         {

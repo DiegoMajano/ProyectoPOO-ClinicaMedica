@@ -8,6 +8,8 @@ using ClinicaMedica.Modelo;
 namespace ClinicaMedica
 {
     public class CrearCita
+
+        // cambiar a cita
     {
         private string codPaciente;
         private string codMedico;
