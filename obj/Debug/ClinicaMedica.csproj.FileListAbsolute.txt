@@ -111,3 +111,44 @@ C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\Cli
 C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Github\obj\Debug\ClinicaMedica.frmConsultarExpedienteReporte.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarExpedienteReporte.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\ClinicaMedica.frmInicio.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\278158071_329692962482837_3178279064538201005_n.jpg
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\copia.jpg
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\PasswordIcon.png
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\UserIcon.png
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\AdminIcon.png
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\MedicoIcon.png
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\AdminIcon32.png
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\MedicoIcon32.png
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\ExitIcon.png
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\Resources\logo}.png
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\ClinicaMedica.exe.config
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\ClinicaMedica.exe
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\ClinicaMedica.pdb
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\EntityFramework.dll
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\EntityFramework.xml
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.csproj.AssemblyReference.cache
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmAgendarCita.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmAgregarPaciente.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarCita.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmBase.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarExpedienteReporte.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarExpedientes.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmConsultarPersonal.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmCrearReportes.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmHome.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmInicio.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmLoginAdmin.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmLoginMedico.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmMenuAdministrativo.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmMenuDoctor.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmMenuSoporte.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.frmRegistrarPersonal.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.Properties.Resources.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.Resources.RecursoFuente.resources
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.csproj.GenerateResource.cache
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.csproj.CoreCompileInputs.cache
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.csproj.CopyComplete
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.exe
+C:\Users\rodri\Source\Repos\ProyectoPOO-ClinicaMedica\obj\Debug\ClinicaMedica.pdb
