@@ -84,18 +84,18 @@
             // pnTop
             // 
             this.pnTop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-            this.pnTop.Size = new System.Drawing.Size(836, 57);
+            this.pnTop.Size = new System.Drawing.Size(853, 57);
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(515, 14);
+            this.lblTitulo.Location = new System.Drawing.Point(351, 15);
             this.lblTitulo.Size = new System.Drawing.Size(150, 26);
             this.lblTitulo.Text = "Crear Reporte";
             // 
             // pnBottom
             // 
             this.pnBottom.Location = new System.Drawing.Point(0, 997);
-            this.pnBottom.Size = new System.Drawing.Size(836, 34);
+            this.pnBottom.Size = new System.Drawing.Size(853, 34);
             // 
             // pnContenido
             // 
