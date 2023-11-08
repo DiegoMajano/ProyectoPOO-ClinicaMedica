@@ -14,7 +14,9 @@ namespace ClinicaMedica
     {
         Paciente p = new Paciente();
         private List<Paciente> pacientes = new List<Paciente>();
-        CrearReporte reporte = new CrearReporte();
+        Reporte reporte = new Reporte();
+        Receta receta = new Receta();
+
 
         ClinicaEntities db = FormFactory.CrearEntidadDB();
         public frmCrearReportes()
@@ -181,18 +183,31 @@ namespace ClinicaMedica
         {
             
         }
+        
+        private void BuscarCodigoReporte()
+        {
+            var codigoReporte = from cr in db.reportes
+                                where cr.codCita == txtCodCita.Text
+                                select cr.codReporte.FirstOrDefault();
+
+            receta.CodReporte = codigoReporte.ToString();
+        }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
-                GuardarReporte();
-                
+                GuardarReporte();        
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
             }
+        }
+
+        private void clbMedicamentos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BuscarCodigoReporte();
         }
     }
 }

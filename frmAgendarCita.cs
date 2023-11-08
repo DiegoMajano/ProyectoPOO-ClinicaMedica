@@ -152,7 +152,7 @@ namespace ClinicaMedica
             string FechaHora = $"{fecha} {hora}";
             DateTime fechahora = DateTime.ParseExact(FechaHora,"dd/MM/yyyy HH:mm:ss",CultureInfo.InvariantCulture);
 
-            CrearCita nuevaCita = new CrearCita();
+            Cita nuevaCita = new Cita();
             nuevaCita.CodPaciente = codigoPaciente;
             nuevaCita.CodMedico = codigoMedico;
             nuevaCita.FechaHora = fechahora;
