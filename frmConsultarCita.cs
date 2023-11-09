@@ -11,9 +11,9 @@ using ClinicaMedica.Modelo;
 
 namespace ClinicaMedica
 {
-    public partial class frmConsultarCita : Form
+    public partial class frmConsultarCita : frmBase
     {
-        Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
+        ClinicaEntities db = FormFactory.CrearEntidadDB();
         private bool filtroFecha;
         private bool filtroHora;
         private bool filtroPaciente;
@@ -30,11 +30,10 @@ namespace ClinicaMedica
             LimpiarCampos();
         }
 
-
         public void LimpiarCampos()
         {
-            cbHorario.SelectedIndex = 0;
-            cbPaciente.SelectedIndex = 0;
+            cbHorario.SelectedIndex=0;
+            cbPaciente.SelectedIndex=0;
             cbMedico.SelectedIndex = 0;
             dtpFechaCita.Value = System.DateTime.Now;
             filtroMedico = false;
@@ -136,17 +135,20 @@ namespace ClinicaMedica
                                CodMedico = medico.codMedico,
                                NombreMedico = medico.primerNombre + " " + medico.primerApellido,
                                CodPaciente = paciente.codPaciente,
-                               NombrePaciente = paciente.primerNombre + " " + paciente.primerApellido,
+                               NombrePaciente = paciente.primerNombre + " " + paciente.segundoNombre + " " + paciente.primerApellido + " " + paciente.segundoApellido,
                                Fecha = cita.fechaHora,
                                Hora = cita.hora,
                            };
 
             dgvConsultarCitas.DataSource = consulta.ToList();
-
-            dgvConsultarCitas.Columns["NombreMedico"].HeaderText = "Nombre Medico";
+            dgvConsultarCitas.Columns["CodCita"].HeaderText = "Código Cita";
+            dgvConsultarCitas.Columns["codMedico"].HeaderText = "Código Médico";
+            dgvConsultarCitas.Columns["codPaciente"].HeaderText = "Código Paciente";
+            dgvConsultarCitas.Columns["NombreMedico"].HeaderText = "Nombre Médico";
             dgvConsultarCitas.Columns["NombrePaciente"].HeaderText = "Nombre Paciente";
             dgvConsultarCitas.Columns["Fecha"].DefaultCellStyle.Format = "dd/MM/yyyy";
-
+            dgvConsultarCitas.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dgvConsultarCitas.ClearSelection();
             LimpiarCampos();
         }
 
@@ -159,11 +161,6 @@ namespace ClinicaMedica
         private void btnEditar_Click(object sender, EventArgs e)
         {
             // agregar la funcionalidad de editar cuando el agendar cita esté listo
-        }
-
-        private void dgvConsultarCitas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

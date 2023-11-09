@@ -14,5 +14,10 @@ namespace ClinicaMedica
         {
             InitializeComponent();
         }
+
+        private void pnTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

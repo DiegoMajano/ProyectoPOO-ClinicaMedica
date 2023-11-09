@@ -41,7 +41,7 @@
             this.btnSoporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSoporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(248)))));
             this.btnSoporte.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnSoporte.Location = new System.Drawing.Point(682, 403);
+            this.btnSoporte.Location = new System.Drawing.Point(676, 398);
             this.btnSoporte.Name = "btnSoporte";
             this.btnSoporte.Size = new System.Drawing.Size(112, 40);
             this.btnSoporte.TabIndex = 8;

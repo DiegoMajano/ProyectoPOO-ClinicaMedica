@@ -56,7 +56,7 @@
             // lblTitulo
             // 
             this.lblTitulo.Font = new System.Drawing.Font("Montserrat SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(276, 14);
+            this.lblTitulo.Location = new System.Drawing.Point(282, 14);
             this.lblTitulo.Size = new System.Drawing.Size(191, 26);
             this.lblTitulo.Text = "Registrar personal";
             // 
@@ -236,11 +236,12 @@
             // btnBorrar
             // 
             this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
-            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
+            this.btnBorrar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnBorrar.FlatAppearance.BorderSize = 2;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.ForeColor = System.Drawing.Color.White;
+            this.btnBorrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
             this.btnBorrar.Location = new System.Drawing.Point(620, 464);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(112, 40);

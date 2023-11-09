@@ -17,19 +17,30 @@ namespace ClinicaMedica
             InitializeComponent();
         }
 
+        private void frmMenuSoporte_Load(object sender, EventArgs e)
+        {
+            mostrarInicio();
+            inicio.Recordatorios();
+        }
+
+        private static frmInicio inicio;
         private static frmRegistrarPersonal registrarMedico;
         private static frmConsultarPersonal consultarPersonal;
+                
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        public void mostrarInicio()
         {
-            DialogResult result = MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            if (inicio == null)
             {
-                frmHome home = new frmHome();
-                this.Hide();
-                home.Show();
+                inicio = FormFactory.CrearFormInicio();
+                inicio.TopLevel = false;
+                inicio.Dock = DockStyle.Fill;
             }
-        }      
+            pnContenido.Controls.Add(inicio);
+            inicio.Show();
+            inicio.BringToFront();
+            inicio.Recordatorios();
+        }
 
         private void btnbtnRegistrarPersonal_Click(object sender, EventArgs e)
         {
@@ -42,12 +53,7 @@ namespace ClinicaMedica
             pnContenido.Controls.Add(registrarMedico);
             registrarMedico.Show();
             registrarMedico.BringToFront();
-        }
-
-        private void btnLimpiarPnContenedor_Click(object sender, EventArgs e)
-        {
-            pnContenido.Controls.Clear();
-        }
+        }        
 
         private void btnConsultarExpediente_Click(object sender, EventArgs e)
         {
@@ -62,9 +68,34 @@ namespace ClinicaMedica
             consultarPersonal.BringToFront();
         }
 
-        private void frmMenuSoporte_Load(object sender, EventArgs e)
+        private void btnLimpiarPnContenedor_Click(object sender, EventArgs e)
         {
+            pnContenido.Controls.Clear();
+        }
 
+        private void LimpiarTodo()
+        {
+            pnContenido.Controls.Clear();
+            registrarMedico?.Dispose();
+            consultarPersonal?.Dispose();
+
+            registrarMedico = null;
+            consultarPersonal = null;
+
+            mostrarInicio();
+            inicio.Recordatorios();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                frmHome home = new frmHome();
+                this.Hide();
+                LimpiarTodo();
+                home.Show();
+            }
         }
     }
 }

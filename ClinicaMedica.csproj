@@ -13,6 +13,21 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -56,7 +71,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrearCita.cs" />
+    <Compile Include="Cita.cs" />
+    <Compile Include="Receta.cs" />
+    <Compile Include="Reporte.cs" />
     <Compile Include="FormFactory.cs" />
     <Compile Include="frmAgendarCita.cs">
       <SubType>Form</SubType>
@@ -112,6 +129,12 @@
     <Compile Include="frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLoginMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,50 +171,41 @@
     <Compile Include="frmRegistrarPersonal.Designer.cs">
       <DependentUpon>frmRegistrarPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\BDClinica.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDClinica.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDClinica.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDClinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDClinica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDClinica.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\citasMedicas.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\DBClinica.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBClinica.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\DBClinica.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBClinica.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\DBClinica.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBClinica.edmx</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\medicamentos.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\medicos.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\pacientes.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\recetas.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\reportes.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\signosVitales.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\sp_helpdiagrams_Result.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\sysdiagrams.cs">
-      <DependentUpon>DBClinica.tt</DependentUpon>
+      <DependentUpon>BDClinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
@@ -229,6 +243,9 @@
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLoginAdmin.resx">
       <DependentUpon>frmLoginAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,12 +273,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>RecursoFuente.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Modelo\DBClinica.edmx">
+    <EntityDeploy Include="Modelo\BDClinica.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBClinica.Designer.cs</LastGenOutput>
+      <LastGenOutput>BDClinica.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Modelo\DBClinica.edmx.diagram">
-      <DependentUpon>DBClinica.edmx</DependentUpon>
+    <None Include="Modelo\BDClinica.edmx.diagram">
+      <DependentUpon>BDClinica.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -353,19 +370,31 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Modelo\DBClinica.Context.tt">
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modelo\BDClinica.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBClinica.edmx</DependentUpon>
-      <LastGenOutput>DBClinica.Context.cs</LastGenOutput>
+      <DependentUpon>BDClinica.edmx</DependentUpon>
+      <LastGenOutput>BDClinica.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Modelo\DBClinica.tt">
+    <Content Include="Modelo\BDClinica.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBClinica.edmx</DependentUpon>
-      <LastGenOutput>DBClinica.cs</LastGenOutput>
+      <DependentUpon>BDClinica.edmx</DependentUpon>
+      <LastGenOutput>BDClinica.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

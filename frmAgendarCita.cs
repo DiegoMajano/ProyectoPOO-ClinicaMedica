@@ -15,7 +15,7 @@ namespace ClinicaMedica
 {
     public partial class frmAgendarCita : ClinicaMedica.frmBase
     {
-        private static Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
+        private static ClinicaEntities db = FormFactory.CrearEntidadDB();
 
         public frmAgendarCita()
         {
@@ -24,23 +24,41 @@ namespace ClinicaMedica
         private void frmAgendarCita_Load(object sender, EventArgs e)
         {
             Refrescar();
+            dgvCitas.ClearSelection();
             LlenarComboBox();
             cbNombrePaciente.Focus();
             LimpiarCampos();
         }
 
         private void Refrescar()
-        {
+        {            
             var citas = from cita in db.citasMedicas
+                        join paciente in db.pacientes
+                        on cita.codPaciente equals paciente.codPaciente
+                        join medico in db.medicos
+                        on cita.codMedico equals medico.codMedico
+                        orderby cita.fechaHora
                         select new
                         {
                             Codigo = cita.codCita,
-                            paciente = cita.codPaciente
+                            CodigoMedico = cita.codMedico,
+                            medico = medico.primerNombre + " " + medico.primerApellido,
+                            Especialidad = medico.especialidad,
+                            codPaciente = cita.codPaciente,
+                            Paciente = paciente.primerNombre + " " + paciente.segundoNombre + " " + paciente.primerApellido + " " + paciente.segundoApellido,
+                            Fecha = cita.fechaHora,
+                            Hora = cita.hora
                         };
 
             dgvCitas.DataSource = citas.ToList();
+            dgvCitas.ClearSelection();
+            dgvCitas.Columns["Fecha"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvCitas.Columns["medico"].HeaderText = "Médico";
+            dgvCitas.Columns["CodigoMedico"].HeaderText = "Código Médico";
+            dgvCitas.Columns["codPaciente"].HeaderText = "Código Paciente";
+            dgvCitas.Columns["Codigo"].HeaderText = "Código Cita";
+            dgvCitas.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
-            //dgvCitas.Columns["Codigo"].HeaderText = "Codigo Cita";
         }
         private void LlenarComboBox()
         {
@@ -51,8 +69,8 @@ namespace ClinicaMedica
 
         private void LimpiarCampos()
         {
-            cbNombrePaciente.SelectedIndex = 0;
-            cbNombreMedico.SelectedIndex = 0;
+            cbNombrePaciente.Text = "";
+            cbNombreMedico.Text = "";
             cbHorarioCitas.SelectedIndex = 0;
             dtpFechaCita.Value = DateTime.Now;
         }
@@ -77,9 +95,51 @@ namespace ClinicaMedica
 
         private void dtpFechaCita_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpFechaCita.Value < DateTime.Now)
+            if (dtpFechaCita.Value.Day < DateTime.Now.Day || dtpFechaCita.Value.Hour < DateTime.Now.Hour)
             {
-                MessageBox.Show("Seleccionar una fecha válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccionar una fecha y hora válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                dtpFechaCita.Value = DateTime.Now;
+            }
+        }
+
+        private string validador;
+        private bool VerificarCitaPaciente(DateTime fechahora, string paciente)
+        {
+            
+            var verificacion = from citas in db.citasMedicas
+                               where citas.fechaHora == fechahora && citas.codPaciente == paciente
+                               select new
+                               {
+                                   codpaciente = citas.codPaciente,
+                                   fecha = citas.fechaHora
+                               };                              
+
+            if (verificacion.Any(cp => cp.codpaciente == paciente && cp.fecha.Value.Hour == fechahora.Hour))
+            {
+                validador = validador + "paciente";
+                return false;
+            }
+            else
+            {
+                return true;
+
+            }
+        }
+
+        private bool VerificarCitaMedico(DateTime fechahora, string medico)
+        {
+            var verificacion = from citas in db.citasMedicas
+                                 where citas.fechaHora == fechahora && citas.codMedico == medico
+                                 select citas.codMedico;
+
+            if (verificacion.Any(cm => cm == medico))
+            {
+                validador = validador + "medico";
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
 
@@ -92,12 +152,36 @@ namespace ClinicaMedica
             string FechaHora = $"{fecha} {hora}";
             DateTime fechahora = DateTime.ParseExact(FechaHora,"dd/MM/yyyy HH:mm:ss",CultureInfo.InvariantCulture);
 
-            CrearCita nuevaCita = new CrearCita();
+            Cita nuevaCita = new Cita();
             nuevaCita.CodPaciente = codigoPaciente;
             nuevaCita.CodMedico = codigoMedico;
             nuevaCita.FechaHora = fechahora;
+
             
-            db.IngresarCita(nuevaCita.CodPaciente,nuevaCita.CodMedico,nuevaCita.FechaHora);
+            if ( fechahora > DateTime.Now && VerificarCitaPaciente(fechahora,codigoPaciente)&& VerificarCitaMedico(fechahora, codigoMedico))
+            {
+                db.IngresarCita(nuevaCita.CodPaciente, nuevaCita.CodMedico, nuevaCita.FechaHora);
+                MessageBox.Show("La cita se ha registrado exitosamente", "Registro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                switch (validador)
+                {
+                    case "paciente":
+                        MessageBox.Show("El paciente ya posee una cita este dia", "Registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        validador = "";
+                        break;
+                    case "medico":
+                        MessageBox.Show("El medidco ya posee una cita este dia a esa hora", "Registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        validador = "";
+                        break;
+                    default:
+                        MessageBox.Show("Error al agendar una cita en la fecha y/o hora seleccionada", "Registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        validador = "";
+                        break;
+                }
+            }
+            validador = "";
             Refrescar();
             LimpiarCampos();
             cbNombrePaciente.Focus();
@@ -106,11 +190,6 @@ namespace ClinicaMedica
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
-        }
-
-        private void dgvCitas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

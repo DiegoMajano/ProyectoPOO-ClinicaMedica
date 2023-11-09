@@ -11,7 +11,7 @@ namespace ClinicaMedica
 {
     public partial class frmRegistrarPersonal : ClinicaMedica.frmBase
     {
-        Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
+        ClinicaEntities db = FormFactory.CrearEntidadDB();
         Medico medico = new Medico();
         public frmRegistrarPersonal()
         {

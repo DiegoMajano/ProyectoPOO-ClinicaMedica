@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbAgendarCitaa = new System.Windows.Forms.GroupBox();
             this.cbNombrePaciente = new System.Windows.Forms.ComboBox();
             this.dgvCitas = new System.Windows.Forms.DataGridView();
@@ -68,7 +71,7 @@
             this.gbAgendarCitaa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbAgendarCitaa.BackColor = System.Drawing.Color.White;
+            this.gbAgendarCitaa.BackColor = System.Drawing.SystemColors.Control;
             this.gbAgendarCitaa.Controls.Add(this.cbNombrePaciente);
             this.gbAgendarCitaa.Controls.Add(this.dgvCitas);
             this.gbAgendarCitaa.Controls.Add(this.dtpFechaCita);
@@ -104,18 +107,40 @@
             // 
             // dgvCitas
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.dgvCitas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCitas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvCitas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.dgvCitas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvCitas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCitas.Location = new System.Drawing.Point(13, 222);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCitas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCitas.Location = new System.Drawing.Point(35, 229);
             this.dgvCitas.Name = "dgvCitas";
             this.dgvCitas.ReadOnly = true;
+            this.dgvCitas.RowHeadersVisible = false;
             this.dgvCitas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCitas.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvCitas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCitas.Size = new System.Drawing.Size(679, 261);
+            this.dgvCitas.Size = new System.Drawing.Size(636, 254);
             this.dgvCitas.TabIndex = 29;
-            this.dgvCitas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCitas_CellContentClick);
             // 
             // dtpFechaCita
             // 
@@ -136,7 +161,7 @@
             this.cbHorarioCitas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHorarioCitas.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.cbHorarioCitas.FormattingEnabled = true;
-            this.cbHorarioCitas.Location = new System.Drawing.Point(105, 161);
+            this.cbHorarioCitas.Location = new System.Drawing.Point(105, 162);
             this.cbHorarioCitas.MaximumSize = new System.Drawing.Size(700, 0);
             this.cbHorarioCitas.Name = "cbHorarioCitas";
             this.cbHorarioCitas.Size = new System.Drawing.Size(566, 29);
@@ -156,7 +181,7 @@
             // 
             this.lblHorario.AutoSize = true;
             this.lblHorario.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblHorario.Location = new System.Drawing.Point(31, 165);
+            this.lblHorario.Location = new System.Drawing.Point(31, 166);
             this.lblHorario.Name = "lblHorario";
             this.lblHorario.Size = new System.Drawing.Size(64, 21);
             this.lblHorario.TabIndex = 25;
@@ -190,12 +215,13 @@
             // btnBorrar
             // 
             this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
-            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
+            this.btnBorrar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnBorrar.FlatAppearance.BorderSize = 2;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(580, 504);
+            this.btnBorrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnBorrar.Location = new System.Drawing.Point(559, 498);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(112, 40);
             this.btnBorrar.TabIndex = 21;
@@ -211,7 +237,7 @@
             this.btnAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgendar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgendar.ForeColor = System.Drawing.Color.White;
-            this.btnAgendar.Location = new System.Drawing.Point(462, 504);
+            this.btnAgendar.Location = new System.Drawing.Point(441, 498);
             this.btnAgendar.Name = "btnAgendar";
             this.btnAgendar.Size = new System.Drawing.Size(112, 40);
             this.btnAgendar.TabIndex = 20;

@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
             this.cbEspecialidades = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,19 +52,19 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(280, 15);
-            this.lblTitulo.Size = new System.Drawing.Size(206, 26);
-            this.lblTitulo.Text = "Consultar  Personal";
+            this.lblTitulo.Location = new System.Drawing.Point(289, 15);
+            this.lblTitulo.Size = new System.Drawing.Size(177, 26);
+            this.lblTitulo.Text = "Buscar  personal";
             // 
             // pnBottom
             // 
-            this.pnBottom.Location = new System.Drawing.Point(0, 618);
-            this.pnBottom.Size = new System.Drawing.Size(754, 46);
+            this.pnBottom.Location = new System.Drawing.Point(0, 648);
+            this.pnBottom.Size = new System.Drawing.Size(754, 16);
             // 
             // pnContenido
             // 
             this.pnContenido.Controls.Add(this.gbInformacion);
-            this.pnContenido.Size = new System.Drawing.Size(754, 561);
+            this.pnContenido.Size = new System.Drawing.Size(754, 591);
             // 
             // gbInformacion
             // 
@@ -83,13 +87,15 @@
             this.gbInformacion.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Italic);
             this.gbInformacion.Location = new System.Drawing.Point(24, 20);
             this.gbInformacion.Name = "gbInformacion";
-            this.gbInformacion.Size = new System.Drawing.Size(701, 527);
+            this.gbInformacion.Size = new System.Drawing.Size(701, 550);
             this.gbInformacion.TabIndex = 25;
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "Llenar Datos del Personal";
             // 
             // cbEspecialidades
             // 
+            this.cbEspecialidades.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbEspecialidades.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbEspecialidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEspecialidades.FormattingEnabled = true;
@@ -115,6 +121,8 @@
             // 
             // mtxtCodigo
             // 
+            this.mtxtCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mtxtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtCodigo.Location = new System.Drawing.Point(138, 114);
             this.mtxtCodigo.Mask = "LLL0000";
@@ -143,9 +151,9 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(598, 91);
+            this.btnEditar.Location = new System.Drawing.Point(567, 499);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(97, 40);
+            this.btnEditar.Size = new System.Drawing.Size(112, 40);
             this.btnEditar.TabIndex = 26;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -164,6 +172,8 @@
             // 
             // cbNombreMedico
             // 
+            this.cbNombreMedico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbNombreMedico.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbNombreMedico.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbNombreMedico.FormattingEnabled = true;
@@ -178,14 +188,15 @@
             // btnBorrar
             // 
             this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
-            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
+            this.btnBorrar.BackColor = System.Drawing.Color.White;
+            this.btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnBorrar.FlatAppearance.BorderSize = 2;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(598, 137);
+            this.btnBorrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnBorrar.Location = new System.Drawing.Point(567, 138);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(97, 40);
+            this.btnBorrar.Size = new System.Drawing.Size(112, 40);
             this.btnBorrar.TabIndex = 21;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = false;
@@ -193,18 +204,43 @@
             // 
             // dgvConsultarMedicos
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.dgvConsultarMedicos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConsultarMedicos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvConsultarMedicos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvConsultarMedicos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConsultarMedicos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvConsultarMedicos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.dgvConsultarMedicos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Italic);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultarMedicos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvConsultarMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarMedicos.Location = new System.Drawing.Point(22, 195);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConsultarMedicos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvConsultarMedicos.Location = new System.Drawing.Point(22, 201);
             this.dgvConsultarMedicos.Name = "dgvConsultarMedicos";
             this.dgvConsultarMedicos.ReadOnly = true;
+            this.dgvConsultarMedicos.RowHeadersVisible = false;
             this.dgvConsultarMedicos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.dgvConsultarMedicos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvConsultarMedicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsultarMedicos.Size = new System.Drawing.Size(657, 316);
+            this.dgvConsultarMedicos.Size = new System.Drawing.Size(657, 285);
             this.dgvConsultarMedicos.TabIndex = 3;
             this.dgvConsultarMedicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarMedicos_CellContentClick);
             // 
@@ -216,9 +252,9 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(598, 45);
+            this.btnBuscar.Location = new System.Drawing.Point(567, 92);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(97, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(112, 40);
             this.btnBuscar.TabIndex = 20;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;

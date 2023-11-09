@@ -10,6 +10,10 @@ namespace ClinicaMedica
     /* ------ IMPLEMENTACIÓN DEL PATRÓN DE DISEÑO "FACTORY METHOD" PARA LA CREACION DE LOS FORMULARIOS HIJOS EN LOS MENÚS ------ */
     public class FormFactory
     {
+        public static frmInicio CrearFormInicio()
+        {
+            return new frmInicio();
+        }
         public static frmAgendarCita CrearFormAgendarCita()
         {
             return new frmAgendarCita();
@@ -40,9 +44,9 @@ namespace ClinicaMedica
         }
 
         // CREAR INSTANCIA DEL CONTEXTO DE LA BASE DE DATOS
-        public static Prueba_1Entities1 CrearEntidadDB()
+        public static ClinicaEntities CrearEntidadDB()
         {
-            return new Prueba_1Entities1();
+            return new ClinicaEntities();
         }
     }
 }

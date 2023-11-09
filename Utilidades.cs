@@ -10,17 +10,17 @@ namespace ClinicaMedica
 {
     public class Utilidades
     {
-        private static Prueba_1Entities1 db = FormFactory.CrearEntidadDB();
+        private static ClinicaEntities db = FormFactory.CrearEntidadDB();
 
         public static void LlenarCBPacientes(ComboBox comboBox)
         {
-            // --- LLenar el combobox con los nombres de los pacientes 
+            // --- seleccionar los nombres de los pacientes y convertirlos en una lista
             var nombresPacientes = db.pacientes
-                .Select(p => p.primerNombre + " " + p.segundoNombre + " " + p.primerApellido + " " + p.segundoApellido)
-                .ToList();
-            nombresPacientes.Insert(0, "");
+                                    .Select(p => p.primerNombre + " " + p.segundoNombre + " " + p.primerApellido + " " + p.segundoApellido)
+                                    .ToList();
 
-            comboBox.DataSource=nombresPacientes;
+            nombresPacientes.Insert(0, "");
+            comboBox.DataSource = nombresPacientes;
             // autocompletar el nombre escrito con los nombres traidos de la base de datos
 
             AutoCompleteStringCollection autocompletarPacientes = new AutoCompleteStringCollection();
@@ -30,12 +30,14 @@ namespace ClinicaMedica
 
         public static void LlenarCBMedicos(ComboBox comboBox)
         {
-            // --- llenar el combobox con los nombres de los pacientes
+            // --- seleccionar los nombres de los medicos y convertirlos en una lista
             var nombresMedicos = db.medicos
-                .Select(m => m.primerNombre + " " + m.primerApellido)
-                .ToList();
+                                .Select(m => m.primerNombre + " " +  m.primerApellido)
+                                .ToList();
+
             nombresMedicos.Insert(0, "");
-            comboBox.DataSource=nombresMedicos;
+            comboBox.DataSource = nombresMedicos;
+
             // autocompletar el nombre escrito con los nombres traidos de la base de datos
 
             AutoCompleteStringCollection autocompletarDoctor = new AutoCompleteStringCollection();
@@ -63,6 +65,9 @@ namespace ClinicaMedica
                 new TimeSpan(14, 30, 0),
                 new TimeSpan(15, 0, 0),
                 new TimeSpan(15, 30, 0),
+                new TimeSpan(16, 0, 0),
+                new TimeSpan(16, 30, 0),
+                new TimeSpan(17, 0, 0),
             };
             comboBox.DataSource = horarios;
         }
@@ -79,7 +84,7 @@ namespace ClinicaMedica
         public static string ObtenerCodigoPaciente(string nombrePaciente)
         {
             var codigoPaciente = db.pacientes
-                .Where(p => p.primerNombre + " " + p.segundoNombre + " " + p.primerApellido + " " + p.segundoApellido == nombrePaciente)
+               .Where(p => p.primerNombre + " " + p.segundoNombre + " " + p.primerApellido + " " + p.segundoApellido == nombrePaciente)
                 .Select(p => p.codPaciente)
                 .FirstOrDefault();
 
