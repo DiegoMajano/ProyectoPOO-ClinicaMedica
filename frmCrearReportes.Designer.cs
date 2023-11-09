@@ -70,6 +70,8 @@
             this.lblPeso = new System.Windows.Forms.Label();
             this.lblTemperatura = new System.Windows.Forms.Label();
             this.gbMedicamento = new System.Windows.Forms.GroupBox();
+            this.btnTerminar = new System.Windows.Forms.Button();
+            this.btnAgregarM = new System.Windows.Forms.Button();
             this.txtIndicaciones = new System.Windows.Forms.TextBox();
             this.lblIndicaciones = new System.Windows.Forms.Label();
             this.clbMedicamentos = new System.Windows.Forms.CheckedListBox();
@@ -90,13 +92,13 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(343, 15);
+            this.lblTitulo.Location = new System.Drawing.Point(482, 15);
             this.lblTitulo.Size = new System.Drawing.Size(150, 26);
             this.lblTitulo.Text = "Crear Reporte";
             // 
             // pnBottom
             // 
-            this.pnBottom.Location = new System.Drawing.Point(0, 1000);
+            this.pnBottom.Location = new System.Drawing.Point(0, 1004);
             this.pnBottom.Size = new System.Drawing.Size(836, 34);
             // 
             // pnContenido
@@ -108,7 +110,7 @@
             this.pnContenido.Controls.Add(this.gbInformacion);
             this.pnContenido.Controls.Add(this.gbDReporte);
             this.pnContenido.Dock = System.Windows.Forms.DockStyle.None;
-            this.pnContenido.Size = new System.Drawing.Size(853, 943);
+            this.pnContenido.Size = new System.Drawing.Size(853, 947);
             // 
             // pnBusqueda
             // 
@@ -162,7 +164,7 @@
             this.cbPacBusqueda.Name = "cbPacBusqueda";
             this.cbPacBusqueda.Size = new System.Drawing.Size(458, 29);
             this.cbPacBusqueda.TabIndex = 4;
-            this.cbPacBusqueda.TextChanged += new System.EventHandler(this.cbPacBusqueda_TextChanged);
+            this.cbPacBusqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbPacBusqueda_KeyPress);
             // 
             // gbInformacion
             // 
@@ -182,7 +184,7 @@
             this.gbInformacion.Controls.Add(this.txtP_Nombre);
             this.gbInformacion.Controls.Add(this.lblNombre);
             this.gbInformacion.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.gbInformacion.Location = new System.Drawing.Point(28, 86);
+            this.gbInformacion.Location = new System.Drawing.Point(28, 88);
             this.gbInformacion.Name = "gbInformacion";
             this.gbInformacion.Size = new System.Drawing.Size(793, 178);
             this.gbInformacion.TabIndex = 26;
@@ -357,9 +359,9 @@
             this.gbDReporte.Controls.Add(this.panel2);
             this.gbDReporte.Controls.Add(this.txtMotivo);
             this.gbDReporte.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.gbDReporte.Location = new System.Drawing.Point(28, 420);
+            this.gbDReporte.Location = new System.Drawing.Point(28, 422);
             this.gbDReporte.Name = "gbDReporte";
-            this.gbDReporte.Size = new System.Drawing.Size(793, 301);
+            this.gbDReporte.Size = new System.Drawing.Size(793, 286);
             this.gbDReporte.TabIndex = 28;
             this.gbDReporte.TabStop = false;
             this.gbDReporte.Text = "Datos Reporte";
@@ -369,7 +371,7 @@
             this.txtCodReporte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCodReporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodReporte.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtCodReporte.Location = new System.Drawing.Point(184, 252);
+            this.txtCodReporte.Location = new System.Drawing.Point(184, 243);
             this.txtCodReporte.Name = "txtCodReporte";
             this.txtCodReporte.ReadOnly = true;
             this.txtCodReporte.Size = new System.Drawing.Size(219, 26);
@@ -380,7 +382,7 @@
             this.lblCodReporte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCodReporte.AutoSize = true;
             this.lblCodReporte.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblCodReporte.Location = new System.Drawing.Point(48, 255);
+            this.lblCodReporte.Location = new System.Drawing.Point(48, 246);
             this.lblCodReporte.Name = "lblCodReporte";
             this.lblCodReporte.Size = new System.Drawing.Size(130, 21);
             this.lblCodReporte.TabIndex = 24;
@@ -395,7 +397,7 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
-            this.btnBorrar.Location = new System.Drawing.Point(650, 245);
+            this.btnBorrar.Location = new System.Drawing.Point(650, 229);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(112, 40);
             this.btnBorrar.TabIndex = 34;
@@ -412,7 +414,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(532, 245);
+            this.btnGuardar.Location = new System.Drawing.Point(532, 229);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(112, 40);
             this.btnGuardar.TabIndex = 33;
@@ -425,7 +427,7 @@
             this.txtDiagnostico.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDiagnostico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDiagnostico.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtDiagnostico.Location = new System.Drawing.Point(410, 61);
+            this.txtDiagnostico.Location = new System.Drawing.Point(410, 52);
             this.txtDiagnostico.Multiline = true;
             this.txtDiagnostico.Name = "txtDiagnostico";
             this.txtDiagnostico.Size = new System.Drawing.Size(352, 171);
@@ -436,7 +438,7 @@
             this.lblDiagnostico.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDiagnostico.AutoSize = true;
             this.lblDiagnostico.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblDiagnostico.Location = new System.Drawing.Point(410, 37);
+            this.lblDiagnostico.Location = new System.Drawing.Point(410, 28);
             this.lblDiagnostico.Name = "lblDiagnostico";
             this.lblDiagnostico.Size = new System.Drawing.Size(101, 21);
             this.lblDiagnostico.TabIndex = 19;
@@ -456,7 +458,7 @@
             this.lblMotivo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMotivo.AutoSize = true;
             this.lblMotivo.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.lblMotivo.Location = new System.Drawing.Point(48, 37);
+            this.lblMotivo.Location = new System.Drawing.Point(48, 28);
             this.lblMotivo.Name = "lblMotivo";
             this.lblMotivo.Size = new System.Drawing.Size(63, 21);
             this.lblMotivo.TabIndex = 17;
@@ -477,7 +479,7 @@
             this.txtMotivo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMotivo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMotivo.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtMotivo.Location = new System.Drawing.Point(48, 61);
+            this.txtMotivo.Location = new System.Drawing.Point(48, 52);
             this.txtMotivo.Multiline = true;
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.Size = new System.Drawing.Size(352, 171);
@@ -497,7 +499,7 @@
             this.gbSignosVitales.Controls.Add(this.lblPeso);
             this.gbSignosVitales.Controls.Add(this.lblTemperatura);
             this.gbSignosVitales.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.gbSignosVitales.Location = new System.Drawing.Point(28, 272);
+            this.gbSignosVitales.Location = new System.Drawing.Point(28, 274);
             this.gbSignosVitales.Name = "gbSignosVitales";
             this.gbSignosVitales.Size = new System.Drawing.Size(793, 142);
             this.gbSignosVitales.TabIndex = 31;
@@ -618,17 +620,53 @@
             // gbMedicamento
             // 
             this.gbMedicamento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gbMedicamento.Controls.Add(this.btnTerminar);
+            this.gbMedicamento.Controls.Add(this.btnAgregarM);
             this.gbMedicamento.Controls.Add(this.txtIndicaciones);
             this.gbMedicamento.Controls.Add(this.lblIndicaciones);
             this.gbMedicamento.Controls.Add(this.clbMedicamentos);
             this.gbMedicamento.Controls.Add(this.lblMedicamentos);
             this.gbMedicamento.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.gbMedicamento.Location = new System.Drawing.Point(28, 727);
+            this.gbMedicamento.Location = new System.Drawing.Point(28, 716);
             this.gbMedicamento.Name = "gbMedicamento";
-            this.gbMedicamento.Size = new System.Drawing.Size(793, 208);
+            this.gbMedicamento.Size = new System.Drawing.Size(793, 223);
             this.gbMedicamento.TabIndex = 32;
             this.gbMedicamento.TabStop = false;
             this.gbMedicamento.Text = "Receta";
+            // 
+            // btnTerminar
+            // 
+            this.btnTerminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTerminar.BackColor = System.Drawing.Color.White;
+            this.btnTerminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnTerminar.FlatAppearance.BorderSize = 2;
+            this.btnTerminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTerminar.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTerminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnTerminar.Location = new System.Drawing.Point(649, 173);
+            this.btnTerminar.Name = "btnTerminar";
+            this.btnTerminar.Size = new System.Drawing.Size(112, 40);
+            this.btnTerminar.TabIndex = 35;
+            this.btnTerminar.Text = "Terminar";
+            this.btnTerminar.UseVisualStyleBackColor = false;
+            this.btnTerminar.Click += new System.EventHandler(this.btnTerminar_Click);
+            // 
+            // btnAgregarM
+            // 
+            this.btnAgregarM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnAgregarM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
+            this.btnAgregarM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
+            this.btnAgregarM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarM.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarM.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarM.Location = new System.Drawing.Point(532, 173);
+            this.btnAgregarM.Name = "btnAgregarM";
+            this.btnAgregarM.Size = new System.Drawing.Size(112, 40);
+            this.btnAgregarM.TabIndex = 35;
+            this.btnAgregarM.Text = "Agregar";
+            this.btnAgregarM.UseVisualStyleBackColor = false;
+            this.btnAgregarM.Click += new System.EventHandler(this.btnAgregarM_Click);
             // 
             // txtIndicaciones
             // 
@@ -659,12 +697,6 @@
             this.clbMedicamentos.Cursor = System.Windows.Forms.Cursors.Default;
             this.clbMedicamentos.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.clbMedicamentos.FormattingEnabled = true;
-            this.clbMedicamentos.Items.AddRange(new object[] {
-            "asdasd",
-            "asddsds",
-            "dsd",
-            "sds",
-            "sdsdsad"});
             this.clbMedicamentos.Location = new System.Drawing.Point(48, 60);
             this.clbMedicamentos.Name = "clbMedicamentos";
             this.clbMedicamentos.Size = new System.Drawing.Size(351, 107);
@@ -687,7 +719,7 @@
             // 
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-            this.ClientSize = new System.Drawing.Size(853, 788);
+            this.ClientSize = new System.Drawing.Size(853, 835);
             this.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.Name = "frmCrearReportes";
             this.Load += new System.EventHandler(this.frmCrearReportes_Load);
@@ -757,5 +789,7 @@
         private System.Windows.Forms.MaskedTextBox mtxtFrecCar;
         private System.Windows.Forms.TextBox txtCodReporte;
         private System.Windows.Forms.Label lblCodReporte;
+        private System.Windows.Forms.Button btnTerminar;
+        private System.Windows.Forms.Button btnAgregarM;
     }
 }

@@ -27,6 +27,7 @@ namespace ClinicaMedica
         private void frmCrearReportes_Load(object sender, EventArgs e)
         {
             Utilidades.LlenarCBPacientes(cbPacBusqueda);
+            Utilidades.LlenarCLBMedicamentos(clbMedicamentos);
             DeshabilidarGroupBox();
         }
         
@@ -59,7 +60,16 @@ namespace ClinicaMedica
                 clbMedicamentos.SetItemChecked(i, false);
             }
         }
-        
+
+        private void cbPacBusqueda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("No se admiten números ni caracteres especiales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
         private bool ValidarCita(string paciente)
         {
             var cita = from c in db.citasMedicas
@@ -153,9 +163,9 @@ namespace ClinicaMedica
         {
             LlenarDatosPaciente();
             gbDReporte.Enabled = true;
-            gbMedicamento.Enabled = true;
             gbSignosVitales.Enabled = true;
             mtxtPeso.Focus();
+            btnGuardar.Enabled = true;
         }
 
         private void GuardarReporte()
@@ -171,26 +181,68 @@ namespace ClinicaMedica
                 reporte.PresionArterial = mtxtPresionArt.Text + " " + mtxtFrecCar.Text;
 
                 db.CrearReporte(reporte.CodCita, reporte.Motivo, reporte.Diagnostico, reporte.Peso, reporte.Talla, reporte.Temperatura, reporte.PresionArterial);
+                db.SaveChanges();
+
+                MessageBox.Show("Agregar los medicamentos que desee agregar al reporte con sus respectivas indicaciones","Registro casi completo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                gbMedicamento.Enabled = true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Error");
+                MessageBox.Show(ex.InnerException.ToString(),"Error");
             }
-            
         }
 
-        private void cbPacBusqueda_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-        
         private void BuscarCodigoReporte()
         {
-            var codigoReporte = from cr in db.reportes
-                                where cr.codCita == txtCodCita.Text
-                                select cr.codReporte.FirstOrDefault();
+            try
+            {
+                var codigoReporte = (from cr in db.reportes
+                                     where cr.codCita.Equals(txtCodCita.Text)
+                                     select cr.codReporte).FirstOrDefault();
 
-            receta.CodReporte = codigoReporte.ToString();
+                if (codigoReporte != null)
+                {
+                    receta.CodReporte = codigoReporte.ToString();
+                    txtCodReporte.Text = receta.CodReporte;
+                    receta.FechaEmitida = DateTime.Now;
+                    if (string.IsNullOrEmpty(receta.CodReceta))
+                    {
+                        db.CrearReceta(receta.CodReporte, receta.FechaEmitida);
+                        db.SaveChanges();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No existe código del reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
+            }
+
+        }
+        private void BuscarCodigoReceta()
+        {
+            try
+            {
+                var codigoReceta = (from cr in db.recetas
+                                     where cr.codReporte.Equals(txtCodReporte.Text)
+                                     select cr.codReceta).FirstOrDefault();
+
+                if (codigoReceta != null)
+                {
+                    receta.CodReceta = codigoReceta.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No existe código de la receta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -203,11 +255,47 @@ namespace ClinicaMedica
             {
                 MessageBox.Show(ex.Message, "Error");
             }
+            btnGuardar.Enabled = false;
         }
 
         private void clbMedicamentos_SelectedIndexChanged(object sender, EventArgs e)
         {
             BuscarCodigoReporte();
+            if (string.IsNullOrEmpty(receta.CodReceta))
+            {
+                BuscarCodigoReceta();
+            }
+        }
+
+        private void btnAgregarM_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                receta.CodReporte = txtCodReporte.Text;
+                receta.NombreMedicamento = clbMedicamentos.SelectedItem.ToString();
+                receta.Indicaciones = txtIndicaciones.Text;
+                db.AgregarMedicamento(receta.CodReceta,receta.NombreMedicamento,receta.Indicaciones);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + " " + ex.InnerException.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            receta.NombreMedicamento = "";
+            receta.Indicaciones = "";
+            for (int i = 0; i < clbMedicamentos.Items.Count; i++)
+            {
+                clbMedicamentos.SetItemChecked(i, false);
+            }
+            txtIndicaciones.Clear();
+
+        }
+
+        private void btnTerminar_Click(object sender, EventArgs e)
+        {
+            db.SaveChanges();
+            MessageBox.Show("Registro del reporte completo realizado","Registro exitoso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            LimpiarCampos();
+            DeshabilidarGroupBox();
         }
     }
 }

@@ -81,6 +81,15 @@ namespace ClinicaMedica
             comboBox.DataSource = especialidades;
         }
 
+        public static void LlenarCLBMedicamentos(CheckedListBox checkedListBox)
+        {
+            List<string> medicamentos = new List<string>
+            {
+                "Acetaminofen","Ibuprofeno","Amoxicilina"
+            };
+            checkedListBox.Items.AddRange(medicamentos.ToArray());
+        }
+
         public static string ObtenerCodigoPaciente(string nombrePaciente)
         {
             var codigoPaciente = db.pacientes
