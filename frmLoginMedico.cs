@@ -1,6 +1,4 @@
-﻿using Capa_Entidad;
-using Capa_Negocios;
-using ClinicaMedica.Modelo;
+﻿using ClinicaMedica.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,41 +20,28 @@ namespace ClinicaMedica
             InitializeComponent();
         }
 
-        E_Users objeuser = new E_Users();
-        N_users objnuser = new N_users();
+        Login loginUser = new Login();
 
         public static string usuario_nombre;
         public static string puesto = "M";
         void login()
         {
-            objeuser.usuario = txtUser.Text;
-            objeuser.pass = txtPassword.Text;
-
-            var registro = from re in db.usuarios
-                           where re.usuario == objeuser.usuario && re.contraseña == objeuser.pass
-                           select new
-                           {
-                               usID = re.userID,
-                               nombre = re.nombre,
-                           };
+            loginUser.Username = txtUser.Text;
+            loginUser.Password = txtPassword.Text;
 
 
-            if (registro.Any(re => re.usID != null))
+            if (!string.IsNullOrEmpty(loginUser.Username)&&!string.IsNullOrEmpty(loginUser.Password))
             {
-                frmMenuDoctor menuDoctor = new frmMenuDoctor(puesto);
-
-                usuario_nombre = registro.First().nombre;
-                this.Hide();
-                menuDoctor.CreateControl();
-                menuDoctor.Show();
+                loginUser.ValidarLogin(loginUser.Username, loginUser.Password,puesto,this);
                 txtPassword.Clear();
                 txtUser.Clear();
-                this.Refresh();
             }
             else
             {
                 MessageBox.Show("Credenciales incorrectas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            txtPassword.Clear();
+            txtUser.Clear();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -78,7 +63,7 @@ namespace ClinicaMedica
         private void frmLoginMedico_FormClosed(object sender, FormClosedEventArgs e)
         {
             usuario_nombre = "";
-            puesto = "";
+            puesto = "";            
         }
     }
 }

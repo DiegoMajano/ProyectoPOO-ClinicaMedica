@@ -19,5 +19,6 @@ namespace ClinicaMedica.Modelo
         public string primerApellido { get; set; }
         public string telefono { get; set; }
         public string especialidad { get; set; }
+        public string clave { get; set; }
     }
 }

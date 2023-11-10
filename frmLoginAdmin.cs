@@ -1,6 +1,4 @@
-﻿using Capa_Entidad;
-using Capa_Negocios;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,36 +27,29 @@ namespace ClinicaMedica
             home.Show();
         }
 
-        E_Users objeuser = new E_Users();
-        N_users objnuser = new N_users();
 
         public static string usuario_nombre;
         public static string puesto = "A";
 
         void login()
         {
-            objeuser.usuario = txtUser.Text;
-            objeuser.pass = txtPassword.Text;
+            Login logUser = new Login();
+            logUser.Username = txtUser.Text;
+            logUser.Password = txtPassword.Text;
+                        
 
-            var registro = from re in db.usuarios
-                           where re.usuario == objeuser.usuario && re.contraseña == objeuser.pass
-                           select new
-                           {
-                               usID = re.userID,
-                               nombre = re.nombre,
-                           };
-
-
-            if (registro.Any(re=>re.usID!=null))
+            if (!string.IsNullOrEmpty(txtPassword.Text)&&!string.IsNullOrEmpty(txtPassword.Text))
             {
-                frmMenuAdministrativo menuAdmin = new frmMenuAdministrativo(puesto);
+                if (logUser.Username.Equals("admin")&&logUser.Password.Equals("passs.admin"))
+                {
+                    frmMenuAdministrativo menuAdmin = new frmMenuAdministrativo(puesto);
 
-                usuario_nombre = registro.First().nombre;
-                this.Hide();
-                menuAdmin.Show();
-                txtPassword.Clear();
-                txtUser.Clear();
-                
+                    usuario_nombre = "Bienvenido de nuevo, recepción";
+                    this.Hide();
+                    menuAdmin.Show();
+                    txtPassword.Clear();
+                    txtUser.Clear();
+                }               
             }
             else
             {

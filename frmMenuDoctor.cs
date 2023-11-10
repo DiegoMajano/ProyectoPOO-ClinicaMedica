@@ -35,7 +35,7 @@ namespace ClinicaMedica
             if (result == DialogResult.Yes)
             {
                 frmHome home = new frmHome();
-                this.Close();
+                this.Hide();
                 pnContenido.Controls.Clear();
                 home.Show();
                 puesto = "";
@@ -48,12 +48,12 @@ namespace ClinicaMedica
 
             // liberar recursos del sistema llamando el método 'Dispose':
             pnContenido.Controls.Clear();
-            //inicio?.Dispose();
+            inicio?.Dispose();
             crearReporte?.Dispose();
             consultarExpediente?.Dispose();
             consultarCita?.Dispose();
+
             // reestableciendo a null las instancias de los formularios
-            //inicio = null;
             crearReporte = null;
             consultarExpediente = null;
             consultarCita = null;
@@ -122,11 +122,6 @@ namespace ClinicaMedica
             pnContenido.Controls.Add(inicio);
             inicio.Show();
             inicio.BringToFront();
-        }
-
-        private void frmMenuDoctor_Deactivate(object sender, EventArgs e)
-        {
-            this.Refresh();
         }
     }
 }

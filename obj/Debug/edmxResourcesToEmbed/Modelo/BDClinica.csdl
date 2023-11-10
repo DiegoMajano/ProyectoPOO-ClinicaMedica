@@ -53,6 +53,7 @@
     <Property Name="primerApellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="telefono" Type="String" MaxLength="9" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="especialidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="clave" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
   </EntityType>
   <EntityType Name="medicamentos">
     <Key>
@@ -227,16 +228,5 @@
       <Parameter Name="tel" Mode="In" Type="String" />
       <Parameter Name="esp" Mode="In" Type="String" />
     </FunctionImport>
-    <EntitySet Name="usuarios" EntityType="ClinicaModel.usuarios" />
   </EntityContainer>
-  <EntityType Name="usuarios">
-    <Key>
-      <PropertyRef Name="userID" />
-    </Key>
-    <Property Name="userID" Type="String" Nullable="false" MaxLength="7" FixedLength="true" Unicode="false" />
-    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="contraseña" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="puesto" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
-  </EntityType>
 </Schema>
