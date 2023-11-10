@@ -34,6 +34,7 @@ namespace ClinicaMedica.Modelo
         public virtual DbSet<medicos> medicos { get; set; }
         public virtual DbSet<medicamentos> medicamentos { get; set; }
         public virtual DbSet<signosVitales> signosVitales { get; set; }
+        public virtual DbSet<usuarios> usuarios { get; set; }
     
         public virtual int IngresarCita(string codP, string codM, Nullable<System.DateTime> fechaH)
         {

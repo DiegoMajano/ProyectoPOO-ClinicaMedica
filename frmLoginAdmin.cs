@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Capa_Entidad;
+using Capa_Negocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicaMedica.Modelo;
 
 namespace ClinicaMedica
 {
     public partial class frmLoginAdmin : Form
     {
+        static ClinicaEntities db = FormFactory.CrearEntidadDB();
+
         public frmLoginAdmin()
         {
             InitializeComponent();
@@ -24,25 +29,49 @@ namespace ClinicaMedica
             home.Show();
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        E_Users objeuser = new E_Users();
+        N_users objnuser = new N_users();
+
+        public static string usuario_nombre;
+        public static string puesto = "A";
+
+        void login()
         {
-            // codigo para validar el login
-            
-            frmMenuAdministrativo menuAdmin = new frmMenuAdministrativo();
-            /*
-            if (txtUser.Text=="" ||txtPassword.Text=="")
+            objeuser.usuario = txtUser.Text;
+            objeuser.pass = txtPassword.Text;
+
+            var registro = from re in db.usuarios
+                           where re.usuario == objeuser.usuario && re.contraseña == objeuser.pass
+                           select new
+                           {
+                               usID = re.userID,
+                               nombre = re.nombre,
+                           };
+
+
+            if (registro.Any(re=>re.usID!=null))
             {
-                MessageBox.Show("Ingreso invalido, Campos no llenos","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (txtUser.Text!="usuario" && txtPassword.Text!="contraseña")//validacion para ver si si existe el user y si la contra es buena
-            {
-                MessageBox.Show("Las credenciales ingresadas son incorrectas, Intentar de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {*/
+                frmMenuAdministrativo menuAdmin = new frmMenuAdministrativo(puesto);
+
+                usuario_nombre = registro.First().nombre;
                 this.Hide();
                 menuAdmin.Show();
-            //}          
+                txtPassword.Clear();
+                txtUser.Clear();
+                
+            }
+            else
+            {
+                MessageBox.Show("Credenciales incorrectas","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                
+            }
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            login();
+            usuario_nombre = "";
+            puesto = "";
         }
     }
 }

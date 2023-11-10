@@ -13,6 +13,12 @@ namespace ClinicaMedica
         public static frmInicio CrearFormInicio()
         {
             return new frmInicio();
+            
+        }
+        public static frmInicio CrearFormInicio(string p)
+        {
+            return new frmInicio(p);
+
         }
         public static frmAgendarCita CrearFormAgendarCita()
         {

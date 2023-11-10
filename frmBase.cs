@@ -15,6 +15,8 @@ namespace ClinicaMedica
         public frmBase()
         {
             InitializeComponent();
+            this.FormClosed += frmBase_FormClosed;
+            this.FormClosing += frmBase_FormClosing;
         }
 
         protected void frmBase_FormClosed(object sender, FormClosedEventArgs e)

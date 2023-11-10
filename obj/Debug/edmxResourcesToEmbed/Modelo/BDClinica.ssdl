@@ -78,6 +78,16 @@ advertencia 6002: La tabla o vista 'Clinica.medico.signosVitales' no tiene defin
     <Property Name="telefono" Type="char" MaxLength="9" Nullable="false" />
     <Property Name="especialidad" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="usuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="contraseña" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="puesto" Type="char" MaxLength="2" Nullable="false" />
+  </EntityType>
   <Association Name="fk_codCitaR">
     <End Role="citasMedicas" Type="Self.citasMedicas" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -205,6 +215,7 @@ advertencia 6002: La tabla o vista 'Clinica.medico.signosVitales' no tiene defin
     <EntitySet Name="recetas" EntityType="Self.recetas" Schema="medico" store:Type="Tables" />
     <EntitySet Name="reportes" EntityType="Self.reportes" Schema="medico" store:Type="Tables" />
     <EntitySet Name="medicos" EntityType="Self.medicos" Schema="personal" store:Type="Tables" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="personal" store:Type="Tables" />
     <EntitySet Name="medicamentos" EntityType="Self.medicamentos" store:Type="Tables" store:Schema="medico">
       <DefiningQuery>SELECT 
     [medicamentos].[codReceta] AS [codReceta], 

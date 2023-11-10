@@ -86,5 +86,16 @@
     <FunctionImportMapping FunctionImportName="CrearReceta" FunctionName="ClinicaModel.Store.CrearReceta" />
     <FunctionImportMapping FunctionImportName="CrearReporte" FunctionName="ClinicaModel.Store.CrearReporte" />
     <FunctionImportMapping FunctionImportName="InscribirMedico" FunctionName="ClinicaModel.Store.InscribirMedico" />
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="ClinicaModel.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="puesto" ColumnName="puesto" />
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

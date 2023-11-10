@@ -46,6 +46,8 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.epValidacion = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbPuesto = new System.Windows.Forms.ComboBox();
+            this.lblPuesto = new System.Windows.Forms.Label();
             this.pnTop.SuspendLayout();
             this.pnContenido.SuspendLayout();
             this.gbInformacion.SuspendLayout();
@@ -62,6 +64,8 @@
             // 
             // pnContenido
             // 
+            this.pnContenido.Controls.Add(this.lblPuesto);
+            this.pnContenido.Controls.Add(this.cbPuesto);
             this.pnContenido.Controls.Add(this.btnBorrar);
             this.pnContenido.Controls.Add(this.btnGuardar);
             this.pnContenido.Controls.Add(this.gbCredenciales);
@@ -270,6 +274,32 @@
             // 
             this.epValidacion.ContainerControl = this;
             // 
+            // cbPuesto
+            // 
+            this.cbPuesto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPuesto.FormattingEnabled = true;
+            this.cbPuesto.Items.AddRange(new object[] {
+            "Seleccionar Puesto",
+            "Médico",
+            "Administración",
+            "Soporte"});
+            this.cbPuesto.Location = new System.Drawing.Point(500, 299);
+            this.cbPuesto.Name = "cbPuesto";
+            this.cbPuesto.Size = new System.Drawing.Size(232, 29);
+            this.cbPuesto.TabIndex = 29;
+            // 
+            // lblPuesto
+            // 
+            this.lblPuesto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPuesto.AutoSize = true;
+            this.lblPuesto.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.lblPuesto.Location = new System.Drawing.Point(496, 275);
+            this.lblPuesto.Name = "lblPuesto";
+            this.lblPuesto.Size = new System.Drawing.Size(65, 21);
+            this.lblPuesto.TabIndex = 15;
+            this.lblPuesto.Text = "Puesto:";
+            // 
             // frmRegistrarPersonal
             // 
             this.ClientSize = new System.Drawing.Size(754, 626);
@@ -278,6 +308,7 @@
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.pnContenido.ResumeLayout(false);
+            this.pnContenido.PerformLayout();
             this.gbInformacion.ResumeLayout(false);
             this.gbInformacion.PerformLayout();
             this.gbCredenciales.ResumeLayout(false);
@@ -306,5 +337,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.MaskedTextBox mtxtTelefono;
         private System.Windows.Forms.ErrorProvider epValidacion;
+        private System.Windows.Forms.Label lblPuesto;
+        private System.Windows.Forms.ComboBox cbPuesto;
     }
 }

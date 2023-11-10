@@ -227,5 +227,16 @@
       <Parameter Name="tel" Mode="In" Type="String" />
       <Parameter Name="esp" Mode="In" Type="String" />
     </FunctionImport>
+    <EntitySet Name="usuarios" EntityType="ClinicaModel.usuarios" />
   </EntityContainer>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="String" Nullable="false" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contraseña" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="puesto" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+  </EntityType>
 </Schema>

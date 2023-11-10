@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Capa_Entidad;
+using Capa_Negocios;
+using ClinicaMedica.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,48 @@ namespace ClinicaMedica
 {
     public partial class frmLoginMedico : Form
     {
+        static ClinicaEntities db = FormFactory.CrearEntidadDB();
+
         public frmLoginMedico()
         {
             InitializeComponent();
+        }
+
+        E_Users objeuser = new E_Users();
+        N_users objnuser = new N_users();
+
+        public static string usuario_nombre;
+        public static string puesto = "M";
+        void login()
+        {
+            objeuser.usuario = txtUser.Text;
+            objeuser.pass = txtPassword.Text;
+
+            var registro = from re in db.usuarios
+                           where re.usuario == objeuser.usuario && re.contraseña == objeuser.pass
+                           select new
+                           {
+                               usID = re.userID,
+                               nombre = re.nombre,
+                           };
+
+
+            if (registro.Any(re => re.usID != null))
+            {
+                frmMenuDoctor menuDoctor = new frmMenuDoctor(puesto);
+
+                usuario_nombre = registro.First().nombre;
+                this.Hide();
+                menuDoctor.CreateControl();
+                menuDoctor.Show();
+                txtPassword.Clear();
+                txtUser.Clear();
+                this.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("Credenciales incorrectas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -28,23 +70,15 @@ namespace ClinicaMedica
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             // codigo para validar el login
+            login();
+            usuario_nombre = "";
+            puesto = "";
+        }
 
-            frmMenuDoctor menuDoctor = new frmMenuDoctor();
-            
-
-            /*if (txtUser.Text == "" || txtPassword.Text == "")
-            {
-                MessageBox.Show("Ingreso invalido, Campos no llenos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (txtUser.Text != "usuario" && txtPassword.Text != "contraseña")//validacion para ver si si existe el user y si la contra es buena
-            {
-                MessageBox.Show("Las credenciales ingresadas son incorrectas, Intentar de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {*/
-                this.Hide();
-                menuDoctor.Show();
-            //}            
+        private void frmLoginMedico_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            usuario_nombre = "";
+            puesto = "";
         }
     }
 }

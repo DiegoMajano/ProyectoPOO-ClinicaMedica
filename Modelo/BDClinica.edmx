@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ClinicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ClinicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="citasMedicas">
           <Key>
             <PropertyRef Name="codCita" />
@@ -82,6 +82,16 @@ advertencia 6002: La tabla o vista 'Clinica.medico.signosVitales' no tiene defin
           <Property Name="primerApellido" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="telefono" Type="char" MaxLength="9" Nullable="false" />
           <Property Name="especialidad" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="char" MaxLength="7" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="contraseña" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="puesto" Type="char" MaxLength="2" Nullable="false" />
         </EntityType>
         <Association Name="fk_codCitaR">
           <End Role="citasMedicas" Type="Self.citasMedicas" Multiplicity="1">
@@ -210,6 +220,7 @@ advertencia 6002: La tabla o vista 'Clinica.medico.signosVitales' no tiene defin
           <EntitySet Name="recetas" EntityType="Self.recetas" Schema="medico" store:Type="Tables" />
           <EntitySet Name="reportes" EntityType="Self.reportes" Schema="medico" store:Type="Tables" />
           <EntitySet Name="medicos" EntityType="Self.medicos" Schema="personal" store:Type="Tables" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="personal" store:Type="Tables" />
           <EntitySet Name="medicamentos" EntityType="Self.medicamentos" store:Type="Tables" store:Schema="medico">
             <DefiningQuery>SELECT 
     [medicamentos].[codReceta] AS [codReceta], 
@@ -251,8 +262,7 @@ advertencia 6002: La tabla o vista 'Clinica.medico.signosVitales' no tiene defin
             <End Role="signosVitales" EntitySet="signosVitales" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ClinicaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -483,7 +493,18 @@ advertencia 6002: La tabla o vista 'Clinica.medico.signosVitales' no tiene defin
             <Parameter Name="tel" Mode="In" Type="String" />
             <Parameter Name="esp" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="usuarios" EntityType="ClinicaModel.usuarios" />
         </EntityContainer>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="String" Nullable="false" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="contraseña" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="puesto" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -575,6 +596,17 @@ advertencia 6002: La tabla o vista 'Clinica.medico.signosVitales' no tiene defin
           <FunctionImportMapping FunctionImportName="CrearReceta" FunctionName="ClinicaModel.Store.CrearReceta" />
           <FunctionImportMapping FunctionImportName="CrearReporte" FunctionName="ClinicaModel.Store.CrearReporte" />
           <FunctionImportMapping FunctionImportName="InscribirMedico" FunctionName="ClinicaModel.Store.InscribirMedico" />
+          <EntitySetMapping Name="usuarios">
+            <EntityTypeMapping TypeName="ClinicaModel.usuarios">
+              <MappingFragment StoreEntitySet="usuarios">
+                <ScalarProperty Name="puesto" ColumnName="puesto" />
+                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

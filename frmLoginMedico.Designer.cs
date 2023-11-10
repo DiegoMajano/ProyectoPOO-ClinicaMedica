@@ -190,6 +190,7 @@
             this.Name = "frmLoginMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal Médico";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLoginMedico_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pbPassIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();

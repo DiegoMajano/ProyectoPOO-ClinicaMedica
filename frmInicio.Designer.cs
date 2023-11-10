@@ -54,7 +54,7 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(426, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(490, 15);
             this.lblTitulo.Size = new System.Drawing.Size(66, 26);
             this.lblTitulo.Text = "Inicio";
             // 
@@ -109,7 +109,7 @@
             this.lblPuestoUser.AutoSize = true;
             this.lblPuestoUser.Location = new System.Drawing.Point(157, 72);
             this.lblPuestoUser.Name = "lblPuestoUser";
-            this.lblPuestoUser.Size = new System.Drawing.Size(54, 21);
+            this.lblPuestoUser.Size = new System.Drawing.Size(55, 21);
             this.lblPuestoUser.TabIndex = 4;
             this.lblPuestoUser.Text = "label2";
             this.lblPuestoUser.Visible = false;
@@ -209,6 +209,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(900, 626);
             this.Name = "frmInicio";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmInicio_FormClosed);
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();

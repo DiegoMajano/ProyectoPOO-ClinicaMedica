@@ -12,9 +12,15 @@ namespace ClinicaMedica
 {
     public partial class frmMenuAdministrativo : Form
     {
+        static string puesto;
         public frmMenuAdministrativo()
         {
             InitializeComponent();
+        }
+        public frmMenuAdministrativo(string p)
+        {
+            InitializeComponent();
+            puesto = p;
         }
 
         // variable estatica para almacenar la referencia a los formularios
@@ -85,7 +91,7 @@ namespace ClinicaMedica
         {
             if (inicio == null)
             {
-                inicio = FormFactory.CrearFormInicio();
+                inicio = FormFactory.CrearFormInicio(puesto);
                 inicio.TopLevel = false;
                 inicio.Dock = DockStyle.Fill;
             }

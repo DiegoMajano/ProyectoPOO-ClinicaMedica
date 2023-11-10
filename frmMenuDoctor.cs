@@ -12,10 +12,16 @@ namespace ClinicaMedica
 {
     public partial class frmMenuDoctor : Form
     {
+        static string puesto;
         public frmMenuDoctor()
         {
             InitializeComponent();
-        } 
+        }
+        public frmMenuDoctor(string p)
+        {
+            InitializeComponent();
+            puesto = p;
+        }
 
         private void frmMenuDoctor_Load(object sender, EventArgs e)
         {
@@ -29,9 +35,10 @@ namespace ClinicaMedica
             if (result == DialogResult.Yes)
             {
                 frmHome home = new frmHome();
-                this.Hide();
+                this.Close();
                 pnContenido.Controls.Clear();
                 home.Show();
+                puesto = "";
             }
         }
 
@@ -108,13 +115,18 @@ namespace ClinicaMedica
         {
             if (inicio == null)
             {
-                inicio = FormFactory.CrearFormInicio();
+                inicio = FormFactory.CrearFormInicio(puesto);
                 inicio.TopLevel = false;
-                inicio.Dock = DockStyle.Fill;
+                inicio.Dock = DockStyle.Fill;            
             }
             pnContenido.Controls.Add(inicio);
             inicio.Show();
-            inicio.BringToFront(); 
+            inicio.BringToFront();
+        }
+
+        private void frmMenuDoctor_Deactivate(object sender, EventArgs e)
+        {
+            this.Refresh();
         }
     }
 }
