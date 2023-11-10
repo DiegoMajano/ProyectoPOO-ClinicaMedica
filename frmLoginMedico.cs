@@ -38,7 +38,7 @@ namespace ClinicaMedica
             }
             else
             {
-                MessageBox.Show("Credenciales incorrectas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Completar los campos con sus credenciales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             txtPassword.Clear();
             txtUser.Clear();

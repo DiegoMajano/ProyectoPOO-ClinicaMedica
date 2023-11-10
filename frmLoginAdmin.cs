@@ -38,9 +38,9 @@ namespace ClinicaMedica
             logUser.Password = txtPassword.Text;
                         
 
-            if (!string.IsNullOrEmpty(txtPassword.Text)&&!string.IsNullOrEmpty(txtPassword.Text))
+            if (!string.IsNullOrEmpty(txtUser.Text)&&!string.IsNullOrEmpty(txtPassword.Text))
             {
-                if (logUser.Username.Equals("admin")&&logUser.Password.Equals("passs.admin"))
+                if (logUser.Username.Equals("admin")&&logUser.Password.Equals("pass.admin"))
                 {
                     frmMenuAdministrativo menuAdmin = new frmMenuAdministrativo(puesto);
 
@@ -49,11 +49,16 @@ namespace ClinicaMedica
                     menuAdmin.Show();
                     txtPassword.Clear();
                     txtUser.Clear();
-                }               
+                }
+                else
+                {
+                    MessageBox.Show("Credenciales incorrectas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
             else
             {
-                MessageBox.Show("Credenciales incorrectas","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Completar los campos con sus credenciales","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 
             }
         }

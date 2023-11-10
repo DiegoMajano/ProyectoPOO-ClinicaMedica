@@ -75,6 +75,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cita.cs" />
+    <Compile Include="frmLoginSoporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginSoporte.Designer.cs">
+      <DependentUpon>frmLoginSoporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="Receta.cs" />
     <Compile Include="Reporte.cs" />
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoginMedico.resx">
       <DependentUpon>frmLoginMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginSoporte.resx">
+      <DependentUpon>frmLoginSoporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuAdministrativo.resx">
       <DependentUpon>frmMenuAdministrativo.cs</DependentUpon>

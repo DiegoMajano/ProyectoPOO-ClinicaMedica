@@ -39,9 +39,9 @@ namespace ClinicaMedica
 
         private void btnSoporte_Click(object sender, EventArgs e)
         {
-            frmMenuSoporte menuSoporte = new frmMenuSoporte();
+            frmLoginSoporte soporte = new frmLoginSoporte();
             this.Hide();
-            menuSoporte.Show();
+            soporte.Show();
         }
     }
 }
