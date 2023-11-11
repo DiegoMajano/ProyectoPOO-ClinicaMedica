@@ -88,18 +88,18 @@
             // pnTop
             // 
             this.pnTop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-            this.pnTop.Size = new System.Drawing.Size(853, 57);
+            this.pnTop.Size = new System.Drawing.Size(836, 57);
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(361, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(492, 9);
             this.lblTitulo.Size = new System.Drawing.Size(150, 26);
             this.lblTitulo.Text = "Crear Reporte";
             // 
             // pnBottom
             // 
             this.pnBottom.Location = new System.Drawing.Point(0, 1004);
-            this.pnBottom.Size = new System.Drawing.Size(853, 34);
+            this.pnBottom.Size = new System.Drawing.Size(836, 34);
             // 
             // pnContenido
             // 
@@ -722,7 +722,7 @@
             // 
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-            this.ClientSize = new System.Drawing.Size(853, 835);
+            this.ClientSize = new System.Drawing.Size(853, 788);
             this.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.Name = "frmCrearReportes";
             this.Load += new System.EventHandler(this.frmCrearReportes_Load);

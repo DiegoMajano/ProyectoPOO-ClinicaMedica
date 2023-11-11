@@ -78,6 +78,7 @@ namespace ClinicaMedica
             else
             {
                 MessageBox.Show("Digitar un peso válido. Rango: 0 lbs a 999 lbs", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtxtPeso.Focus();
             }
         }
 
@@ -90,18 +91,20 @@ namespace ClinicaMedica
             else
             {
                 MessageBox.Show("Digitar una estatura válida Rango: 0 mts a 3.00 mts", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtxtEstatura.Focus();
             }
         }
 
         private void mtxtTemp_Leave(object sender, EventArgs e)
         {
-            if (double.Parse(mtxtTemp.Text) >= 0 && double.Parse(mtxtTemp.Text) <= 3)
+            if (double.Parse(mtxtTemp.Text) >= 0 && double.Parse(mtxtTemp.Text) <= 45)
             {
 
             }
             else
             {
                 MessageBox.Show("Digitar una temperatura válida Rango: 0° a 45°", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtxtTemp.Focus();
             }
         }
 
@@ -287,17 +290,18 @@ namespace ClinicaMedica
                 if (!string.IsNullOrEmpty(mtxtTemp.Text) && !string.IsNullOrEmpty(mtxtPresionArt.Text) && !string.IsNullOrEmpty(mtxtFrecCar.Text) && !string.IsNullOrEmpty(mtxtPeso.Text) && !string.IsNullOrEmpty(mtxtEstatura.Text) && !string.IsNullOrEmpty(txtDiagnostico.Text) && !string.IsNullOrEmpty(txtMotivo.Text))
                 {
                     GuardarReporte();
+                    btnGuardar.Enabled = false;
                 }
                 else
                 {
                     MessageBox.Show("Debe de completar todos los campos para guardar el reporte.", "Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    btnGuardar.Enabled = true;
                 }
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
             }
-            btnGuardar.Enabled = false;
         }
 
         private void clbMedicamentos_SelectedIndexChanged(object sender, EventArgs e)
@@ -338,6 +342,7 @@ namespace ClinicaMedica
             MessageBox.Show("Registro del reporte completo realizado.","Registro exitoso",MessageBoxButtons.OK,MessageBoxIcon.Information);
             LimpiarCampos();
             DeshabilidarGroupBox();
+            txtCodReporte.Clear();
         }
     }
 }
