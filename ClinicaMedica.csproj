@@ -8,7 +8,7 @@
     <ProjectGuid>{ACEE9366-7F1A-4874-9BC8-3046B5F24784}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ClinicaMedica</RootNamespace>
-    <AssemblyName>ClinicaMedica</AssemblyName>
+    <AssemblyName>SistemaClinica</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,6 +50,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>clinica-icono.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -386,6 +389,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="clinica-icono.ico" />
     <Content Include="Modelo\BDClinica.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BDClinica.edmx</DependentUpon>
