@@ -92,7 +92,7 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(492, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(615, 9);
             this.lblTitulo.Size = new System.Drawing.Size(150, 26);
             this.lblTitulo.Text = "Crear Reporte";
             // 

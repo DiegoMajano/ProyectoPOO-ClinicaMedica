@@ -279,7 +279,7 @@ namespace ClinicaMedica
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error");
+                MessageBox.Show("El paciente ya posee un reporte asginado a esta cita", "Error");
             }
         }
 
