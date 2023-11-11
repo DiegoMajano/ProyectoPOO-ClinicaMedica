@@ -28,6 +28,10 @@ namespace ClinicaMedica
         {
             return new frmAgregarPaciente();
         }
+        public static frmAgregarPaciente CrearFormAgregarPaciente(string id)
+        {
+            return new frmAgregarPaciente(id);
+        }
         public static frmConsultarCita CrarFormConsultarCita()
         {
             return new frmConsultarCita();
@@ -35,6 +39,10 @@ namespace ClinicaMedica
         public static frmConsultarExpedientes CrearFormConsultarExpedientes()
         {
             return new frmConsultarExpedientes();
+        }
+        public static frmConsultarExpedientes CrearFormConsultarExpedientes(string p)
+        {
+            return new frmConsultarExpedientes(p);
         }
         public static frmConsultarPersonal CrearFormConsultarPersonal()
         {

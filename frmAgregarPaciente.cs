@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using ClinicaMedica.Modelo;
-
+using System.Linq;
+using Microsoft.SqlServer.Server;
 
 namespace ClinicaMedica
 {
@@ -19,6 +20,18 @@ namespace ClinicaMedica
         public frmAgregarPaciente()
         {
             InitializeComponent();
+        }
+
+        string idPaciente;
+        public frmAgregarPaciente(string id)
+        {
+            InitializeComponent();
+            idPaciente = id;
+            if (id!=null)
+            {
+                CargarDatos(id);
+            }
+           
         }
         private void frmAgregarPaciente_Load(object sender, EventArgs e)
         {
@@ -159,7 +172,7 @@ namespace ClinicaMedica
                     {
                         p.Genero = "M";
                     }
-                    if (mtxtTelefono.Text!="    -")
+                    if (mtxtTelefono.Text != "    -")
                     {
                         p.Telefono = mtxtTelefono.Text;
                     }
@@ -167,7 +180,7 @@ namespace ClinicaMedica
                     {
                         p.Telefono = "";
                     }
-                    if (mtxtDUI.Text!="        -")
+                    if (mtxtDUI.Text != "        -")
                     {
                         p.Dui = mtxtDUI.Text;
 
@@ -176,7 +189,7 @@ namespace ClinicaMedica
                     {
                         p.Dui = "";
                     }
-                    if (mtxtNIT.Text!="    -      -   -")
+                    if (mtxtNIT.Text != "    -      -   -")
                     {
                         p.Nit = mtxtNIT.Text;
                     }
@@ -184,13 +197,100 @@ namespace ClinicaMedica
                     {
                         p.Nit = "";
                     }
-                    db.InscribirPaciente(p.PrimerNombre, p.SegundoNombre, p.PrimerApellido, p.SegundoApellido, p.Direccion, p.Telefono, p.Genero, p.FechaNacimiento, p.Dui, p.Nit);
+
+                    if (idPaciente==null)
+                    {
+                        
+                        db.InscribirPaciente(p.PrimerNombre, p.SegundoNombre, p.PrimerApellido, p.SegundoApellido, p.Direccion, p.Telefono, p.Genero, p.FechaNacimiento, p.Dui, p.Nit);
+                        MessageBox.Show("El paciente se ha registrado correctamente", "Registro hecho", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        try
+                        {
+
+                            db.Database.ExecuteSqlCommand($"UPDATE administracion.pacientes " +
+                                                        $"set primerNombre = '{p.PrimerNombre}', segundoNombre = '{p.SegundoNombre}',  primerApellido = '{p.PrimerApellido}'," +
+                                                        $"segundoApellido = '{p.SegundoApellido}', direccion = '{p.Direccion}', telefono = '{p.Telefono}', sexo = '{p.Genero}'," +
+                                                        $"dui = '{p.Dui}', nit = '{p.Nit}'" +
+                                                        $"where codPaciente = '{idPaciente}';");
+                            MessageBox.Show("El paciente se ha actualizado correctamente", "Registro hecho", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            db.SaveChanges();
+                            this.Hide();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        
+                    }                    
                     db.SaveChanges();
-                    MessageBox.Show("El paciente se ha registrado correctamente", "Registro hecho", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();
                     txtP_Nombre.Focus();
                 }                              
             }            
+        }
+
+        private void CargarDatos(string id)
+        {
+            string codPaciente = id;
+            var datos = from dt in db.pacientes
+                        where dt.codPaciente.Equals(codPaciente)
+                        select new
+                        {
+                            cod = dt.codPaciente,
+                            pnombre = dt.primerNombre,
+                            snombre = dt.segundoNombre,
+                            papellido = dt.primerApellido,
+                            sapellido = dt.segundoApellido,
+                            direccion = dt.direccion,
+                            telefono = dt.telefono,
+                            sexo = dt.sexo,
+                            fechanaci= dt.fechaNacimiento,
+                            dui = dt.dui,
+                            nit = dt.nit
+                        };
+
+            Dictionary<string, string> paciente = new Dictionary<string, string>();
+
+            try
+            {
+                foreach (var n in datos)
+                {
+                    paciente.Add("Cod", n.cod);
+                    paciente.Add("PNombre", n.pnombre);
+                    paciente.Add("SNombre", n.snombre);
+                    paciente.Add("PApellido", n.papellido);
+                    paciente.Add("SApellido", n.sapellido);
+                    if (n.sexo.Equals("M"))
+                    {
+                        paciente.Add("Genero", "Masculino");
+                    }
+                    else
+                    {
+                        paciente.Add("Genero", "Femenino");
+                    }
+                    paciente.Add("Telefono", n.telefono);
+                    paciente.Add("fechaNa", n.fechanaci.ToString("dd/MM/yyyy"));
+                    paciente.Add("DUI", n.dui);
+                    paciente.Add("NIT", n.nit);
+                }
+
+                txtP_Nombre.Text = paciente["PNombre"];
+                txtS_Nombre.Text = paciente["SNombre"];
+                txtP_Apellido.Text = paciente["PApellido"];
+                txtS_Apellido.Text = paciente["SApellido"];
+                cbGenero.SelectedItem = paciente["Genero"];
+                dtpFechaNacimiento.Value = DateTime.Parse(paciente["fechaNa"]);
+                mtxtDUI.Text = paciente["DUI"];
+                mtxtNIT.Text = paciente["NIT"];
+                mtxtTelefono.Text = paciente["Telefono"];
+            }
+            catch
+            {
+
+            }
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)

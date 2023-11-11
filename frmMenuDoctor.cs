@@ -89,7 +89,7 @@ namespace ClinicaMedica
         {
             if (consultarExpediente==null)
             {
-                consultarExpediente = FormFactory.CrearFormConsultarExpedientes();
+                consultarExpediente = FormFactory.CrearFormConsultarExpedientes(puesto);
                 consultarExpediente.TopLevel = false;
                 consultarExpediente.Dock = DockStyle.Fill;
             }

@@ -88,7 +88,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(195, 25);
-            this.txtPassword.TabIndex = 30;
+            this.txtPassword.TabIndex = 27;
             // 
             // btnRegresar
             // 
@@ -177,12 +177,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(809, 451);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbPassIcon);
             this.Controls.Add(this.pbUserIcon);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtUser);

@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using ClinicaMedica.Modelo;
 using System.Linq;
+using System.Data.Entity.Validation;
 
 namespace ClinicaMedica
 {
@@ -15,9 +16,23 @@ namespace ClinicaMedica
         ClinicaEntities db = FormFactory.CrearEntidadDB();
         private bool filtroNombre=false;
         private bool filtroCodigo=false;
+        string puesto;
         public frmConsultarExpedientes()
         {
             InitializeComponent();
+        }
+        public frmConsultarExpedientes(string puesto)
+        {
+            InitializeComponent();
+            this.puesto = puesto;
+            if (this.puesto.Equals("M"))
+            {
+                btnEditar.Enabled = false;
+            }
+            else
+            {
+                btnEditar.Enabled = true;
+            }
         }
 
         private void frmConsultarExpedientes_Load(object sender, EventArgs e)
@@ -25,13 +40,6 @@ namespace ClinicaMedica
             Utilidades.LlenarCBPacientes(cbNombrePaciente);
             LimpiarCampos();
             dgvConsultarExpediente.DataSource = null;
-        }
-
-        public void Refrescar()
-        {                       
-            var lista = from datos in db.pacientes
-                select datos;                    
-            dgvConsultarExpediente.DataSource = lista.ToList();   
         }
 
         public void LimpiarCampos()
@@ -111,7 +119,44 @@ namespace ClinicaMedica
 
         private void btnVerReportes_Click(object sender, EventArgs e)
         {
+            string id = Obtenerid();
+            if (id!=null)
+            {
+                frmConsultarExpedienteReporte reporte = new frmConsultarExpedienteReporte("A",id);
+                reporte.Show();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un paciente","Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+        }
 
+        private string Obtenerid()
+        {
+            try
+            {
+                var seleccion = dgvConsultarExpediente.SelectedRows[0];
+                var cod = seleccion.Cells[0].Value;
+                return cod.ToString();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            string id = Obtenerid();
+            if (id != null)
+            {
+                frmAgregarPaciente agregar = FormFactory.CrearFormAgregarPaciente(id);
+                agregar.Show();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un paciente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
