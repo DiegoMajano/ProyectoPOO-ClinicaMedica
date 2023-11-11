@@ -33,8 +33,6 @@
             this.btnLimpiarPnContenedor = new System.Windows.Forms.Button();
             this.pnSlideBotones = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnConsultarMedicamento = new System.Windows.Forms.Button();
-            this.btnCrearReceta = new System.Windows.Forms.Button();
             this.btnCrearReporte = new System.Windows.Forms.Button();
             this.btnConsultarCita = new System.Windows.Forms.Button();
             this.btnConsultarExpediente = new System.Windows.Forms.Button();
@@ -86,8 +84,6 @@
             // 
             this.pnSlideBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(53)))));
             this.pnSlideBotones.Controls.Add(this.btnSalir);
-            this.pnSlideBotones.Controls.Add(this.btnConsultarMedicamento);
-            this.pnSlideBotones.Controls.Add(this.btnCrearReceta);
             this.pnSlideBotones.Controls.Add(this.btnCrearReporte);
             this.pnSlideBotones.Controls.Add(this.btnConsultarCita);
             this.pnSlideBotones.Controls.Add(this.btnConsultarExpediente);
@@ -113,36 +109,6 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnConsultarMedicamento
-            // 
-            this.btnConsultarMedicamento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnConsultarMedicamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
-            this.btnConsultarMedicamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConsultarMedicamento.FlatAppearance.BorderSize = 0;
-            this.btnConsultarMedicamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarMedicamento.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarMedicamento.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConsultarMedicamento.Location = new System.Drawing.Point(0, 316);
-            this.btnConsultarMedicamento.Name = "btnConsultarMedicamento";
-            this.btnConsultarMedicamento.Size = new System.Drawing.Size(230, 64);
-            this.btnConsultarMedicamento.TabIndex = 5;
-            this.btnConsultarMedicamento.UseVisualStyleBackColor = false;
-            // 
-            // btnCrearReceta
-            // 
-            this.btnCrearReceta.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCrearReceta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
-            this.btnCrearReceta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCrearReceta.FlatAppearance.BorderSize = 0;
-            this.btnCrearReceta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearReceta.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearReceta.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCrearReceta.Location = new System.Drawing.Point(0, 252);
-            this.btnCrearReceta.Name = "btnCrearReceta";
-            this.btnCrearReceta.Size = new System.Drawing.Size(230, 64);
-            this.btnCrearReceta.TabIndex = 4;
-            this.btnCrearReceta.UseVisualStyleBackColor = false;
             // 
             // btnCrearReporte
             // 
@@ -246,8 +212,6 @@
         private System.Windows.Forms.Button btnLimpiarPnContenedor;
         private System.Windows.Forms.Panel pnSlideBotones;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnConsultarMedicamento;
-        private System.Windows.Forms.Button btnCrearReceta;
         private System.Windows.Forms.Button btnCrearReporte;
         private System.Windows.Forms.Button btnConsultarCita;
         private System.Windows.Forms.Button btnConsultarExpediente;

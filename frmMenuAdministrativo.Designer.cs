@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnSalir = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.btnConsultarCita = new System.Windows.Forms.Button();
             this.btnAgendarCita = new System.Windows.Forms.Button();
             this.btnConsultarExpediente = new System.Windows.Forms.Button();
@@ -61,21 +60,6 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // button5
-            // 
-            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(0, 316);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(230, 64);
-            this.button5.TabIndex = 5;
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // btnConsultarCita
             // 
@@ -149,7 +133,6 @@
             // 
             this.pnSlideBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(53)))));
             this.pnSlideBotones.Controls.Add(this.btnSalir);
-            this.pnSlideBotones.Controls.Add(this.button5);
             this.pnSlideBotones.Controls.Add(this.btnConsultarCita);
             this.pnSlideBotones.Controls.Add(this.btnAgendarCita);
             this.pnSlideBotones.Controls.Add(this.btnConsultarExpediente);
@@ -247,7 +230,6 @@
         private System.Windows.Forms.Panel pnLogoSlide;
         private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnConsultarCita;
         private System.Windows.Forms.Button btnAgendarCita;
         private System.Windows.Forms.Button btnConsultarExpediente;
