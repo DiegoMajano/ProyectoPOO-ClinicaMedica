@@ -31,14 +31,9 @@ namespace ClinicaMedica
                                usID = re.codMedico,
                                nombre = re.primerNombre + " " + re.primerApellido
                            };
-            frmMenuDoctor menuDoctor = new frmMenuDoctor(puesto);
+           
 
-            //frmLoginMedico.usuario_nombre = registro.First().nombre;
-            form.Hide();
-            menuDoctor.CreateControl();
-            menuDoctor.Show();
-
-           /* if (registro.Any(re => re.usID != null))
+            if (registro.Any(re => re.usID != null))
             {
                 frmMenuDoctor menuDoctor = new frmMenuDoctor(puesto);
 
@@ -50,7 +45,7 @@ namespace ClinicaMedica
             else
             {
                 MessageBox.Show("Credenciales incorrectas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+            }
         }
     }
 }
