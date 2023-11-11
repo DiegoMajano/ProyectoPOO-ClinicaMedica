@@ -176,7 +176,7 @@
             // frmLoginAdmin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(809, 451);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
