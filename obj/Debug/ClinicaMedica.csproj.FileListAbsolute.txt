@@ -112,3 +112,45 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaM
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\bin\Debug\SistemaClinica.pdb
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\SistemaClinica.exe
 C:\Users\Diego Majano\Desktop\UDB\Año 2023\Ciclo 2 - 2023\POO\Proyecto\ClinicaMedica\obj\Debug\SistemaClinica.pdb
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\Resources\278158071_329692962482837_3178279064538201005_n.jpg
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\Resources\copia.jpg
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\Resources\PasswordIcon.png
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\Resources\UserIcon.png
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\Resources\AdminIcon.png
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\Resources\MedicoIcon.png
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\Resources\AdminIcon32.png
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\Resources\MedicoIcon32.png
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\Resources\ExitIcon.png
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\Resources\logo}.png
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\SistemaClinica.exe.config
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\SistemaClinica.exe
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\SistemaClinica.pdb
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\EntityFramework.dll
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\EntityFramework.xml
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.csproj.AssemblyReference.cache
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmAgendarCita.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmAgregarPaciente.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmConsultarCita.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmBase.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmConsultarExpedienteReporte.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmConsultarExpedientes.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmConsultarPersonal.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmCrearReportes.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmHome.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmInicio.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmLoginAdmin.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmLoginMedico.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmLoginSoporte.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmMenuAdministrativo.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmMenuDoctor.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmMenuSoporte.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.frmRegistrarPersonal.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.Properties.Resources.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.Resources.RecursoFuente.resources
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.csproj.GenerateResource.cache
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.csproj.CoreCompileInputs.cache
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\ClinicaMedica.csproj.CopyComplete
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\SistemaClinica.exe
+C:\Users\Valul\OneDrive\Documentos\proyecto MDB-POO\Clinica Githhub\obj\Debug\SistemaClinica.pdb

@@ -46,7 +46,7 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(522, 15);
+            this.lblTitulo.Location = new System.Drawing.Point(493, 9);
             // 
             // pnBottom
             // 

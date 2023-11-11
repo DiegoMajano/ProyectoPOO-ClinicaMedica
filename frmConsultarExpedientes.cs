@@ -92,6 +92,7 @@ namespace ClinicaMedica
             if (cbNombrePaciente.SelectedIndex != 0)
             {
                 filtroNombre = true;
+               
             }
         }
 
