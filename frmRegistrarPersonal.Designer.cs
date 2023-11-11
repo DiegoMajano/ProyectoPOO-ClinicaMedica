@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarPersonal));
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -273,6 +274,7 @@
             // frmRegistrarPersonal
             // 
             this.ClientSize = new System.Drawing.Size(754, 626);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegistrarPersonal";
             this.Load += new System.EventHandler(this.frmRegistrarMedico_Load);
             this.pnTop.ResumeLayout(false);

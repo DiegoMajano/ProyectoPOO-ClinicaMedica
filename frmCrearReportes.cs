@@ -69,6 +69,41 @@ namespace ClinicaMedica
                 MessageBox.Show("No se admiten números ni caracteres especiales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+        private void mtxtPeso_Leave(object sender, EventArgs e)
+        {
+            if (double.Parse(mtxtPeso.Text) <= 999 && double.Parse(mtxtPeso.Text) >= 0)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Digitar un peso válido. Rango: 0 lbs a 999 lbs", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void mtxtEstatura_Leave(object sender, EventArgs e)
+        {
+            if (double.Parse(mtxtEstatura.Text) >= 0 && double.Parse(mtxtEstatura.Text) <= 3)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Digitar una estatura válida Rango: 0 mts a 3.00 mts", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void mtxtTemp_Leave(object sender, EventArgs e)
+        {
+            if (double.Parse(mtxtTemp.Text) >= 0 && double.Parse(mtxtTemp.Text) <= 3)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Digitar una temperatura válida Rango: 0° a 45°", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
 
         private bool ValidarCita(string paciente)
         {
@@ -154,7 +189,7 @@ namespace ClinicaMedica
             }
             else
             {
-                MessageBox.Show("Seleccionar paciente con cita programada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seleccionar paciente con cita programada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 LimpiarCampos();
             }
         }
@@ -213,7 +248,7 @@ namespace ClinicaMedica
                 }
                 else
                 {
-                    MessageBox.Show("No existe código del reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No existe código del reporte.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -249,7 +284,14 @@ namespace ClinicaMedica
         {
             try
             {
-                GuardarReporte();        
+                if (!string.IsNullOrEmpty(mtxtTemp.Text) && !string.IsNullOrEmpty(mtxtPresionArt.Text) && !string.IsNullOrEmpty(mtxtFrecCar.Text) && !string.IsNullOrEmpty(mtxtPeso.Text) && !string.IsNullOrEmpty(mtxtEstatura.Text) && !string.IsNullOrEmpty(txtDiagnostico.Text) && !string.IsNullOrEmpty(txtMotivo.Text))
+                {
+                    GuardarReporte();
+                }
+                else
+                {
+                    MessageBox.Show("Debe de completar todos los campos para guardar el reporte.", "Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
             }
             catch(Exception ex)
             {
@@ -293,7 +335,7 @@ namespace ClinicaMedica
         private void btnTerminar_Click(object sender, EventArgs e)
         {
             db.SaveChanges();
-            MessageBox.Show("Registro del reporte completo realizado","Registro exitoso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Registro del reporte completo realizado.","Registro exitoso",MessageBoxButtons.OK,MessageBoxIcon.Information);
             LimpiarCampos();
             DeshabilidarGroupBox();
         }

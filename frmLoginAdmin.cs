@@ -44,7 +44,7 @@ namespace ClinicaMedica
                 {
                     frmMenuAdministrativo menuAdmin = new frmMenuAdministrativo(puesto);
 
-                    usuario_nombre = "Bienvenido de nuevo, recepción";
+                    usuario_nombre = "Bienvenido de nuevo a recepción";
                     this.Hide();
                     menuAdmin.Show();
                     txtPassword.Clear();

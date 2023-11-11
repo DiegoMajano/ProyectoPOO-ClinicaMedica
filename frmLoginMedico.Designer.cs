@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoginMedico));
             this.label4 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnRegresar = new System.Windows.Forms.Button();
@@ -48,11 +49,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.label4.Location = new System.Drawing.Point(347, 130);
+            this.label4.Location = new System.Drawing.Point(322, 130);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 21);
+            this.label4.Size = new System.Drawing.Size(181, 21);
             this.label4.TabIndex = 20;
-            this.label4.Text = "Interfaz Médica";
+            this.label4.Text = "Inicio de sesión Médico";
             // 
             // txtPassword
             // 
@@ -66,7 +67,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(195, 25);
-            this.txtPassword.TabIndex = 19;
+            this.txtPassword.TabIndex = 16;
             // 
             // btnRegresar
             // 
@@ -187,6 +188,7 @@
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.pcbLogo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLoginMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal Médico";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.btnSoporte = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnadmin = new System.Windows.Forms.Button();
@@ -124,6 +125,7 @@
             this.Controls.Add(this.btnmedico);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clinicas Guadalupanas";

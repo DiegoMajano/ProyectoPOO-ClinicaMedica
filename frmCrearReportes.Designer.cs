@@ -88,18 +88,18 @@
             // pnTop
             // 
             this.pnTop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-            this.pnTop.Size = new System.Drawing.Size(853, 57);
+            this.pnTop.Size = new System.Drawing.Size(836, 57);
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Location = new System.Drawing.Point(400, 15);
+            this.lblTitulo.Location = new System.Drawing.Point(384, 15);
             this.lblTitulo.Size = new System.Drawing.Size(150, 26);
             this.lblTitulo.Text = "Crear Reporte";
             // 
             // pnBottom
             // 
             this.pnBottom.Location = new System.Drawing.Point(0, 1004);
-            this.pnBottom.Size = new System.Drawing.Size(853, 34);
+            this.pnBottom.Size = new System.Drawing.Size(836, 34);
             // 
             // pnContenido
             // 
@@ -371,7 +371,7 @@
             this.txtCodReporte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCodReporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodReporte.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.txtCodReporte.Location = new System.Drawing.Point(184, 243);
+            this.txtCodReporte.Location = new System.Drawing.Point(234, 243);
             this.txtCodReporte.Name = "txtCodReporte";
             this.txtCodReporte.ReadOnly = true;
             this.txtCodReporte.Size = new System.Drawing.Size(219, 26);
@@ -384,9 +384,9 @@
             this.lblCodReporte.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.lblCodReporte.Location = new System.Drawing.Point(48, 246);
             this.lblCodReporte.Name = "lblCodReporte";
-            this.lblCodReporte.Size = new System.Drawing.Size(130, 21);
+            this.lblCodReporte.Size = new System.Drawing.Size(180, 21);
             this.lblCodReporte.TabIndex = 24;
-            this.lblCodReporte.Text = "Código Reporte:";
+            this.lblCodReporte.Text = "Código reporte creado:";
             // 
             // btnBorrar
             // 
@@ -516,6 +516,7 @@
             this.mtxtTemp.Size = new System.Drawing.Size(219, 26);
             this.mtxtTemp.TabIndex = 31;
             this.mtxtTemp.ValidatingType = typeof(int);
+            this.mtxtTemp.Leave += new System.EventHandler(this.mtxtTemp_Leave);
             // 
             // mtxtFrecCar
             // 
@@ -538,17 +539,19 @@
             this.mtxtEstatura.Size = new System.Drawing.Size(219, 26);
             this.mtxtEstatura.TabIndex = 29;
             this.mtxtEstatura.ValidatingType = typeof(int);
+            this.mtxtEstatura.Leave += new System.EventHandler(this.mtxtEstatura_Leave);
             // 
             // mtxtPeso
             // 
             this.mtxtPeso.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mtxtPeso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtPeso.Location = new System.Drawing.Point(165, 27);
-            this.mtxtPeso.Mask = "9999";
+            this.mtxtPeso.Mask = "999";
             this.mtxtPeso.Name = "mtxtPeso";
             this.mtxtPeso.Size = new System.Drawing.Size(219, 26);
             this.mtxtPeso.TabIndex = 28;
             this.mtxtPeso.ValidatingType = typeof(int);
+            this.mtxtPeso.Leave += new System.EventHandler(this.mtxtPeso_Leave);
             // 
             // mtxtPresionArt
             // 

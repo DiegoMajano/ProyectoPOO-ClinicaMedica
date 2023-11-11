@@ -37,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.mtxtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.lblBuscarPor = new System.Windows.Forms.Label();
             this.cbNombreMedico = new System.Windows.Forms.ComboBox();
             this.btnBorrar = new System.Windows.Forms.Button();
@@ -77,7 +76,6 @@
             this.gbInformacion.Controls.Add(this.label2);
             this.gbInformacion.Controls.Add(this.mtxtCodigo);
             this.gbInformacion.Controls.Add(this.label1);
-            this.gbInformacion.Controls.Add(this.btnEditar);
             this.gbInformacion.Controls.Add(this.lblBuscarPor);
             this.gbInformacion.Controls.Add(this.cbNombreMedico);
             this.gbInformacion.Controls.Add(this.btnBorrar);
@@ -142,21 +140,6 @@
             this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 27;
             this.label1.Text = "Código:";
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(77)))), ((int)(((byte)(130)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(567, 499);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(112, 40);
-            this.btnEditar.TabIndex = 26;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // lblBuscarPor
             // 
@@ -225,7 +208,7 @@
             this.dgvConsultarMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Italic);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(24)))), ((int)(((byte)(81)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -242,7 +225,6 @@
             this.dgvConsultarMedicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsultarMedicos.Size = new System.Drawing.Size(657, 285);
             this.dgvConsultarMedicos.TabIndex = 3;
-            this.dgvConsultarMedicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarMedicos_CellContentClick);
             // 
             // btnBuscar
             // 
@@ -297,7 +279,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblBuscarPor;
         private System.Windows.Forms.ComboBox cbNombreMedico;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.MaskedTextBox mtxtCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbEspecialidades;

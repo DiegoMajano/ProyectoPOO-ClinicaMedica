@@ -91,10 +91,5 @@ namespace ClinicaMedica
             LimpiarCampos();
             dgvConsultarMedicos.DataSource = null;
         }
-
-        private void dgvConsultarMedicos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

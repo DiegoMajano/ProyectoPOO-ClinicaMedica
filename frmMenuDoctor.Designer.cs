@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuDoctor));
             this.pnContenido = new System.Windows.Forms.Panel();
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnLimpiarPnContenedor = new System.Windows.Forms.Button();
@@ -192,6 +193,7 @@
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.pnSlideBotones);
             this.Font = new System.Drawing.Font("Montserrat", 11.25F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMenuDoctor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Doctor";

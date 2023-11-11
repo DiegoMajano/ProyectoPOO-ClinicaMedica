@@ -13,9 +13,7 @@ namespace ClinicaMedica
     public partial class frmConsultarExpedienteReporte : ClinicaMedica.frmBase
     {
         ClinicaEntities db = FormFactory.CrearEntidadDB();
-        static string puesto;
         public string id;
-        Persona personas = null;
         
         public frmConsultarExpedienteReporte()
         {
@@ -33,7 +31,7 @@ namespace ClinicaMedica
         }
         private void CargarDatos(string codPaciente)
         {
-            lblTitulo.Text = $"Reportees paciente {codPaciente}";
+            lblTitulo.Text = $"Reportes del paciente: {codPaciente}";
             var reporte = from re in db.reportes 
                           join ci in db.citasMedicas on re.codCita equals ci.codCita
                           join si in db.signosVitales on re.codReporte equals si.codReporte
@@ -58,27 +56,12 @@ namespace ClinicaMedica
                               Indicaciones = me.indicaciones
                           };
 
-            dataGridView1.DataSource = reporte.ToList();
+            dgvConsultarReporte.DataSource = reporte.ToList();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        private void frmConsultarExpedienteReporte_Load(object sender, EventArgs e)
-        {
-            switch (puesto)
-            {
-                case "M":
-                    //algo
-                    break;
-                case "A":
-                    // algo
-                    break;
-                default:
-                    break;
-            }
         }
     }
 }

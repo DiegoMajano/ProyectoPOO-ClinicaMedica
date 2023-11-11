@@ -31,27 +31,23 @@ namespace ClinicaMedica
             {
                 case "A":
                     nombre = frmLoginAdmin.usuario_nombre;
-                    lblNombreUser.Text = nombre;
+                    lblNombre.Text = nombre;
                     lblPuestoUser.Text = "Administración";
                     lblPuestoUser.Visible = true;
-                    lblNombreUser.Visible = true;
-                    lblespecialidad.Visible = false;
+                    lblNombreUser.Visible = false;
                     break;
 
                 case "M":
                     nombre = frmLoginMedico.usuario_nombre;
                     lblNombreUser.Text = nombre;
                     lblPuestoUser.Text = "Médico";
-                    lblEspecialidadUser.Text = "aaaaaa";
                     lblPuestoUser.Visible = true;
                     lblNombreUser.Visible = true;
-                    lblEspecialidadUser.Visible = true;
                     break;
 
                 case "S":
                     lblNombreUser.Text = "soporte god";
                     lblPuestoUser.Text = "Soporte";
-                    lblespecialidad.Visible = false;
                     lblPuestoUser.Visible = true;
                     lblNombreUser.Visible = true;
                     break ;
@@ -59,23 +55,21 @@ namespace ClinicaMedica
         }
 
         public void Recordatorios()
-        {
-            
+        {            
             switch (p)
             {
                 case "A":
-
                     RecordatorioAdmin(dgvCitasDia);
                     break;
 
                 case "M":
-
                     RecordatorioMedico(dgvCitasDia, nombre);
                     break;
                 case "S":
                     break;
             }            
         }
+
         private void RecordatorioAdmin(DataGridView dgv)
         {
             dgv.DataSource = null;

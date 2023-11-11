@@ -271,6 +271,7 @@ namespace ClinicaMedica
                     {
                         paciente.Add("Genero", "Femenino");
                     }
+                    paciente.Add("Direccion",n.direccion);
                     paciente.Add("Telefono", n.telefono);
                     paciente.Add("fechaNa", n.fechanaci.ToString("dd/MM/yyyy"));
                     paciente.Add("DUI", n.dui);
@@ -282,14 +283,15 @@ namespace ClinicaMedica
                 txtP_Apellido.Text = paciente["PApellido"];
                 txtS_Apellido.Text = paciente["SApellido"];
                 cbGenero.SelectedItem = paciente["Genero"];
+                txtDireccion.Text = paciente["Direccion"];
                 dtpFechaNacimiento.Value = DateTime.Parse(paciente["fechaNa"]);
                 mtxtDUI.Text = paciente["DUI"];
                 mtxtNIT.Text = paciente["NIT"];
                 mtxtTelefono.Text = paciente["Telefono"];
             }
-            catch
+            catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -297,7 +299,6 @@ namespace ClinicaMedica
         {
             LimpiarCampos();
             txtP_Nombre.Focus();
-            //falta mostrar que se borro correctamente o mal, uso de catch
         }        
     }
 }

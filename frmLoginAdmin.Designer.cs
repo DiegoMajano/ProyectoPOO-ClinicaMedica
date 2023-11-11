@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoginAdmin));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,11 +71,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 11.25F);
-            this.label4.Location = new System.Drawing.Point(338, 128);
+            this.label4.Location = new System.Drawing.Point(293, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(181, 21);
+            this.label4.Size = new System.Drawing.Size(238, 21);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Interfaz Administrativo";
+            this.label4.Text = "Inicio de sesión administración";
             // 
             // txtPassword
             // 
@@ -188,6 +189,7 @@
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.pcbLogo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLoginAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal de Administración";
